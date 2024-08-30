@@ -18,6 +18,7 @@
 		BC0DFA982C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFA972C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift */; };
 		BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */; };
 		BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */; };
+		BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BC0DFA972C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBudgetCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemCell.swift; sourceTree = "<group>"; };
 		BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListItemCell.xib; sourceTree = "<group>"; };
+		BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				BC0DFA742C81BC0100B705A7 /* AppDelegate.swift */,
 				BC0DFA762C81BC0100B705A7 /* SceneDelegate.swift */,
+				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
 				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
 				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
 				BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,

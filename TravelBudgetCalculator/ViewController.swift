@@ -7,27 +7,20 @@
 
 import UIKit
 
-enum CurrencyType: String, CaseIterable {
-    case euro = "EUR"
-    case usDollar = "USD"
-    // TODO: 通貨ごとのレートは可変なため、enum自体には持たせるべきではないので後から設定できるようにどうにかする
-}
-
 struct PaymentListItem {
-    let title: String
-    let amount: Double
-    let currencyType: CurrencyType
+    var title: String
+    var amount: Double
+    var currencyType: CurrencyType
 }
 
 class ViewController: UIViewController {
-    let oneEuroToYenRate: Double = 170.00
-    let oneUsDollarToYenRate: Double = 150.00
-    
-    let section1Items: [PaymentListItem] = [
-        .init(title: "condisででかい水とタキスとチョコクッキー", amount: 4.15, currencyType: .euro),
-        .init(title: "昼のレストランでサラダとパエリアなど", amount: 33.675, currencyType: .euro),
-        .init(title: "タキスとか買ったかも？", amount: 4.94, currencyType: .euro),
-        .init(title: "まりりんたちとご飯", amount: 21.14, currencyType: .euro)
+    var currency: CurrencyType = .USD
+    var toYenRate = 0.0
+    var section1Items: [PaymentListItem] = [
+        .init(title: "condisででかい水とタキスとチョコクッキー", amount: 4.15, currencyType: .EUR),
+        .init(title: "昼のレストランでサラダとパエリアなど", amount: 33.675, currencyType: .EUR),
+        .init(title: "タキスとか買ったかも？", amount: 4.94, currencyType: .EUR),
+        .init(title: "まりりんたちとご飯", amount: 21.14, currencyType: .EUR)
     ]
 
     @IBOutlet weak var tableView: UITableView!
@@ -53,17 +46,17 @@ extension ViewController: UITableViewDataSource {
         let item = section1Items[indexPath.row]
         cell.titleTextField.text = "\(item.title)"
         cell.amountTextField.text = "\(item.amount)"
-        
-        let rateValue: Double = {
-            switch item.currencyType {
-            case .euro:
-                return oneEuroToYenRate
-            case .usDollar:
-                return oneUsDollarToYenRate
-            }
-        }()
-        let yenAmount = item.amount * rateValue
-        cell.yenDisplayLabel.text = "\(yenAmount)"
+        cell.currencySelectionButton.setTitle(item.currencyType.code, for: .normal)
+        cell.didSelectCurrency = { [weak self] type in
+            // 元データをまず更新
+            self?.section1Items[indexPath.row].currencyType = type
+            
+            // その後に該当のセルだけを再描画
+            self?.tableView.reloadRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)],
+                                 with: .none)
+        }
+        let yenAmount = item.amount * toYenRate
+        cell.yenDisplayLabel.text = "(\(String(format: "%.0f", ceil(yenAmount)))円)"
         return cell
     }
 }
