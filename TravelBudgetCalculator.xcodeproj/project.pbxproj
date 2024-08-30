@@ -16,6 +16,8 @@
 		BC0DFA8C2C81BC0300B705A7 /* TravelBudgetCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFA8B2C81BC0300B705A7 /* TravelBudgetCalculatorTests.swift */; };
 		BC0DFA962C81BC0300B705A7 /* TravelBudgetCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFA952C81BC0300B705A7 /* TravelBudgetCalculatorUITests.swift */; };
 		BC0DFA982C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFA972C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift */; };
+		BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */; };
+		BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BC0DFA912C81BC0300B705A7 /* TravelBudgetCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelBudgetCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0DFA952C81BC0300B705A7 /* TravelBudgetCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBudgetCalculatorUITests.swift; sourceTree = "<group>"; };
 		BC0DFA972C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBudgetCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemCell.swift; sourceTree = "<group>"; };
+		BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				BC0DFA762C81BC0100B705A7 /* SceneDelegate.swift */,
 				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
 				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
+				BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */,
+				BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */,
 				BC0DFA7D2C81BC0300B705A7 /* Assets.xcassets */,
 				BC0DFA7F2C81BC0300B705A7 /* LaunchScreen.storyboard */,
 				BC0DFA822C81BC0300B705A7 /* Info.plist */,
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
+				BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */,
 				BC0DFA812C81BC0300B705A7 /* Base in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
 			);
@@ -259,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
+				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
 				BC0DFA772C81BC0100B705A7 /* SceneDelegate.swift in Sources */,
 			);
