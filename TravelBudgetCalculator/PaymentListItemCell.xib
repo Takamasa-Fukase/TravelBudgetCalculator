@@ -4,78 +4,73 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentListItemCell" rowHeight="156" id="KGk-i7-Jjw" customClass="PaymentListItemCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PaymentListItemCell" rowHeight="156" id="KGk-i7-Jjw" customClass="PaymentListItemCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                <rect key="frame" x="0.0" y="0.0" width="333" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="現地通貨での金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-W6-8lT">
-                        <rect key="frame" x="16" y="44" width="153.66666666666666" height="28"/>
+                        <rect key="frame" x="16" y="40" width="183" height="28"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="28" id="5oS-2f-tcs"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJ2-5n-m6d">
-                        <rect key="frame" x="169.66666666666666" y="43" width="48" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="48" id="EYg-tZ-6lZ"/>
-                        </constraints>
-                        <menu key="menu" id="ZWk-0H-UlC">
-                            <children>
-                                <command title="Item 1" id="G0W-Ns-jDT"/>
-                                <command title="Item 2" id="Fzj-LM-zCt"/>
-                            </children>
-                        </menu>
-                        <state key="normal" title="EUR"/>
-                    </button>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="品目" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-po-dsE">
-                        <rect key="frame" x="16" y="12" width="288" height="28"/>
+                        <rect key="frame" x="16" y="12" width="301" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="28" id="52z-tj-n4O"/>
+                            <constraint firstAttribute="height" constant="24" id="52z-tj-n4O"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（〇〇円）" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-eb-gPQ">
-                        <rect key="frame" x="225.66666666666666" y="51" width="62.333333333333343" height="14.333333333333329"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-eb-gPQ">
+                        <rect key="frame" x="273" y="47" width="44" height="14.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(USD)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zic-8b-dCQ">
+                        <rect key="frame" x="155" y="40" width="40" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="J7f-tx-BCY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Zic-8b-dCQ" firstAttribute="trailing" secondItem="X7q-W6-8lT" secondAttribute="trailing" constant="-4" id="Hyu-hE-wDL"/>
                     <constraint firstAttribute="trailing" secondItem="Buo-po-dsE" secondAttribute="trailing" constant="16" id="J81-4H-5qk"/>
                     <constraint firstItem="Buo-po-dsE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Lab-qw-ck5"/>
-                    <constraint firstItem="X7q-W6-8lT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.48" id="MhI-Pq-cB9"/>
+                    <constraint firstItem="X7q-W6-8lT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.55" id="MhI-Pq-cB9"/>
                     <constraint firstItem="Buo-po-dsE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="RI3-6d-xbA"/>
                     <constraint firstItem="g5b-eb-gPQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="aW5-zx-UAQ"/>
-                    <constraint firstItem="dJ2-5n-m6d" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="eQZ-Ha-Yzw"/>
+                    <constraint firstItem="Zic-8b-dCQ" firstAttribute="height" secondItem="X7q-W6-8lT" secondAttribute="height" id="dof-UF-ITV"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="top" secondItem="Buo-po-dsE" secondAttribute="bottom" constant="4" id="iYD-7C-o5U"/>
                     <constraint firstAttribute="bottom" secondItem="X7q-W6-8lT" secondAttribute="bottom" constant="12" id="m31-6I-5ow"/>
-                    <constraint firstItem="dJ2-5n-m6d" firstAttribute="leading" secondItem="X7q-W6-8lT" secondAttribute="trailing" id="nhw-zt-xp1"/>
+                    <constraint firstItem="Zic-8b-dCQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="pWx-dg-azF"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qGT-o7-1wF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="g5b-eb-gPQ" secondAttribute="trailing" constant="16" id="qlc-j2-tNk"/>
-                    <constraint firstItem="g5b-eb-gPQ" firstAttribute="leading" secondItem="dJ2-5n-m6d" secondAttribute="trailing" constant="8" id="zIq-pG-Z6v"/>
+                    <constraint firstAttribute="trailing" secondItem="g5b-eb-gPQ" secondAttribute="trailing" constant="16" id="qlc-j2-tNk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="amountTextField" destination="X7q-W6-8lT" id="Jy8-Zd-66Z"/>
-                <outlet property="currencySelectionButton" destination="dJ2-5n-m6d" id="0tA-s2-U7R"/>
+                <outlet property="currencyLabel" destination="Zic-8b-dCQ" id="fVv-jP-6Kg"/>
                 <outlet property="titleTextField" destination="Buo-po-dsE" id="w8w-ei-OlL"/>
                 <outlet property="yenDisplayLabel" destination="g5b-eb-gPQ" id="R67-Wq-iqc"/>
             </connections>
-            <point key="canvasLocation" x="74.809160305343511" y="59.154929577464792"/>
+            <point key="canvasLocation" x="84.732824427480907" y="59.154929577464792"/>
         </tableViewCell>
     </objects>
 </document>

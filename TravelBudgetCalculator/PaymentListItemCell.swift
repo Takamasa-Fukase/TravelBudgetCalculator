@@ -7,34 +7,42 @@
 
 import UIKit
 
-class PaymentListItemCell: UITableViewCell {
-    var didSelectCurrency: ((CurrencyType) -> Void)?
+class PaymentListItemCell: UITableViewCell {    
+    var didEndEditingAmount: ((Double) -> Void) = {_ in }
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var currencySelectionButton: UIButton!
+    @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var yenDisplayLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setupCurrencySelectionButton()
+        setupAmountTextField()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
-    func setupCurrencySelectionButton() {
-        let currencyOptionList = CurrencyType.allCases.map { item in
-            return UIAction(title: item.rawValue, handler: { [weak self] _ in
-                guard let didSelectCurrency = self?.didSelectCurrency else { return }
-                didSelectCurrency(item)
-            })
+    func setupAmountTextField() {
+        amountTextField.delegate = self
+        amountTextField.keyboardType = .numberPad
+        amountTextField.returnKeyType = .done
+        amountTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 0))
+        amountTextField.rightViewMode = .always
+    }
+}
+
+extension PaymentListItemCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let doubleAmount = Double(textField.text ?? "") else {
+            // 不正な文字が入っていた場合はエラー表示する
+            textField.text = ""
+            yenDisplayLabel.text = "入力値が不正です"
+            return
         }
-        currencySelectionButton.menu = UIMenu(title: "現地通貨を選択", children: currencyOptionList)
-        currencySelectionButton.showsMenuAsPrimaryAction = true
-        currencySelectionButton.changesSelectionAsPrimaryAction = true
+        // 円表示を更新するために通知
+        didEndEditingAmount(doubleAmount)
     }
 }
