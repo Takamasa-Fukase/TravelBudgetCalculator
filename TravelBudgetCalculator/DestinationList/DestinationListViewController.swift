@@ -17,7 +17,7 @@ struct Destination {
 
 class DestinationListViewController: UIViewController {
     var destinationList: [Destination] = [
-        .init(name: "バリ島", duration: "7/18~7/23", sum: 9.1, yosan: 10.6, currency: .IDR),
+        .init(name: "バリ島", duration: "7/18~7/23", sum: 9.155, yosan: 10.6, currency: .IDR),
         .init(name: "インド", duration: "7/24~7/29", sum: 9.7, yosan: 9.4, currency: .INR),
         .init(name: "トルコ", duration: "7/30~8/3", sum: 10.2, yosan: 8.1, currency: .TRY),
     ]
@@ -52,6 +52,9 @@ extension DestinationListViewController: UITableViewDataSource {
         let item = destinationList[indexPath.row]
         cell.nameLabel.text = item.name
         cell.durationLabel.text = item.duration
+        cell.sumLabel.text = "合計：\(String(format: "%.1f", item.sum))"
+        cell.estimatedAmountLabel.text = "予算：\(String(format: "%.1f", item.yosan))"
+        cell.restAmountLabel.text = "残り：\(String(format: "%.1f", item.yosan - item.sum))"
         return cell
     }
 }
