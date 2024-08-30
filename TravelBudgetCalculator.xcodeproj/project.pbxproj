@@ -19,6 +19,16 @@
 		BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */; };
 		BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */; };
 		BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */; };
+		BCA9A9382C822E7100084047 /* DestinationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9362C822E7100084047 /* DestinationListViewController.swift */; };
+		BCA9A93B2C822EA700084047 /* DestinationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */; };
+		BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */; };
+		BCA9A93F2C822ECD00084047 /* CreateDestinationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */; };
+		BCA9A9412C822EED00084047 /* DateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController.swift */; };
+		BCA9A9432C822EF300084047 /* DateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController.storyboard */; };
+		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
+		BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */; };
+		BCA9A94A2C82312D00084047 /* DestinationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9482C82312D00084047 /* DestinationListCell.swift */; };
+		BCA9A94B2C82312D00084047 /* DestinationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9492C82312D00084047 /* DestinationListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,16 @@
 		BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemCell.swift; sourceTree = "<group>"; };
 		BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListItemCell.xib; sourceTree = "<group>"; };
 		BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
+		BCA9A9362C822E7100084047 /* DestinationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListViewController.swift; sourceTree = "<group>"; };
+		BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DestinationListViewController.storyboard; sourceTree = "<group>"; };
+		BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDestinationViewController.swift; sourceTree = "<group>"; };
+		BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDestinationViewController.storyboard; sourceTree = "<group>"; };
+		BCA9A9402C822EED00084047 /* DateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController.swift; sourceTree = "<group>"; };
+		BCA9A9422C822EF300084047 /* DateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController.storyboard; sourceTree = "<group>"; };
+		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
+		BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateDetailViewController.storyboard; sourceTree = "<group>"; };
+		BCA9A9482C82312D00084047 /* DestinationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListCell.swift; sourceTree = "<group>"; };
+		BCA9A9492C82312D00084047 /* DestinationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestinationListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +130,10 @@
 				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
 				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
 				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
+				BCA9A9322C822D8200084047 /* DestinationList */,
+				BCA9A9332C822DD500084047 /* CreateDestination */,
+				BCA9A9342C822E0200084047 /* DateList */,
+				BCA9A9352C822E1B00084047 /* DateDetail */,
 				BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */,
 				BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */,
 				BC0DFA7D2C81BC0300B705A7 /* Assets.xcassets */,
@@ -134,6 +158,44 @@
 				BC0DFA972C81BC0300B705A7 /* TravelBudgetCalculatorUITestsLaunchTests.swift */,
 			);
 			path = TravelBudgetCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		BCA9A9322C822D8200084047 /* DestinationList */ = {
+			isa = PBXGroup;
+			children = (
+				BCA9A9362C822E7100084047 /* DestinationListViewController.swift */,
+				BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */,
+				BCA9A9482C82312D00084047 /* DestinationListCell.swift */,
+				BCA9A9492C82312D00084047 /* DestinationListCell.xib */,
+			);
+			path = DestinationList;
+			sourceTree = "<group>";
+		};
+		BCA9A9332C822DD500084047 /* CreateDestination */ = {
+			isa = PBXGroup;
+			children = (
+				BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */,
+				BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */,
+			);
+			path = CreateDestination;
+			sourceTree = "<group>";
+		};
+		BCA9A9342C822E0200084047 /* DateList */ = {
+			isa = PBXGroup;
+			children = (
+				BCA9A9402C822EED00084047 /* DateListViewController.swift */,
+				BCA9A9422C822EF300084047 /* DateListViewController.storyboard */,
+			);
+			path = DateList;
+			sourceTree = "<group>";
+		};
+		BCA9A9352C822E1B00084047 /* DateDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BCA9A9442C822F0200084047 /* DateDetailViewController.swift */,
+				BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */,
+			);
+			path = DateDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +302,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA9A9432C822EF300084047 /* DateListViewController.storyboard in Resources */,
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
+				BCA9A93F2C822ECD00084047 /* CreateDestinationViewController.storyboard in Resources */,
 				BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */,
 				BC0DFA812C81BC0300B705A7 /* Base in Resources */,
+				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
+				BCA9A93B2C822EA700084047 /* DestinationListViewController.storyboard in Resources */,
+				BCA9A94B2C82312D00084047 /* DestinationListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +335,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA9A9412C822EED00084047 /* DateListViewController.swift in Sources */,
 				BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */,
+				BCA9A9382C822E7100084047 /* DestinationListViewController.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
+				BCA9A94A2C82312D00084047 /* DestinationListCell.swift in Sources */,
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
+				BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
 				BC0DFA772C81BC0100B705A7 /* SceneDelegate.swift in Sources */,
+				BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +531,7 @@
 				INFOPLIST_FILE = TravelBudgetCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = DestinationListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,7 +559,7 @@
 				INFOPLIST_FILE = TravelBudgetCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = DestinationListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

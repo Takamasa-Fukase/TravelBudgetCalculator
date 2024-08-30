@@ -7,6 +7,17 @@
 
 import UIKit
 
+struct PaymentListSection {
+    let paymentType: PaymentType
+    let items: [PaymentListItem]
+    
+    enum PaymentType: String, CaseIterable {
+        case transportation = "交通費"
+        case food = "食費"
+        case other = "その他"
+    }
+}
+
 struct PaymentListItem {
     var title: String
     var amount: Double
