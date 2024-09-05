@@ -13,10 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let sb = UIStoryboard(name: "DestinationListViewController", bundle: nil)
+        let sb = UIStoryboard(name: "DateDetailViewController", bundle: nil)
         let vc = sb.instantiateInitialViewController()
-        let navi = UINavigationController(rootViewController: vc!)
-        window?.rootViewController = navi
+//        let navi = UINavigationController(rootViewController: vc!)
+//        window?.rootViewController = navi
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 
