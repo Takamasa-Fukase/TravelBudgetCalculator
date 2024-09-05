@@ -17,6 +17,24 @@ class DateListViewController: UIViewController {
         
         // 初期データを取り込み
         dateList = defaultItineraryData
+        // 各日に３ジャンルの初期データを挿入
+        dateList.enumerated().forEach { (index, dailyExpense) in
+            if dailyExpense.expenseData.isEmpty {
+                print("ジャンルデータが入っていないのでデフォルトデータを挿入しました: \(dailyExpense.date), \(dailyExpense.cityName)")
+                dateList[index].expenseData = [
+                    .init(paymentType: .transportation, items: [
+                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                    ]),
+                    .init(paymentType: .food, items: [
+                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                    ]),
+                    .init(paymentType: .other, items: [
+                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                    ])
+                ]
+            }
+        }
+        
         setupParchment()
     }
 

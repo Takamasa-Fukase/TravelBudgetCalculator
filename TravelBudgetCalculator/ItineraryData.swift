@@ -14,7 +14,7 @@ import Foundation
  - MXN：7.28円
  */
 
-var defaultItineraryData: [DailyExpense] = [
+let defaultItineraryData: [DailyExpense] = [
     // USA
     DailyExpense(date: "9月12日（木）", cityName: "LosAngeles 1日目", currency: .USD, expenseData: []),
     
