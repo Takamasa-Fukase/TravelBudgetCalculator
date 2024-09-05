@@ -100,23 +100,23 @@ class DateListViewController: UIViewController {
 }
 
 extension DateListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let data = data[indexPath.row].expenseData
-        var paymentItemCount = 0
-        data.forEach({ item in
-            paymentItemCount += item.items.count
-        })
-        // 48 + 64 + (24,28,12)
-        /*
-         １つの日付に対して最低でも最初からあって消えないものは、
-         3つのジャンルのヘッダーとフッター。
-         なので、48(header), 64(footer) x 3は最初からある。
-         それに加えて、3つのジャンルのitemの合計数。
-         */
-        let eachGenreHeaderFooterSumHeight = 3 * (48 + 64)
-        let allItemsInDaySumHeight = paymentItemCount * (24 + 28 + 12)
-        return CGFloat(eachGenreHeaderFooterSumHeight + allItemsInDaySumHeight) + 200
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let data = data[indexPath.row].expenseData
+//        var paymentItemCount = 0
+//        data.forEach({ item in
+//            paymentItemCount += item.items.count
+//        })
+//        // 48 + 64 + (24,28,12)
+//        /*
+//         １つの日付に対して最低でも最初からあって消えないものは、
+//         3つのジャンルのヘッダーとフッター。
+//         なので、48(header), 64(footer) x 3は最初からある。
+//         それに加えて、3つのジャンルのitemの合計数。
+//         */
+//        let eachGenreHeaderFooterSumHeight = 3 * (48 + 64)
+//        let allItemsInDaySumHeight = paymentItemCount * (24 + 28 + 12)
+//        return CGFloat(eachGenreHeaderFooterSumHeight + allItemsInDaySumHeight) + 200
+//    }
 }
 
 extension DateListViewController: UITableViewDataSource {
