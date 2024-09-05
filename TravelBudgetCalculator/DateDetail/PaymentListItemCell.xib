@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,29 +18,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="品目" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-po-dsE">
-                        <rect key="frame" x="16" y="4" width="249" height="24"/>
+                        <rect key="frame" x="16" y="8" width="249" height="32"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="52z-tj-n4O"/>
+                            <constraint firstAttribute="height" constant="32" id="52z-tj-n4O"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="現地通貨での金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-W6-8lT">
-                        <rect key="frame" x="16" y="32" width="183" height="28"/>
+                        <rect key="frame" x="16" y="44" width="183" height="32"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="28" id="5oS-2f-tcs"/>
+                            <constraint firstAttribute="height" constant="32" id="5oS-2f-tcs"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-eb-gPQ">
-                        <rect key="frame" x="273" y="39" width="44" height="14.333333333333336"/>
+                        <rect key="frame" x="273" y="53" width="44" height="14.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(USD)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zic-8b-dCQ">
-                        <rect key="frame" x="155" y="32" width="40" height="28"/>
+                        <rect key="frame" x="155" y="44" width="40" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="J7f-tx-BCY"/>
                         </constraints>
@@ -48,12 +51,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-ZU-mKG">
-                        <rect key="frame" x="277" y="-4" width="40" height="40"/>
+                        <rect key="frame" x="277" y="4" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Weq-rb-bxH"/>
                             <constraint firstAttribute="height" constant="40" id="vZB-A0-4jt"/>
                         </constraints>
-                        <color key="tintColor" systemColor="darkTextColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
                         <connections>
@@ -61,11 +64,12 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="trailing" secondItem="X7q-W6-8lT" secondAttribute="trailing" constant="-4" id="Hyu-hE-wDL"/>
                     <constraint firstItem="Buo-po-dsE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Lab-qw-ck5"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.55" id="MhI-Pq-cB9"/>
-                    <constraint firstItem="Buo-po-dsE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="RI3-6d-xbA"/>
+                    <constraint firstItem="Buo-po-dsE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="RI3-6d-xbA"/>
                     <constraint firstItem="g5b-eb-gPQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="aW5-zx-UAQ"/>
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="height" secondItem="X7q-W6-8lT" secondAttribute="height" id="dof-UF-ITV"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="top" secondItem="Buo-po-dsE" secondAttribute="bottom" constant="4" id="iYD-7C-o5U"/>
@@ -90,8 +94,14 @@
     </objects>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <systemColor name="darkTextColor">
+        <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
