@@ -17,24 +17,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-ww-ZRk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="140.66666666666669" width="393" height="711.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="ltW-Mw-nYl"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="uYV-ZC-oOI"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9月16日（月）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-sY-R1B">
+                                <rect key="frame" x="16" y="79" width="361" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ブエノスアイレス3日目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-Hg-1HJ">
+                                <rect key="frame" x="16" y="116.66666666666669" width="361" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Blu-ww-ZRk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Mfj-KR-Hut"/>
+                            <constraint firstItem="ruR-Hg-1HJ" firstAttribute="top" secondItem="YUb-sY-R1B" secondAttribute="bottom" constant="4" id="2SO-eZ-yB3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ruR-Hg-1HJ" secondAttribute="trailing" constant="16" id="2TZ-1f-YhJ"/>
                             <constraint firstAttribute="bottom" secondItem="Blu-ww-ZRk" secondAttribute="bottom" id="WaS-y3-bqV"/>
+                            <constraint firstItem="Blu-ww-ZRk" firstAttribute="top" secondItem="ruR-Hg-1HJ" secondAttribute="bottom" id="aWb-kH-j95"/>
+                            <constraint firstItem="YUb-sY-R1B" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="b0U-G1-718"/>
+                            <constraint firstItem="ruR-Hg-1HJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="dCJ-b6-rM8"/>
+                            <constraint firstItem="YUb-sY-R1B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="haB-71-Ci0"/>
                             <constraint firstItem="Blu-ww-ZRk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hpg-nq-e4Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YUb-sY-R1B" secondAttribute="trailing" constant="16" id="oxP-qZ-SPp"/>
                             <constraint firstItem="Blu-ww-ZRk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rmH-Oj-HqM"/>
+                            <constraint firstItem="ruR-Hg-1HJ" firstAttribute="top" secondItem="YUb-sY-R1B" secondAttribute="bottom" constant="4" id="xJK-Uf-Efm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityNameLabel" destination="ruR-Hg-1HJ" id="Zkg-Sv-ruT"/>
+                        <outlet property="dateLabel" destination="YUb-sY-R1B" id="d07-nT-t13"/>
                         <outlet property="tableView" destination="Blu-ww-ZRk" id="KJO-Jk-rlo"/>
                     </connections>
                 </viewController>

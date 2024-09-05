@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="移動：3,500円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOA-Ai-9TW">
-                    <rect key="frame" x="16" y="12" width="361" height="32"/>
+                    <rect key="frame" x="16" y="4" width="361" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="9ah-wP-T27"/>
                     </constraints>
@@ -28,7 +28,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vOA-Ai-9TW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="05x-uf-fKd"/>
-                <constraint firstItem="vOA-Ai-9TW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="BZ0-Y7-0gv"/>
+                <constraint firstItem="vOA-Ai-9TW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="BZ0-Y7-0gv"/>
                 <constraint firstAttribute="bottom" secondItem="vOA-Ai-9TW" secondAttribute="bottom" constant="4" id="FFa-qS-038"/>
                 <constraint firstAttribute="trailing" secondItem="vOA-Ai-9TW" secondAttribute="trailing" constant="16" id="ZO9-pe-YpJ"/>
             </constraints>

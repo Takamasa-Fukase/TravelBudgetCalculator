@@ -42,9 +42,7 @@ class DateListViewController: UIViewController {
         let vcs = dateList.map { dailyExpense in
             let sb = UIStoryboard(name: "DateDetailViewController", bundle: nil)
             let vc = sb.instantiateInitialViewController() as! DateDetailViewController
-            vc.date = dailyExpense.date
-            vc.cityName = dailyExpense.cityName
-            vc.data = dailyExpense.expenseData
+            vc.dailyExpense = dailyExpense
             vc.title = dailyExpense.date
             return vc
         }

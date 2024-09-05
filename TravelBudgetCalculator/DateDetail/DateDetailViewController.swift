@@ -26,29 +26,17 @@ struct PaymentListItem {
 
 class DateDetailViewController: UIViewController {
     var toYenRate: Double = 0.15
+    var dailyExpense: DailyExpense = .init(date: "", cityName: "", currency: .USD, expenseData: [])
     
-    var date: String = ""
-    var cityName: String = ""
-    var data: [PaymentListSection] = [
-        PaymentListSection(
-            paymentType: .transportation,
-            items: []
-        ),
-        PaymentListSection(
-            paymentType: .food,
-            items: []
-        ),
-        PaymentListSection(
-            paymentType: .other,
-            items: []
-        )
-    ]
-    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dateLabel.text = dailyExpense.date
+        cityNameLabel.text = dailyExpense.cityName
         setupTableView()
     }
     
@@ -65,9 +53,17 @@ class DateDetailViewController: UIViewController {
 }
 
 extension DateDetailViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 0.1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0.1
+//    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionHeader") as! DateDetailGenreSectionHeader
-        let sectionData = data[section]
+        let sectionData = dailyExpense.expenseData[section]
         let genreName = sectionData.paymentType.rawValue
         var sumAmount: Double = 0.0
         sectionData.items.forEach({ item in
@@ -81,7 +77,7 @@ extension DateDetailViewController: UITableViewDelegate {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
         // TODO: 後で、画面というかセルに保持されている通貨を代入するように変更する
         sectionFooter.addFormButtonTapped = { [weak self] in
-            self?.data[section].items.append(
+            self?.dailyExpense.expenseData[section].items.append(
                 PaymentListItem(title: "", amount: 0.0, currencyType: .ARA)
             )
             self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
@@ -92,23 +88,23 @@ extension DateDetailViewController: UITableViewDelegate {
 
 extension DateDetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return dailyExpense.expenseData.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].items.count
+        return dailyExpense.expenseData[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentListItemCell", for: indexPath) as! PaymentListItemCell
-        let item = data[indexPath.section].items[indexPath.row]
+        let item = dailyExpense.expenseData[indexPath.section].items[indexPath.row]
         cell.titleTextField.text = "\(item.title)"
         cell.amountTextField.text = "\(item.amount)"
         cell.currencyLabel.text = "(\(item.currencyType.code))"
         cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: toYenRate)
         cell.didEndEditingAmount = { [weak self] amount in
             cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
-            self?.data[indexPath.section].items[indexPath.row].amount = amount
+            self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = amount
             self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         return cell
