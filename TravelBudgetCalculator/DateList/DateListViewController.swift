@@ -101,24 +101,6 @@ class DateListViewController: UIViewController {
 }
 
 extension DateListViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let data = data[indexPath.row].expenseData
-//        var paymentItemCount = 0
-//        data.forEach({ item in
-//            paymentItemCount += item.items.count
-//        })
-//        // 48 + 64 + (24,28,12)
-//        /*
-//         １つの日付に対して最低でも最初からあって消えないものは、
-//         3つのジャンルのヘッダーとフッター。
-//         なので、48(header), 64(footer) x 3は最初からある。
-//         それに加えて、3つのジャンルのitemの合計数。
-//         */
-//        let eachGenreHeaderFooterSumHeight = 3 * (48 + 64)
-//        let allItemsInDaySumHeight = paymentItemCount * (24 + 28 + 12)
-//        return CGFloat(eachGenreHeaderFooterSumHeight + allItemsInDaySumHeight) + 200
-//    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -139,30 +121,14 @@ extension DateListViewController: UITableViewDataSource {
         cell.dateLabel.text = item.date
         cell.cityNameLabel.text = item.cityName
         cell.data = item.expenseData
-        cell.didUpdateCellHeight = { [weak self] in
-            print("高さが更新された: \(self?.data[indexPath.row].date)")
-//            self?.tableView.reloadSections(IndexSet(integer: 0), with: .none)
-//            self?.tableView.reloadData()
-//            self?.tableView.beginUpdates()
-//            self?.tableView.endUpdates()
-        }
-//        cell.didUpdateData = { [weak self] newData in
-//            self?.data[indexPath.row].expenseData = newData
-//            print("\(indexPath.row + 1)日目がdidUpdateData")
-//            print("データ: \(self?.data)")
-//            self?.tableView.reloadData()
-//        }
         cell.addButtonTapped = { [weak self] genreIndex in
-            print("\(indexPath.row)番目の日付の、genreIndex: \(genreIndex)に追加します")
             self?.data[indexPath.row].expenseData[genreIndex].items.append(
                 PaymentListItem(title: "⭐️", amount: 0.0, currencyType: .ARA)
             )
-            print("データが更新されました:\n - \(self!.data)")
-//            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
-//            cell.tableView.reloadData()
             self?.tableView.reloadData()
         }
         cell.tableView.reloadData()
+        // TODO: 200追加して雑にバグFixしている
         cell.tableViewHeight.constant = cell.tableView.contentSize.height + 200
         return cell
     }

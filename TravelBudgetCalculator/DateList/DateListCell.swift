@@ -30,8 +30,6 @@ class DateListCell: UITableViewCell {
             items: []
         )
     ]
-    var didUpdateCellHeight: (() -> Void) = {}
-//    var didUpdateData: (([PaymentListSection]) -> Void) = { _ in }
     var addButtonTapped: ((Int) -> Void) = { _ in }
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -42,26 +40,8 @@ class DateListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTableView()
-//        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
     }
     
-    deinit {
-//        tableView.removeObserver(self, forKeyPath: "contentSize")
-    }
-    
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if keyPath == "contentSize",
-//           let newSize = change?[.newKey] as? CGSize {
-//            // 親TableViewも更新するように通知する
-//            didUpdateCellHeight()
-//            print("高さを更新します: \(newSize.height)")
-//            tableViewHeight.constant = newSize.height
-////            tableView.invalidateIntrinsicContentSize()
-////            tableView.layoutIfNeeded()
-//            
-//        }
-//    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -97,11 +77,6 @@ extension DateListCell: UITableViewDelegate {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
         // TODO: 後で、画面というかセルに保持されている通貨を代入するように変更する
         sectionFooter.addFormButtonTapped = { [weak self] in
-//            self?.data[section].items.append(
-//                PaymentListItem(title: "", amount: 0.0, currencyType: .ARA)
-//            )
-//            self!.didUpdateData(self!.data)
-//            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
             self!.addButtonTapped(section)
         }
         return sectionFooter

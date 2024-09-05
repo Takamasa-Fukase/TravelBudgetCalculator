@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27E7A24D164927F8D5234B764ACED079 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DA165287C90CF0C6F2669459E26154D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		37AE89972AC238CCF4F60AC3C9FE4DE1 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		522C53EB0411D306BFE11F5164F31015 /* Pods-TravelBudgetCalculatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72D787130CF444AEBC1810B416E3B4CA /* Pods-TravelBudgetCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */; };
+		7356E1900FCFCD73A83AB74B5DD96E50 /* Pods-TravelBudgetCalculatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */; };
+		B2DE4414F5A8807A45956E748BC45BED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F77D8BF2B32FA326AD3883B6FB8EE99E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */; };
+		FEC0A2A080063306AF6305DF7384C97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1221885B6D5CE6A0E1D7E28B9429DEFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 065170C1A7332D9BA6D8C4B4F2253A36;
+			remoteInfo = "Pods-TravelBudgetCalculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h"; sourceTree = "<group>"; };
+		108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m"; sourceTree = "<group>"; };
+		11D1C295CCB6644AB48902F197C65AC9 /* Pods-TravelBudgetCalculator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-Info.plist"; sourceTree = "<group>"; };
+		1349277BE7C0E24FA832C936A6E531EC /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap"; sourceTree = "<group>"; };
+		22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculatorTests-umbrella.h"; sourceTree = "<group>"; };
+		4ACD4C64EC430F3535D1C4FD4FC9F33B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist"; sourceTree = "<group>"; };
+		5EA795BE53C7D1C7AA427AC435586716 /* Pods-TravelBudgetCalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator.modulemap"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		87B818F0C251979BA05043A194A36052 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-dummy.m"; sourceTree = "<group>"; };
+		90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DACD6787A92D8849E22D064D6600FD4 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A3C98365CAA7A4BC3A913CBA9EB1B2BA /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB74C0D8159EC6D4627C33B36C03989A /* Pods-TravelBudgetCalculator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B1BAE97AE0B7CE82234043C7967509AE /* Pods-TravelBudgetCalculator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculatorTests"; path = Pods_TravelBudgetCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-umbrella.h"; sourceTree = "<group>"; };
+		E6D4820A185D678F758BFED7A530796B /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculator"; path = Pods_TravelBudgetCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		F3931E959586D7F8857B07371AF1C247 /* Pods-TravelBudgetCalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculatorTests.modulemap"; sourceTree = "<group>"; };
+		F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculatorTests-dummy.m"; sourceTree = "<group>"; };
+		FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests"; path = Pods_TravelBudgetCalculator_TravelBudgetCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2201023BCDC54AFC20E64A07955D4B /* Pods-TravelBudgetCalculatorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19AB1F3DAAD2504A79CB4974D835E4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC0A2A080063306AF6305DF7384C97A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		720B285E7899DCC56480D4370530CF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DE4414F5A8807A45956E748BC45BED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98B5DA7C1DF79A60EC2862BE3E88B7B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA165287C90CF0C6F2669459E26154D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E725C1514D8C2C8A5532052598C482 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1349277BE7C0E24FA832C936A6E531EC /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */,
+				87B818F0C251979BA05043A194A36052 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */,
+				9DACD6787A92D8849E22D064D6600FD4 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */,
+				108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */,
+				4ACD4C64EC430F3535D1C4FD4FC9F33B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */,
+				037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */,
+				F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */,
+				C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */,
+			);
+			name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
+			path = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
+			sourceTree = "<group>";
+		};
+		27D185D69850D1CD44089B78ABDF3EC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */,
+				FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
+				BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8B4D7290C6B31264F76D43B8422359B9 /* Pods-TravelBudgetCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				5EA795BE53C7D1C7AA427AC435586716 /* Pods-TravelBudgetCalculator.modulemap */,
+				AB74C0D8159EC6D4627C33B36C03989A /* Pods-TravelBudgetCalculator-acknowledgements.markdown */,
+				B1BAE97AE0B7CE82234043C7967509AE /* Pods-TravelBudgetCalculator-acknowledgements.plist */,
+				88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */,
+				11D1C295CCB6644AB48902F197C65AC9 /* Pods-TravelBudgetCalculator-Info.plist */,
+				D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */,
+				90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */,
+				F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */,
+			);
+			name = "Pods-TravelBudgetCalculator";
+			path = "Target Support Files/Pods-TravelBudgetCalculator";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				27D185D69850D1CD44089B78ABDF3EC6 /* Products */,
+				DA9A8619A67F6D2B9024A2721A1B23B0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9A8619A67F6D2B9024A2721A1B23B0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D7290C6B31264F76D43B8422359B9 /* Pods-TravelBudgetCalculator */,
+				04E725C1514D8C2C8A5532052598C482 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
+				ECF7950342653618AD4FB3F2DB0E503F /* Pods-TravelBudgetCalculatorTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ECF7950342653618AD4FB3F2DB0E503F /* Pods-TravelBudgetCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3931E959586D7F8857B07371AF1C247 /* Pods-TravelBudgetCalculatorTests.modulemap */,
+				E6D4820A185D678F758BFED7A530796B /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */,
+				A3C98365CAA7A4BC3A913CBA9EB1B2BA /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */,
+				F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */,
+				FF2201023BCDC54AFC20E64A07955D4B /* Pods-TravelBudgetCalculatorTests-Info.plist */,
+				22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */,
+				F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */,
+				A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */,
+			);
+			name = "Pods-TravelBudgetCalculatorTests";
+			path = "Target Support Files/Pods-TravelBudgetCalculatorTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37B5F1ABCB16906351246E97CB9B0213 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37AE89972AC238CCF4F60AC3C9FE4DE1 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		502E5B16D3D5F8DE614864C77B282FBF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E7A24D164927F8D5234B764ACED079 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D1F5CBA8E4A6CF30B5F331206CA46E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522C53EB0411D306BFE11F5164F31015 /* Pods-TravelBudgetCalculatorTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B734A63A47853E81698EF215AEA90C87 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */;
+			buildPhases = (
+				37B5F1ABCB16906351246E97CB9B0213 /* Headers */,
+				51AA864399001AAB522BE7929A4D15FF /* Sources */,
+				19AB1F3DAAD2504A79CB4974D835E4F3 /* Frameworks */,
+				BBA3EA4A781B984AEFCC8BEA248E7A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TravelBudgetCalculator";
+			productName = Pods_TravelBudgetCalculator;
+			productReference = EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */;
+			productType = "com.apple.product-type.framework";
+		};
+		302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E80DF1A9E361C26872F306E1BD8061 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */;
+			buildPhases = (
+				502E5B16D3D5F8DE614864C77B282FBF /* Headers */,
+				F3369A3545F4F8F68872ABC46E589E5A /* Sources */,
+				98B5DA7C1DF79A60EC2862BE3E88B7B1 /* Frameworks */,
+				9E227CFD25F8AB1E4D4D164B32A7A9B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
+			productName = Pods_TravelBudgetCalculator_TravelBudgetCalculatorUITests;
+			productReference = FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC358AC2C2AA8FA7E71086C97CAE917E /* Pods-TravelBudgetCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 710D1D81D7AA584B76F52E229FF73B4D /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculatorTests" */;
+			buildPhases = (
+				B3D1F5CBA8E4A6CF30B5F331206CA46E /* Headers */,
+				64D9C056876FE321AE7D171836569202 /* Sources */,
+				720B285E7899DCC56480D4370530CF29 /* Frameworks */,
+				EE63BBBD8FEF50A2CC3704E726324F46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59716FEEF5F1849EDEAF43472C25051F /* PBXTargetDependency */,
+			);
+			name = "Pods-TravelBudgetCalculatorTests";
+			productName = Pods_TravelBudgetCalculatorTests;
+			productReference = BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 27D185D69850D1CD44089B78ABDF3EC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */,
+				302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
+				AC358AC2C2AA8FA7E71086C97CAE917E /* Pods-TravelBudgetCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E227CFD25F8AB1E4D4D164B32A7A9B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBA3EA4A781B984AEFCC8BEA248E7A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE63BBBD8FEF50A2CC3704E726324F46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51AA864399001AAB522BE7929A4D15FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D787130CF444AEBC1810B416E3B4CA /* Pods-TravelBudgetCalculator-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D9C056876FE321AE7D171836569202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7356E1900FCFCD73A83AB74B5DD96E50 /* Pods-TravelBudgetCalculatorTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3369A3545F4F8F68872ABC46E589E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77D8BF2B32FA326AD3883B6FB8EE99E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59716FEEF5F1849EDEAF43472C25051F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TravelBudgetCalculator";
+			target = 065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */;
+			targetProxy = 1221885B6D5CE6A0E1D7E28B9429DEFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22CEE87E76531F053593074FDB93272B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7DB2C2A7367EFBB9255E2BA712ED8703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		97A4AB5BAB74863E7F4790F959E41D70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C873D3C071BDDC046D6E8F63C69C2591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CB5A3B635259F7B950DA6391DBF0F134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD805E66661D1FB229AE06E2ABD48245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EDEEFF7F79A4BD20FBDCE0A06BE88F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06E80DF1A9E361C26872F306E1BD8061 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CEE87E76531F053593074FDB93272B /* Debug */,
+				97A4AB5BAB74863E7F4790F959E41D70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */,
+				C873D3C071BDDC046D6E8F63C69C2591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		710D1D81D7AA584B76F52E229FF73B4D /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD805E66661D1FB229AE06E2ABD48245 /* Debug */,
+				7DB2C2A7367EFBB9255E2BA712ED8703 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B734A63A47853E81698EF215AEA90C87 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDEEFF7F79A4BD20FBDCE0A06BE88F1B /* Debug */,
+				CB5A3B635259F7B950DA6391DBF0F134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
