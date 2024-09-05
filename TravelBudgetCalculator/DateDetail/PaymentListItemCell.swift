@@ -35,7 +35,7 @@ class PaymentListItemCell: UITableViewCell {
     
     func setupTitleTextField() {
 //        titleTextField.delegate = self
-        amountTextField.returnKeyType = .done
+        titleTextField.returnKeyType = .done
     }
     
     func setupAmountTextField() {
