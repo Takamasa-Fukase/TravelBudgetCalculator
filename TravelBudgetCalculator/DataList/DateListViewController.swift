@@ -49,7 +49,9 @@ class DateListViewController: UIViewController {
         
         pagingViewController = PagingViewController(viewControllers: vcs)
         pagingViewController.menuHorizontalAlignment = .center
-        pagingViewController.selectedTextColor = UIColor.black
+        pagingViewController.textColor = .systemGray
+        pagingViewController.selectedTextColor = .label
+        pagingViewController.menuBackgroundColor = .systemBackground
         pagingViewController.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         pagingViewController.selectedFont = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.medium)
         pagingViewController.indicatorOptions = .visible(height: 4, zIndex: Int.max - 1, spacing: UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12), insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
