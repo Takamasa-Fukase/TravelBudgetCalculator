@@ -31,31 +31,32 @@ class DateListCell: UITableViewCell {
         )
     ]
     var didUpdateCellHeight: (() -> Void) = {}
-    
+    var didUpdateData: (([PaymentListSection]) -> Void) = { _ in }
+
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+//    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTableView()
-        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+//        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
     }
     
     deinit {
-        tableView.removeObserver(self, forKeyPath: "contentSize")
+//        tableView.removeObserver(self, forKeyPath: "contentSize")
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "contentSize",
-           let newSize = change?[.newKey] as? CGSize {
-            print("高さを更新します: \(newSize.height)")
-            tableViewHeight.constant = newSize.height
-            // 親TableViewも更新するように通知する
-            didUpdateCellHeight()
-        }
-    }
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "contentSize",
+//           let newSize = change?[.newKey] as? CGSize {
+//            print("高さを更新します: \(newSize.height)")
+//            tableViewHeight.constant = newSize.height
+//            // 親TableViewも更新するように通知する
+//            didUpdateCellHeight()
+//        }
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -95,6 +96,7 @@ extension DateListCell: UITableViewDelegate {
             self?.data[section].items.append(
                 PaymentListItem(title: "", amount: 0.0, currencyType: .ARA)
             )
+            self!.didUpdateData(self!.data)
             self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
         }
         return sectionFooter
@@ -120,6 +122,7 @@ extension DateListCell: UITableViewDataSource {
         cell.didEndEditingAmount = { [weak self] amount in
             cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
             self?.data[indexPath.section].items[indexPath.row].amount = amount
+            self!.didUpdateData(self!.data)
             self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         return cell
