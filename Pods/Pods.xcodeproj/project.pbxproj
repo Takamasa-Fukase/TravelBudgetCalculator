@@ -180,7 +180,7 @@
 		9B7BD4658BE2390EACBC1885DE4437B2 /* PagingStaticDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingStaticDataSource.swift; path = Parchment/Classes/PagingStaticDataSource.swift; sourceTree = "<group>"; };
 		9C8823FB3814B9AA3EE47A69628FBF6E /* PageState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageState.swift; path = Parchment/Structs/PageState.swift; sourceTree = "<group>"; };
 		9CED560C050F78AF7F541D17C48B67DD /* PagingMenuInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuInteraction.swift; path = Parchment/Enums/PagingMenuInteraction.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DE5F6F179F1F033F454934D658EF841 /* PagingIndicatorOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorOptions.swift; path = Parchment/Enums/PagingIndicatorOptions.swift; sourceTree = "<group>"; };
 		9E2582DDCFFD86701D8FC3572E15C084 /* Parchment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Parchment-umbrella.h"; sourceTree = "<group>"; };
 		A0CA2EB72191177414D2AEDDB409A114 /* PagingCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCellViewModel.swift; path = Parchment/Structs/PagingCellViewModel.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		B29ABF8B582F927ECC4E7EC5DE86BD36 /* Pods-TravelBudgetCalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculatorTests-umbrella.h"; sourceTree = "<group>"; };
 		BB03A5A0875A4DCD8594BFDB67FBDA4E /* Pods-TravelBudgetCalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator.modulemap"; sourceTree = "<group>"; };
 		BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculatorTests"; path = Pods_TravelBudgetCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Parchment; path = Parchment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Parchment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B0DC77040A7CD43636C4E3A5C75324 /* PagingDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingDiff.swift; path = Parchment/Structs/PagingDiff.swift; sourceTree = "<group>"; };
 		CD149D0E7A824B90D9B9DFD87924D2B5 /* PagingCellLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCellLayoutAttributes.swift; path = Parchment/Classes/PagingCellLayoutAttributes.swift; sourceTree = "<group>"; };
 		CE395C6974F64551116BF0EF2246068D /* Tween.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tween.swift; path = Parchment/Protocols/Tween.swift; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 		9D9D5681DF7D15876028F0C8789CAD9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */,
+				BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment.framework */,
 				EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */,
 				FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
 				BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */,
@@ -412,7 +412,6 @@
 				D2A867AB04571E77BB9A0F0A3D5EEC91 /* UIView+constraints.swift */,
 				CF427280596530A3F853A1AB245148B7 /* Support Files */,
 			);
-			name = Parchment;
 			path = Parchment;
 			sourceTree = "<group>";
 		};
@@ -538,7 +537,7 @@
 			);
 			name = Parchment;
 			productName = Parchment;
-			productReference = BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */;
+			productReference = BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
@@ -811,11 +810,11 @@
 			baseConfigurationReference = FAEC2219D153007838F60EAE7A2C3390 /* Parchment.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -831,6 +830,7 @@
 				MODULEMAP_FILE = "Target Support Files/Parchment/Parchment.modulemap";
 				PRODUCT_MODULE_NAME = Parchment;
 				PRODUCT_NAME = Parchment;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -846,11 +846,11 @@
 			baseConfigurationReference = 29537E69AB627E1FFD07122CDBFDFA0E /* Parchment.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -866,6 +866,7 @@
 				MODULEMAP_FILE = "Target Support Files/Parchment/Parchment.modulemap";
 				PRODUCT_MODULE_NAME = Parchment;
 				PRODUCT_NAME = Parchment;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";

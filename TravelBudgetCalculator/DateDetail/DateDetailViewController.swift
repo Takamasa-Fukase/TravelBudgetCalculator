@@ -33,37 +33,20 @@ class DateDetailViewController: UIViewController {
      */
     var toYenRate: Double = 0.15
     
+    var date: String = ""
+    var cityName: String = ""
     var data: [PaymentListSection] = [
         PaymentListSection(
             paymentType: .transportation,
-            items: [
-                PaymentListItem(
-                    title: "空港から市内のバス",
-                    amount: 4000,
-                    currencyType: .ARA
-                ),
-                PaymentListItem(
-                    title: "タクシー",
-                    amount: 1200.25,
-                    currencyType: .ARA
-                ),
-            ]
+            items: []
         ),
         PaymentListSection(
             paymentType: .food,
-            items: [
-                PaymentListItem(
-                    title: "スーパー",
-                    amount: 87200.58,
-                    currencyType: .ARA
-                )
-            ]
+            items: []
         ),
         PaymentListSection(
             paymentType: .other,
-            items: [
-                
-            ]
+            items: []
         )
     ]
     
