@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="品目" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-po-dsE">
-                        <rect key="frame" x="16" y="4" width="301" height="24"/>
+                        <rect key="frame" x="16" y="4" width="249" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="52z-tj-n4O"/>
                         </constraints>
@@ -47,10 +47,22 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-ZU-mKG">
+                        <rect key="frame" x="277" y="-4" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Weq-rb-bxH"/>
+                            <constraint firstAttribute="height" constant="40" id="vZB-A0-4jt"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="darkTextColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
+                        <connections>
+                            <action selector="menuButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="24q-L8-JV3"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="trailing" secondItem="X7q-W6-8lT" secondAttribute="trailing" constant="-4" id="Hyu-hE-wDL"/>
-                    <constraint firstAttribute="trailing" secondItem="Buo-po-dsE" secondAttribute="trailing" constant="16" id="J81-4H-5qk"/>
                     <constraint firstItem="Buo-po-dsE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Lab-qw-ck5"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.55" id="MhI-Pq-cB9"/>
                     <constraint firstItem="Buo-po-dsE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="RI3-6d-xbA"/>
@@ -61,6 +73,9 @@
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="pWx-dg-azF"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qGT-o7-1wF"/>
                     <constraint firstAttribute="trailing" secondItem="g5b-eb-gPQ" secondAttribute="trailing" constant="16" id="qlc-j2-tNk"/>
+                    <constraint firstItem="pDh-ZU-mKG" firstAttribute="centerY" secondItem="Buo-po-dsE" secondAttribute="centerY" id="quo-A6-JOI"/>
+                    <constraint firstAttribute="trailing" secondItem="pDh-ZU-mKG" secondAttribute="trailing" constant="16" id="ryb-sq-cog"/>
+                    <constraint firstItem="pDh-ZU-mKG" firstAttribute="leading" secondItem="Buo-po-dsE" secondAttribute="trailing" constant="12" id="whq-dU-ZeB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -73,4 +88,10 @@
             <point key="canvasLocation" x="84.732824427480907" y="38.380281690140848"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

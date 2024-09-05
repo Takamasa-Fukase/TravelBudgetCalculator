@@ -8,8 +8,10 @@
 import UIKit
 
 class PaymentListItemCell: UITableViewCell {    
-    var didEndEditingAmount: ((Double) -> Void) = {_ in }
-    
+    var id: UUID = UUID()
+    var didEndEditingAmount: ((Double) -> Void) = { _ in }
+    var menuButtonTapped: ((UUID) -> Void) = { _ in }
+
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var currencyLabel: UILabel!
@@ -23,6 +25,10 @@ class PaymentListItemCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction private func menuButtonTapped(_ sender: Any) {
+        menuButtonTapped(id)
     }
     
     func setupAmountTextField() {

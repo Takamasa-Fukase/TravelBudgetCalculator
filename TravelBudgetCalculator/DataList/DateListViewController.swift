@@ -23,13 +23,13 @@ class DateListViewController: UIViewController {
                 print("ジャンルデータが入っていないのでデフォルトデータを挿入しました: \(dailyExpense.date), \(dailyExpense.cityName)")
                 dateList[index].expenseData = [
                     .init(paymentType: .transportation, items: [
-                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                        .init(id: UUID(), title: "", amount: 0, currencyType: dailyExpense.currency)
                     ]),
                     .init(paymentType: .food, items: [
-                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                        .init(id: UUID(), title: "", amount: 0, currencyType: dailyExpense.currency)
                     ]),
                     .init(paymentType: .other, items: [
-                        .init(title: "", amount: 0, currencyType: dailyExpense.currency)
+                        .init(id: UUID(), title: "", amount: 0, currencyType: dailyExpense.currency)
                     ])
                 ]
             }
