@@ -44,6 +44,7 @@ class DateDetailViewController: UIViewController {
         tableView.register(UINib(nibName: "PaymentListItemCell", bundle: nil), forCellReuseIdentifier: "PaymentListItemCell")
         tableView.register(UINib(nibName: "DateDetailGenreSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "DateDetailGenreSectionHeader")
         tableView.register(UINib(nibName: "DateDetailGenreSectionFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "DateDetailGenreSectionFooter")
+        tableView.keyboardDismissMode = .onDrag
     }
     
     func yenAmountText(amount: Double, toYenRate: Double) -> String {

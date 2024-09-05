@@ -12,6 +12,7 @@ class PaymentListItemCell: UITableViewCell {
     var didEndEditing: ((String, Double) -> Void) = { _, _  in }
     var menuButtonTapped: ((UUID) -> Void) = { _ in }
     var showError: ((String) -> Void) = { _ in }
+    var toolBar = UIToolbar()
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
@@ -21,6 +22,8 @@ class PaymentListItemCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        InputFormUtil.setupToolBar(toolBar, target: nil, action: #selector(done))
+        setupTitleTextField()
         setupAmountTextField()
     }
 
@@ -32,12 +35,19 @@ class PaymentListItemCell: UITableViewCell {
         menuButtonTapped(id)
     }
     
-    func setupAmountTextField() {
-        amountTextField.delegate = self
-        amountTextField.keyboardType = .numberPad
+    func setupTitleTextField() {
+        titleTextField.delegate = self
         amountTextField.returnKeyType = .done
+    }
+    
+    func setupAmountTextField() {
+        InputFormUtil.setupNumberTextField(amountTextField, delegate: self, toolBar: toolBar)
         amountTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 0))
         amountTextField.rightViewMode = .always
+    }
+    
+    @objc func done() {
+        contentView.endEditing(true)
     }
 }
 
