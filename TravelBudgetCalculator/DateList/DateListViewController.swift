@@ -106,10 +106,13 @@ extension DateListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateListCell", for: indexPath) as! DateListCell
-        let item = data[indexPath.section]
+        let item = data[indexPath.row]
         cell.dateLabel.text = item.date
         cell.cityNameLabel.text = item.cityName
         cell.data = item.expenseData
+        cell.didUpdateCellHeight = { [weak self] in
+//            self?.tableView.reloadSections(IndexSet(integer: 0), with: .none)
+        }
         return cell
     }
 }

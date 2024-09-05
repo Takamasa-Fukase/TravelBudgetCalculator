@@ -30,14 +30,31 @@ class DateListCell: UITableViewCell {
             items: []
         )
     ]
+    var didUpdateCellHeight: (() -> Void) = {}
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTableView()
+        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    
+    deinit {
+        tableView.removeObserver(self, forKeyPath: "contentSize")
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize",
+           let newSize = change?[.newKey] as? CGSize {
+            print("高さを更新します: \(newSize.height)")
+            tableViewHeight.constant = newSize.height
+            // 親TableViewも更新するように通知する
+            didUpdateCellHeight()
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

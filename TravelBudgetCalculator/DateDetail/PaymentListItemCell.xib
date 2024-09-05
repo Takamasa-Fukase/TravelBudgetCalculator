@@ -16,20 +16,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="97"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="現地通貨での金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-W6-8lT">
-                        <rect key="frame" x="16" y="32" width="183" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="28" id="5oS-2f-tcs"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="品目" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-po-dsE">
                         <rect key="frame" x="16" y="4" width="301" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="52z-tj-n4O"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="現地通貨での金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-W6-8lT">
+                        <rect key="frame" x="16" y="32" width="183" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="5oS-2f-tcs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-eb-gPQ">
