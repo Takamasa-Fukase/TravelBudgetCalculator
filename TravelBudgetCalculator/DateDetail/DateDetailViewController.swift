@@ -9,6 +9,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+class TouchesBeganTableView: UITableView {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        superview?.touchesBegan(touches, with: event)
+    }
+}
+
 struct PaymentListSection {
     let paymentType: PaymentType
     var items: [PaymentListItem]
@@ -34,7 +40,7 @@ class DateDetailViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: TouchesBeganTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
