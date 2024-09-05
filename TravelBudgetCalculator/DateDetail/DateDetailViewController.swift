@@ -25,12 +25,6 @@ struct PaymentListItem {
 }
 
 class DateDetailViewController: UIViewController {
-    /*
-     - USD：144.93円
-     - ARA：0.15円
-     - COP：0.035円
-     - MXN：7.28円
-     */
     var toYenRate: Double = 0.15
     
     var date: String = ""
