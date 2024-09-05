@@ -131,6 +131,7 @@ extension DateDetailViewController: UITableViewDataSource {
         cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: toYenRate)
         cell.didEndEditingAmount = { [weak self] amount in
             cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
+            self?.data[indexPath.section].items[indexPath.row].amount = amount
             self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         return cell
