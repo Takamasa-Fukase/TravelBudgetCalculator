@@ -23,6 +23,7 @@
 		BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */; };
 		BC18F8702C89813D006C8D59 /* DateListViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18F86F2C89813D006C8D59 /* DateListViewController2.swift */; };
 		BC18F8722C898143006C8D59 /* DateListViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18F8712C898143006C8D59 /* DateListViewController2.storyboard */; };
+		BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */; };
 		BCA9A9382C822E7100084047 /* DestinationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9362C822E7100084047 /* DestinationListViewController.swift */; };
 		BCA9A93B2C822EA700084047 /* DestinationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */; };
 		BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */; };
@@ -85,6 +86,7 @@
 		BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
 		BC18F86F2C89813D006C8D59 /* DateListViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController2.swift; sourceTree = "<group>"; };
 		BC18F8712C898143006C8D59 /* DateListViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController2.storyboard; sourceTree = "<group>"; };
+		BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryData.swift; sourceTree = "<group>"; };
 		BCA9A9362C822E7100084047 /* DestinationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListViewController.swift; sourceTree = "<group>"; };
 		BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DestinationListViewController.storyboard; sourceTree = "<group>"; };
 		BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDestinationViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				BC0DFA762C81BC0100B705A7 /* SceneDelegate.swift */,
 				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
 				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
+				BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */,
 				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
 				BCA9A9322C822D8200084047 /* DestinationList */,
 				BCA9A9332C822DD500084047 /* CreateDestination */,
@@ -532,6 +535,7 @@
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
 				BCD007132C8931E10072B455 /* DateDetailGenreSectionHeader.swift in Sources */,
 				BC0DFA772C81BC0100B705A7 /* SceneDelegate.swift in Sources */,
+				BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */,
 				BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
