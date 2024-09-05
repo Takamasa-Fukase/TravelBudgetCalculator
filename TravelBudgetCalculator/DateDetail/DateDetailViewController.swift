@@ -26,7 +26,6 @@ struct PaymentListItem {
 }
 
 class DateDetailViewController: UIViewController {
-    var toYenRate: Double = 0.15
     var dailyExpense: DailyExpense = .init(date: "", cityName: "", currency: .USD, expenseData: [])
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -62,16 +61,16 @@ extension DateDetailViewController: UITableViewDelegate {
         sectionData.items.forEach({ item in
             sumAmount += item.amount
         })
-        sectionHeader.genreLabel.text = "\(genreName)：\(yenAmountText(amount: sumAmount, toYenRate: toYenRate))"
+        // MEMO: 後でitemごとに個別のレートに変更できる機能を作る場合は、合計をitemごとのレートで先に計算してから合算するように修正が必要
+        sectionHeader.genreLabel.text = "\(genreName)：\(yenAmountText(amount: sumAmount, toYenRate: dailyExpense.currency.toYenRate))"
         return sectionHeader
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
-        // TODO: 後で、画面というかセルに保持されている通貨を代入するように変更する
         sectionFooter.addFormButtonTapped = { [weak self] in
             self?.dailyExpense.expenseData[section].items.append(
-                PaymentListItem(id: UUID(), title: "", amount: 0.0, currencyType: .ARA)
+                PaymentListItem(id: UUID(), title: "", amount: 0.0, currencyType: self?.dailyExpense.currency ?? .USD)
             )
             self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
         }
@@ -94,16 +93,24 @@ extension DateDetailViewController: UITableViewDataSource {
         cell.id = item.id
         cell.titleTextField.text = "\(item.title)"
         cell.amountTextField.text = "\(item.amount)"
+        // MARK: ここでは日付データが持っている共通通貨ではなく、item単体で保持されている通貨を使用する。
+        // 今後、個別のセルの通貨を編集して保存する機能を作る予定があるので。（トルコでユーロを使ったみたいに。）
         cell.currencyLabel.text = "(\(item.currencyType.code))"
-        cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: toYenRate)
+        cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: item.currencyType.toYenRate)
         cell.didEndEditingAmount = { [weak self] amount in
-            cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
             self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = amount
             self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         cell.menuButtonTapped = { [weak self] id in
-            let yenText = self?.yenAmountText(amount: item.amount, toYenRate: self?.toYenRate ?? 0.0) ?? ""
-            let message = "項目名：\(item.title)\n現地通貨：\(item.amount)\n（\(yenText)）"
+            guard let selectedItem = self?.dailyExpense.expenseData.first(where: { $0.items.contains(where: { $0.id == id }) })?.items.first(where: { $0.id == id }) else {
+                let errorAlert = UIAlertController(title: "エラーが発生しました", message: "選択されたItemの取得に失敗", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "閉じる", style: .default)
+                errorAlert.addAction(ok)
+                self?.present(errorAlert, animated: true)
+                return
+            }
+            let yenText = self?.yenAmountText(amount: selectedItem.amount, toYenRate: selectedItem.currencyType.toYenRate) ?? ""
+            let message = "項目名：\(selectedItem.title)\n現地通貨：\(selectedItem.amount)\n（\(yenText)）"
             let alert = UIAlertController(
                 title: "項目を削除します",
                 message: message,
@@ -116,13 +123,9 @@ extension DateDetailViewController: UITableViewDataSource {
                 }) ?? 0
                 let rowIndex = self?.dailyExpense.expenseData[sectionIndex].items.firstIndex(where: { $0.id == id }) ?? 0
                 let selectedIndexPath = IndexPath(row: rowIndex, section: sectionIndex)
-                
-                print("対象のindexPath' \(selectedIndexPath), 削除前のデータ:\(self?.tableView.indexPathsForVisibleRows)")
                 // 該当のデータを削除して画面を更新
                 self?.dailyExpense.expenseData[selectedIndexPath.section].items.remove(at: selectedIndexPath.row)
-                print("データをまず削除した")
                 self?.tableView.deleteRows(at: [selectedIndexPath], with: .left)
-                print("対象のindexPath' \(selectedIndexPath), 削除した後のデータ:\(self?.tableView.indexPathsForVisibleRows)")
             }
             alert.addAction(cancel)
             alert.addAction(delete)

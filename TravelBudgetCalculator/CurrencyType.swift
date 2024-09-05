@@ -86,4 +86,20 @@ enum CurrencyType: String, CaseIterable {
     var description: String {
         return self.rawValue
     }
+    
+    var toYenRate: Double {
+        // TODO: UDに保存されているデータを返す
+        switch self {
+        case .USD:
+            return 144.93
+        case .ARA:
+            return 0.15
+        case .COP:
+            return 0.035
+        case .MXN:
+            return 7.28
+        default:
+            return 0.0
+        }
+    }
 }
