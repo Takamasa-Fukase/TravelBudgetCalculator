@@ -80,7 +80,7 @@ extension DateDetailViewController: UITableViewDelegate {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
         sectionFooter.addFormButtonTapped = { [weak self] in
             self?.dailyExpense.expenseData[section].items.append(
-                PaymentListItem(id: UUID(), title: "", amount: 0.0, currencyType: self?.dailyExpense.currency ?? .USD)
+                PaymentListItem(id: UUID(), title: "", amount: 0, currencyType: self?.dailyExpense.currency ?? .USD)
             )
             self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
         }

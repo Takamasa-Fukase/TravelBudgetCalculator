@@ -27,7 +27,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="現地通貨での金額" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7q-W6-8lT">
-                        <rect key="frame" x="16" y="44" width="183" height="32"/>
+                        <rect key="frame" x="16" y="46" width="183" height="32"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="5oS-2f-tcs"/>
@@ -36,13 +36,13 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-eb-gPQ">
-                        <rect key="frame" x="273" y="53" width="44" height="14.333333333333329"/>
+                        <rect key="frame" x="273" y="55" width="44" height="14.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(USD)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zic-8b-dCQ">
-                        <rect key="frame" x="155" y="44" width="40" height="32"/>
+                        <rect key="frame" x="155" y="46" width="40" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="J7f-tx-BCY"/>
                         </constraints>
@@ -72,8 +72,8 @@
                     <constraint firstItem="Buo-po-dsE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="RI3-6d-xbA"/>
                     <constraint firstItem="g5b-eb-gPQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="aW5-zx-UAQ"/>
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="height" secondItem="X7q-W6-8lT" secondAttribute="height" id="dof-UF-ITV"/>
-                    <constraint firstItem="X7q-W6-8lT" firstAttribute="top" secondItem="Buo-po-dsE" secondAttribute="bottom" constant="4" id="iYD-7C-o5U"/>
-                    <constraint firstAttribute="bottom" secondItem="X7q-W6-8lT" secondAttribute="bottom" constant="4" id="m31-6I-5ow"/>
+                    <constraint firstItem="X7q-W6-8lT" firstAttribute="top" secondItem="Buo-po-dsE" secondAttribute="bottom" constant="6" id="iYD-7C-o5U"/>
+                    <constraint firstAttribute="bottom" secondItem="X7q-W6-8lT" secondAttribute="bottom" constant="8" id="m31-6I-5ow"/>
                     <constraint firstItem="Zic-8b-dCQ" firstAttribute="centerY" secondItem="X7q-W6-8lT" secondAttribute="centerY" id="pWx-dg-azF"/>
                     <constraint firstItem="X7q-W6-8lT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qGT-o7-1wF"/>
                     <constraint firstAttribute="trailing" secondItem="g5b-eb-gPQ" secondAttribute="trailing" constant="16" id="qlc-j2-tNk"/>

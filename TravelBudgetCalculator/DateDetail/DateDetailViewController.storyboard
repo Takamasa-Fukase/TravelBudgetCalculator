@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-ww-ZRk">
-                                <rect key="frame" x="0.0" y="140.66666666666669" width="393" height="711.33333333333326"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-ww-ZRk">
+                                <rect key="frame" x="0.0" y="152.66666666666669" width="393" height="699.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="ltW-Mw-nYl"/>
@@ -43,7 +43,7 @@
                             <constraint firstItem="ruR-Hg-1HJ" firstAttribute="top" secondItem="YUb-sY-R1B" secondAttribute="bottom" constant="4" id="2SO-eZ-yB3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ruR-Hg-1HJ" secondAttribute="trailing" constant="16" id="2TZ-1f-YhJ"/>
                             <constraint firstAttribute="bottom" secondItem="Blu-ww-ZRk" secondAttribute="bottom" id="WaS-y3-bqV"/>
-                            <constraint firstItem="Blu-ww-ZRk" firstAttribute="top" secondItem="ruR-Hg-1HJ" secondAttribute="bottom" id="aWb-kH-j95"/>
+                            <constraint firstItem="Blu-ww-ZRk" firstAttribute="top" secondItem="ruR-Hg-1HJ" secondAttribute="bottom" constant="12" id="aWb-kH-j95"/>
                             <constraint firstItem="YUb-sY-R1B" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="b0U-G1-718"/>
                             <constraint firstItem="ruR-Hg-1HJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="dCJ-b6-rM8"/>
                             <constraint firstItem="YUb-sY-R1B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="haB-71-Ci0"/>
