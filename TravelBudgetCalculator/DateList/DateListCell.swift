@@ -31,7 +31,8 @@ class DateListCell: UITableViewCell {
         )
     ]
     var didUpdateCellHeight: (() -> Void) = {}
-    var didUpdateData: (([PaymentListSection]) -> Void) = { _ in }
+//    var didUpdateData: (([PaymentListSection]) -> Void) = { _ in }
+    var addButtonTapped: ((Int) -> Void) = { _ in }
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -53,6 +54,7 @@ class DateListCell: UITableViewCell {
            let newSize = change?[.newKey] as? CGSize {
             print("高さを更新します: \(newSize.height)")
             tableViewHeight.constant = newSize.height
+            tableView.layoutIfNeeded()
             // 親TableViewも更新するように通知する
             didUpdateCellHeight()
         }
@@ -93,11 +95,12 @@ extension DateListCell: UITableViewDelegate {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
         // TODO: 後で、画面というかセルに保持されている通貨を代入するように変更する
         sectionFooter.addFormButtonTapped = { [weak self] in
-            self?.data[section].items.append(
-                PaymentListItem(title: "", amount: 0.0, currencyType: .ARA)
-            )
-            self!.didUpdateData(self!.data)
-            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
+//            self?.data[section].items.append(
+//                PaymentListItem(title: "", amount: 0.0, currencyType: .ARA)
+//            )
+//            self!.didUpdateData(self!.data)
+//            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
+            self!.addButtonTapped(section)
         }
         return sectionFooter
     }
@@ -120,10 +123,10 @@ extension DateListCell: UITableViewDataSource {
         cell.currencyLabel.text = "(\(item.currencyType.code))"
         cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: toYenRate)
         cell.didEndEditingAmount = { [weak self] amount in
-            cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
-            self?.data[indexPath.section].items[indexPath.row].amount = amount
-            self!.didUpdateData(self!.data)
-            self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
+//            cell.yenDisplayLabel.text = self?.yenAmountText(amount: amount, toYenRate: self?.toYenRate ?? 0.0)
+//            self?.data[indexPath.section].items[indexPath.row].amount = amount
+//            self!.didUpdateData(self!.data)
+//            self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         return cell
     }
