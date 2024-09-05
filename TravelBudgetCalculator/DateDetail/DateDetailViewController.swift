@@ -60,6 +60,7 @@ class DateDetailViewController: UIViewController {
         tableView.register(UINib(nibName: "DateDetailGenreSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "DateDetailGenreSectionHeader")
         tableView.register(UINib(nibName: "DateDetailGenreSectionFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "DateDetailGenreSectionFooter")
         tableView.keyboardDismissMode = .onDrag
+        tableView.contentInset.bottom = 200
     }
     
     func yenAmountText(amount: Double, toYenRate: Double) -> String {
@@ -121,7 +122,11 @@ extension DateDetailViewController: UITableViewDataSource {
         
         cell.id = item.id
         cell.titleTextField.text = "\(item.title)"
-        cell.amountTextField.text = "\(item.amount)"
+        if item.amount == 0 {
+            cell.amountTextField.text = ""
+        }else {
+            cell.amountTextField.text = "\(item.amount)"
+        }
         // MARK: ここでは日付データが持っている共通通貨ではなく、item単体で保持されている通貨を使用する。
         // 今後、個別のセルの通貨を編集して保存する機能を作る予定があるので。（トルコでユーロを使ったみたいに。）
         cell.currencyLabel.text = "(\(item.currencyType.code))"
