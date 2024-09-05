@@ -1,8 +1,8 @@
 //
 //  UIView+Extension.swift
-//  AR-GunMan
+//  TravelBudgetCalculator
 //
-//  Created by Takahiro Fukase on 2021/11/27.
+//  Created by ウルトラ深瀬 on 5/9/24.
 //
 
 import UIKit
