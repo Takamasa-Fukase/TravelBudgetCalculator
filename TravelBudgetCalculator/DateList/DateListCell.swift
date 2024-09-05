@@ -42,23 +42,25 @@ class DateListCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupTableView()
-        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+//        tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
     }
     
     deinit {
-        tableView.removeObserver(self, forKeyPath: "contentSize")
+//        tableView.removeObserver(self, forKeyPath: "contentSize")
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "contentSize",
-           let newSize = change?[.newKey] as? CGSize {
-            print("高さを更新します: \(newSize.height)")
-            tableViewHeight.constant = newSize.height
-            tableView.layoutIfNeeded()
-            // 親TableViewも更新するように通知する
-            didUpdateCellHeight()
-        }
-    }
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "contentSize",
+//           let newSize = change?[.newKey] as? CGSize {
+//            // 親TableViewも更新するように通知する
+//            didUpdateCellHeight()
+//            print("高さを更新します: \(newSize.height)")
+//            tableViewHeight.constant = newSize.height
+////            tableView.invalidateIntrinsicContentSize()
+////            tableView.layoutIfNeeded()
+//            
+//        }
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

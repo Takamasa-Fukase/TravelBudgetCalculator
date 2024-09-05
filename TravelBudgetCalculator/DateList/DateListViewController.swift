@@ -140,8 +140,11 @@ extension DateListViewController: UITableViewDataSource {
         cell.cityNameLabel.text = item.cityName
         cell.data = item.expenseData
         cell.didUpdateCellHeight = { [weak self] in
+            print("高さが更新された: \(self?.data[indexPath.row].date)")
 //            self?.tableView.reloadSections(IndexSet(integer: 0), with: .none)
 //            self?.tableView.reloadData()
+//            self?.tableView.beginUpdates()
+//            self?.tableView.endUpdates()
         }
 //        cell.didUpdateData = { [weak self] newData in
 //            self?.data[indexPath.row].expenseData = newData
@@ -156,9 +159,11 @@ extension DateListViewController: UITableViewDataSource {
             )
             print("データが更新されました:\n - \(self!.data)")
 //            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
+//            cell.tableView.reloadData()
             self?.tableView.reloadData()
         }
         cell.tableView.reloadData()
+        cell.tableViewHeight.constant = cell.tableView.contentSize.height + 200
         return cell
     }
 }
