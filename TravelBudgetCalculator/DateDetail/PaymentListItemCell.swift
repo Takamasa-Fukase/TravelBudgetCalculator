@@ -12,7 +12,6 @@ class PaymentListItemCell: UITableViewCell {
     var didEndEditing: ((String, Double) -> Void) = { _, _  in }
     var menuButtonTapped: ((UUID) -> Void) = { _ in }
     var showError: ((String) -> Void) = { _ in }
-    var toolBar = UIToolbar()
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
@@ -22,7 +21,6 @@ class PaymentListItemCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        InputFormUtil.setupToolBar(toolBar, target: nil, action: #selector(done))
         setupTitleTextField()
         setupAmountTextField()
     }
@@ -36,12 +34,14 @@ class PaymentListItemCell: UITableViewCell {
     }
     
     func setupTitleTextField() {
-        titleTextField.delegate = self
+//        titleTextField.delegate = self
         amountTextField.returnKeyType = .done
     }
     
     func setupAmountTextField() {
-        InputFormUtil.setupNumberTextField(amountTextField, delegate: self, toolBar: toolBar)
+//        amountTextField.delegate = self
+        amountTextField.keyboardType = .numbersAndPunctuation
+        amountTextField.returnKeyType = .done
         amountTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 0))
         amountTextField.rightViewMode = .always
     }
@@ -51,14 +51,14 @@ class PaymentListItemCell: UITableViewCell {
     }
 }
 
-extension PaymentListItemCell: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        let title = titleTextField.text ?? ""
-        guard let doubleAmount = Double(amountTextField.text ?? "") else {
-            showError("金額に不正な文字が入っていたので更新失敗")
-            return
-        }
-        // 円表示を更新するために通知
-        didEndEditing(title, doubleAmount)
-    }
-}
+//extension PaymentListItemCell: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        let title = titleTextField.text ?? ""
+//        guard let doubleAmount = Double(amountTextField.text ?? "") else {
+//            showError("金額に不正な文字が入っていたので更新失敗")
+//            return
+//        }
+//        // 円表示を更新するために通知
+//        didEndEditing(title, doubleAmount)
+//    }
+//}

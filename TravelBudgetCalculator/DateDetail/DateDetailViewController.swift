@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 struct PaymentListSection {
     let paymentType: PaymentType
@@ -26,6 +28,8 @@ struct PaymentListItem {
 }
 
 class DateDetailViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    var activeTextField = BehaviorRelay<UIView?>(value: nil)
     var dailyExpense: DailyExpense = .init(date: "", cityName: "", currency: .USD, expenseData: [])
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -38,6 +42,11 @@ class DateDetailViewController: UIViewController {
         dateLabel.text = dailyExpense.date
         cityNameLabel.text = dailyExpense.cityName
         setupTableView()
+        setRxKeyboardMovement(disposeBag: disposeBag,
+                              scrollView: tableView,
+                              textField: activeTextField.asObservable(),
+                              view: view,
+                              buttonConstraint: NSLayoutConstraint())
     }
     
     func setupTableView() {
@@ -91,6 +100,11 @@ extension DateDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentListItemCell", for: indexPath) as! PaymentListItemCell
         let item = dailyExpense.expenseData[indexPath.section].items[indexPath.row]
+        
+        // Delegateを親VCに設定
+        cell.titleTextField.delegate = self
+        cell.amountTextField.delegate = self
+        
         cell.id = item.id
         cell.titleTextField.text = "\(item.title)"
         cell.amountTextField.text = "\(item.amount)"
@@ -135,5 +149,12 @@ extension DateDetailViewController: UITableViewDataSource {
             self?.showError(message: message)
         }
         return cell
+    }
+}
+
+extension DateDetailViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeTextField.accept(textField)
+        return true
     }
 }

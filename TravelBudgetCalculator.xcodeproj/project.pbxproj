@@ -28,6 +28,7 @@
 		BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */; };
 		BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */; };
 		BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731582C89BF23007C56A5 /* UIView+Extension.swift */; };
+		BCA7315B2C89E81C007C56A5 /* KeyboardOverlapUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */; };
 		BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController0.swift */; };
 		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
@@ -89,6 +90,7 @@
 		BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormUtil.swift; sourceTree = "<group>"; };
 		BCA731582C89BF23007C56A5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardOverlapUtil.swift; sourceTree = "<group>"; };
 		BCA9A9402C822EED00084047 /* DateListViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController0.swift; sourceTree = "<group>"; };
 		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */,
 				BCA731582C89BF23007C56A5 /* UIView+Extension.swift */,
 				BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */,
+				BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */,
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
 				BC58CB5C2C8989C100F40E16 /* UnusedFiles */,
@@ -511,6 +514,7 @@
 				BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */,
 				BCD007172C8934AA0072B455 /* DateDetailGenreSectionFooter.swift in Sources */,
 				BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */,
+				BCA7315B2C89E81C007C56A5 /* KeyboardOverlapUtil.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
 				BCD007102C8891080072B455 /* DateListCell.swift in Sources */,
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
