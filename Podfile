@@ -6,6 +6,7 @@ target 'TravelBudgetCalculator' do
   use_frameworks!
 
   # Pods for TravelBudgetCalculator
+  pod 'Parchment', '~> 4.0'
 
   target 'TravelBudgetCalculatorTests' do
     inherit! :search_paths

@@ -7,68 +7,229 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27E7A24D164927F8D5234B764ACED079 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DA165287C90CF0C6F2669459E26154D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		37AE89972AC238CCF4F60AC3C9FE4DE1 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		522C53EB0411D306BFE11F5164F31015 /* Pods-TravelBudgetCalculatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72D787130CF444AEBC1810B416E3B4CA /* Pods-TravelBudgetCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */; };
-		7356E1900FCFCD73A83AB74B5DD96E50 /* Pods-TravelBudgetCalculatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */; };
+		00FFF1CB43ED89B86B5DC3BE32CF528D /* PagingMenuHorizontalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC3E0AE0E2B68A99E1FB2A699B88DC /* PagingMenuHorizontalAlignment.swift */; };
+		0447707D9056B8A166907FB216971672 /* PagingIndicatorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5F6F179F1F033F454934D658EF841 /* PagingIndicatorOptions.swift */; };
+		05304E38E7FEDF6C2DF9BE8099FB1D42 /* PagingViewControllerInfiniteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CB0D9AFAA9BAB1B10CDBE339CA8AA9 /* PagingViewControllerInfiniteDataSource.swift */; };
+		07149EA1769BCDDCA8CCFB51978E172F /* PagingBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29360362D4F944D274E9038B1A02D183 /* PagingBorderView.swift */; };
+		0752BD69201A8163B72A4B9E2D61BAA2 /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE395C6974F64551116BF0EF2246068D /* Tween.swift */; };
+		07C527D0D93A69C2AD9720CF02494130 /* PagingMenuPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF62936BA09637D4C602D76FBE638E /* PagingMenuPosition.swift */; };
+		0B3BE7236C3C7CC013617C482902E113 /* Parchment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A157526399877D94C9929D5A1221C934 /* Parchment-dummy.m */; };
+		0EE8DBBC6EF7A4479E0B3AFE629DE2CF /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3AF630D220BF4B96D6A5F80A09FCA6 /* CollectionView.swift */; };
+		0F2A6337218D467AC7589447D04475F0 /* PageViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6AE369683FEE926A40E2B0C4289BC /* PageViewCoordinator.swift */; };
+		0FB10024FB8FFE37742B14D7EA7A0F3E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E87930CAE3E12E4FE0349528A71CD1 /* PageView.swift */; };
+		1449FCF609D29D7C9BF81ADFA9BD2B06 /* PageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518AD153A58E66EA56A0DFC555B5B10 /* PageViewManager.swift */; };
+		1C0C752A145074A56BFDAF0203605B19 /* Pods-TravelBudgetCalculator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D37F018F979655BC91353D3A448812 /* Pods-TravelBudgetCalculator-dummy.m */; };
+		1C2F9EDA346E6E02C40EC6D09BE0769F /* PagingIndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8A000A5B3E79EC97F7C299E8B2BFBB /* PagingIndicatorStyle.swift */; };
+		2DC8CD9A91531D73FDFAE72A284E4725 /* PagingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8A596645596D09D6D941D60577C299 /* PagingItem.swift */; };
+		2EF4F974FBAB00B39F5AF4D13532B094 /* PagingSizeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0FE76E2169B30206CBF6E32069138E /* PagingSizeCache.swift */; };
+		32396F8D78AE56E6F6FB57193E32D181 /* PagingMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34E98FF74AA122A9EF3DF755BDFCB0 /* PagingMenuDataSource.swift */; };
+		35195DF0F7ADAC1540671DBF12D697C4 /* PagingMenuInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED560C050F78AF7F541D17C48B67DD /* PagingMenuInteraction.swift */; };
+		419D8F5A4C4BC0753420B1568AE06A38 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D8E86894061ABEC8B9D190148BCAC0D /* Pods-TravelBudgetCalculator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4728366DF1D852CD4B802246D16FFC6C /* PagingViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316654F9593CA57184099CF3279FBD19 /* PagingViewControllerDataSource.swift */; };
+		4F838C40F66AB30482D48911EA340DBF /* PagingMenuItemSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F43866DF0CB5E63B54BBF61DE0E657 /* PagingMenuItemSize.swift */; };
+		4FDFE8B6D384232B4DFEC415DFBF5766 /* InvalidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CBEBBD94C3A2014D39E32611AA26E /* InvalidationState.swift */; };
+		522C53EB0411D306BFE11F5164F31015 /* Pods-TravelBudgetCalculatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B29ABF8B582F927ECC4E7EC5DE86BD36 /* Pods-TravelBudgetCalculatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546F1CBC8A1051DA4D726E9763012DD1 /* PagingIndexItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27648433ABE6E34C74BAB37D366D93B /* PagingIndexItem.swift */; };
+		555D9914240EA62C4A981D2E607039CA /* PagingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF64D7785603639D2F8C37A24D848B /* PagingDistance.swift */; };
+		56ACB34F292882432D7707AD631C9804 /* PagingHostingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D375DD6FF68E0EF0F28F2F91340D7 /* PagingHostingIndicatorView.swift */; };
+		5822116C9421849008163553FCA42A3B /* PageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8823FB3814B9AA3EE47A69628FBF6E /* PageState.swift */; };
+		5F608882ADCF7E3CE61A560626BDF7DB /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB2C5817DFBE9609E5353D833CEF0A /* PagingViewController.swift */; };
+		61A72753B279B49C978B84A2AC4D1D32 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597698E7842D2525792D76115E75149B /* UIEdgeInsets.swift */; };
+		690D0162E6A39C16265D81D0C3654DAD /* PagingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF43557F728BAEBF49BCBB4BB01B99F /* PagingDirection.swift */; };
+		69E118EF05306BFAE4D4AA40D1CE5422 /* PagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829E44A3CFB9657F708B6717A9548A2B /* PagingController.swift */; };
+		6B86AE4414CC895B9F3EB30E40D37B51 /* PagingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA2EB72191177414D2AEDDB409A114 /* PagingCellViewModel.swift */; };
+		6D5047120743AD3E675AAB2299004860 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918AAA8A85C0F1426F5D6840B30060CB /* PageViewController.swift */; };
+		713249888FE225E378F970574BCB4A8C /* PageContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB000E99DADEC47BE8912ECE3A78DD2 /* PageContentConfiguration.swift */; };
+		7356E1900FCFCD73A83AB74B5DD96E50 /* Pods-TravelBudgetCalculatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8F49FEA84BEC8D65BB3692B2C8B590 /* Pods-TravelBudgetCalculatorTests-dummy.m */; };
+		75E4BD5FC3308A2F097E2282116CFB69 /* Parchment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2582DDCFFD86701D8FC3572E15C084 /* Parchment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CC5F369E54891E1D6E34FAB802BA1B6 /* PagingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B289B254ED1C44B62190B9EB3271BB0B /* PagingCell.swift */; };
+		810DDB3B223892647B292DADDD1F6C68 /* PagingIndicatorLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484AB96E24CDDF16D3C8B5F01C8D4C0 /* PagingIndicatorLayoutAttributes.swift */; };
+		861D9599A679FDD90DBF6BC57D3CC37D /* PagingMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894BBA08692434542105ABA4F7EF177 /* PagingMenuTransition.swift */; };
+		87331E777A479569A767E104ABECE42B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5485891C8F360D416812BF98A768E65 /* Page.swift */; };
+		893A96F8C247BCD04F6525460A3C4321 /* PagingMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB447BCC0151F743A66EF9F8A66D2DD7 /* PagingMenuDelegate.swift */; };
+		8B46B7D7F4AEE3CF75AC504DC1625709 /* PageViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E630C109263092AA820D4049DB8C64 /* PageViewState.swift */; };
+		8E9E3526B3FD6684F7C02474A563718A /* AnyPagingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEF9C960EACE2C42B5B1E39A83A4E74 /* AnyPagingItem.swift */; };
+		917E44BABDBA8850E78913CA0AA77E58 /* PageItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF794E3F0B2F9F7D75DA058B1419E99 /* PageItemCell.swift */; };
+		92A036865BF45000B7886DE55DA7E3C0 /* PagingNavigationOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7971651FC1F7D1B0793182F10E206718 /* PagingNavigationOrientation.swift */; };
+		948C651A4D162B85B6585B19EEE05617 /* UIColor+interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18807DF4A8F92E393E7897BE6EA623 /* UIColor+interpolation.swift */; };
+		9673417D2F586707ED39D0EEAA409D29 /* PagingContentInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB52F9EA5EF2FAA8B1704377F6091E /* PagingContentInteraction.swift */; };
+		9D29492D90C59F54DD8625EE424C2262 /* PagingStaticDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7BD4658BE2390EACBC1885DE4437B2 /* PagingStaticDataSource.swift */; };
+		9F177971BF7D3F3A6114AE912967183C /* PageViewManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D716D2F111A9DABE628E7345AB6DB2C /* PageViewManagerDelegate.swift */; };
+		9F91EB21B13FE2DDF3650B8D1218A859 /* PagingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36169647CB7DD1138A2C7268B6D61C67 /* PagingMenuView.swift */; };
+		9FACACAF03F3531CFFAED57E7A92ABEE /* PagingDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0DC77040A7CD43636C4E3A5C75324 /* PagingDiff.swift */; };
+		9FEF31D79B725EF98294757BF80BE57F /* PagingControllerRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8161DAACE21564AFE49DA73632D2F /* PagingControllerRepresentableView.swift */; };
+		A440CCC0E530A46D61158ECDDE33805D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A5441B71E26F7B4DCD518EC14D1296BD /* PagingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459BCB64467DEED4F8B6003A2186115 /* PagingItems.swift */; };
+		A5699068969A64693C08D362037D0A83 /* PagingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DECE07BDA1F1015052B741303B9BF /* PagingOptions.swift */; };
+		A8ECFB7B73FEBE40811FC79C3717F1DA /* PagingCellLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD149D0E7A824B90D9B9DFD87924D2B5 /* PagingCellLayoutAttributes.swift */; };
+		A9AC9F287FA48D582840C9045497726A /* PagingFiniteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E93EDAFE7FA9820D10B28450F13113 /* PagingFiniteDataSource.swift */; };
+		AB7F0F13E6083672A7239B5AE370E945 /* PagingBorderOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BD978BD9FA1A5768EF0383D836B07 /* PagingBorderOptions.swift */; };
+		AF9F97D8B0B04EC01B6943E1881733A8 /* PageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04AE75C87524A1092198619EB4E0F7D /* PageViewControllerDataSource.swift */; };
+		B2AB1A56225C509443F77CCA170260FB /* PagingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D300DF876C8A67A3000F3A4C5721B /* PagingState.swift */; };
 		B2DE4414F5A8807A45956E748BC45BED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		F77D8BF2B32FA326AD3883B6FB8EE99E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */; };
-		FEC0A2A080063306AF6305DF7384C97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B9487D69A439A72EF76BF958E96D0AB7 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E84566C875B171957CAC759B4DCFCBD8 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0F2DA43291B49BB75016A8C01BF34D7 /* PageItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3F68FCCBDFA7E6AC9AEAEDBF34881 /* PageItemBuilder.swift */; };
+		C2820B7F77F635962A64C90536FFE6CC /* PagingBorderLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317AA23CEB9B4D1D2EEF3A7626A33BDA /* PagingBorderLayoutAttributes.swift */; };
+		C329D2551D56567EB5E6376C2DBA9C68 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6303A6ED0BCAD25E991E9FBB385D1B70 /* PagingView.swift */; };
+		C578E9AD4B125D990BAC3A462DCA6FCA /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A867AB04571E77BB9A0F0A3D5EEC91 /* UIView+constraints.swift */; };
+		C5BCA8728D2BF5596505B476C9EC48D8 /* PagingTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E027F4827198F498BCF0D0EA6F322 /* PagingTitleCell.swift */; };
+		CC73E15A5E2E23659D9212F4ED69A97B /* PagingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39B67FA5771A97595C2F50033F20063 /* PagingTransition.swift */; };
+		D5F4C9C75F465DAF1B34A5F2781983BD /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64042D507017CBDF5B13A005413F6E53 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */; };
+		D6C38EA9D8C26C38730E8C6F42525B1B /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26D3DDEBCD6565D3F8BF65113F3E51 /* PagingCollectionViewLayout.swift */; };
+		D75BE7991BF833B48D035041657DB7E8 /* PagingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592FD9ED40E61FCA1D811BE71D23435F /* PagingIndicatorView.swift */; };
+		D91C36D5F8F129A14B78D7D8C0205DB0 /* PagingMenuItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294D4FFE93BB190B06E2ECA92E39A11 /* PagingMenuItemSource.swift */; };
+		D957D029BFD023DF2927C0ABC2DF1BF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DAA095E2CFA445F17D4BCA82FE6A8851 /* PagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14408D5E82A49A2DBDC957CCE89C4BA9 /* PagingLayout.swift */; };
+		DB28552EFC8D5BB3DD57499A81FE2936 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DF8EC17FDA33FD83257EE59035DB0544 /* PagingInvalidationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EE7B39B733802B77AB0ECF8E72AB9D /* PagingInvalidationContext.swift */; };
+		DFB6767DA68DA1403F4794760D3FEC68 /* PageViewManagerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0683B6B3C9367E26E8DED0DE1983B /* PageViewManagerDataSource.swift */; };
+		E42234C96DA46A7D0C7660874BCDCCCB /* PagingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575C3D39546F01CDC03C1BCB0CA20916 /* PagingViewControllerDelegate.swift */; };
+		E4C1F4AFCFF3AA2B27160041FF8E8BD0 /* PageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4460B923DCB41FA81778DA377D02619 /* PageItem.swift */; };
+		EAE0A04C42CDDF3BB3E389DA148E69B3 /* PageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C492EFCE4E0E296ECA95E369EE50D5 /* PageViewControllerDelegate.swift */; };
+		EC5C7B5B8A02408A9D760A0EAE1F18D6 /* PagingViewControllerSizeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295F1D2AA82BAA99969E7E17C7E2CD7 /* PagingViewControllerSizeDelegate.swift */; };
+		ED1EAEED76C623B94497A050B779405C /* PagingIndicatorMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480903851C236017CA1F46BD521982B /* PagingIndicatorMetric.swift */; };
+		F487FA79CFB45B4F8C7239C4D78E5871 /* PageViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC1741F1D6CCD963EEE8ACC0C6ABA5 /* PageViewDirection.swift */; };
+		FE39FFAF639472E5D8A4C5BD80CDCD3C /* PagingSelectedScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F57940AEC982AB6192DD45042CD3E7 /* PagingSelectedScrollPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1221885B6D5CE6A0E1D7E28B9429DEFE /* PBXContainerItemProxy */ = {
+		279E6BCE41172E3A06CC65AD39053ED7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 065170C1A7332D9BA6D8C4B4F2253A36;
 			remoteInfo = "Pods-TravelBudgetCalculator";
 		};
+		3AAF34935F0F30AC3B3F19169F3FA368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18184DEEDE7075D999122505659B55E9;
+			remoteInfo = Parchment;
+		};
+		CAAB520AC267160075BD6BFC1118E2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18184DEEDE7075D999122505659B55E9;
+			remoteInfo = Parchment;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h"; sourceTree = "<group>"; };
-		108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m"; sourceTree = "<group>"; };
-		11D1C295CCB6644AB48902F197C65AC9 /* Pods-TravelBudgetCalculator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-Info.plist"; sourceTree = "<group>"; };
-		1349277BE7C0E24FA832C936A6E531EC /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap"; sourceTree = "<group>"; };
-		22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculatorTests-umbrella.h"; sourceTree = "<group>"; };
-		4ACD4C64EC430F3535D1C4FD4FC9F33B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist"; sourceTree = "<group>"; };
-		5EA795BE53C7D1C7AA427AC435586716 /* Pods-TravelBudgetCalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator.modulemap"; sourceTree = "<group>"; };
+		01F746A475CB9872A3704A37757D6C41 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist"; sourceTree = "<group>"; };
+		12B0683B6B3C9367E26E8DED0DE1983B /* PageViewManagerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewManagerDataSource.swift; path = Parchment/Protocols/PageViewManagerDataSource.swift; sourceTree = "<group>"; };
+		14408D5E82A49A2DBDC957CCE89C4BA9 /* PagingLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingLayout.swift; path = Parchment/Protocols/PagingLayout.swift; sourceTree = "<group>"; };
+		1480903851C236017CA1F46BD521982B /* PagingIndicatorMetric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorMetric.swift; path = Parchment/Structs/PagingIndicatorMetric.swift; sourceTree = "<group>"; };
+		1543BE1B116EF6100970CA393FCDBAB1 /* Parchment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Parchment-prefix.pch"; sourceTree = "<group>"; };
+		16AD09BBA7C2F1EEEBA15AC09DCC0EEC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		178BD978BD9FA1A5768EF0383D836B07 /* PagingBorderOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingBorderOptions.swift; path = Parchment/Enums/PagingBorderOptions.swift; sourceTree = "<group>"; };
+		1B3AF630D220BF4B96D6A5F80A09FCA6 /* CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionView.swift; path = Parchment/Protocols/CollectionView.swift; sourceTree = "<group>"; };
+		1B8612AB9E1E5106D6D9A7BEE05F6DE7 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DF794E3F0B2F9F7D75DA058B1419E99 /* PageItemCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageItemCell.swift; path = Parchment/Structs/PageItemCell.swift; sourceTree = "<group>"; };
+		1FB000E99DADEC47BE8912ECE3A78DD2 /* PageContentConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageContentConfiguration.swift; path = Parchment/Structs/PageContentConfiguration.swift; sourceTree = "<group>"; };
+		29360362D4F944D274E9038B1A02D183 /* PagingBorderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingBorderView.swift; path = Parchment/Classes/PagingBorderView.swift; sourceTree = "<group>"; };
+		29537E69AB627E1FFD07122CDBFDFA0E /* Parchment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Parchment.release.xcconfig; sourceTree = "<group>"; };
+		2F34E98FF74AA122A9EF3DF755BDFCB0 /* PagingMenuDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuDataSource.swift; path = Parchment/Protocols/PagingMenuDataSource.swift; sourceTree = "<group>"; };
+		316654F9593CA57184099CF3279FBD19 /* PagingViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewControllerDataSource.swift; path = Parchment/Protocols/PagingViewControllerDataSource.swift; sourceTree = "<group>"; };
+		317AA23CEB9B4D1D2EEF3A7626A33BDA /* PagingBorderLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingBorderLayoutAttributes.swift; path = Parchment/Classes/PagingBorderLayoutAttributes.swift; sourceTree = "<group>"; };
+		34DC1741F1D6CCD963EEE8ACC0C6ABA5 /* PageViewDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewDirection.swift; path = Parchment/Enums/PageViewDirection.swift; sourceTree = "<group>"; };
+		36169647CB7DD1138A2C7268B6D61C67 /* PagingMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuView.swift; path = Parchment/Classes/PagingMenuView.swift; sourceTree = "<group>"; };
+		36E630C109263092AA820D4049DB8C64 /* PageViewState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewState.swift; path = Parchment/Enums/PageViewState.swift; sourceTree = "<group>"; };
+		386A1109CE56624C8264D9AFA2354D60 /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3F8A596645596D09D6D941D60577C299 /* PagingItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingItem.swift; path = Parchment/Protocols/PagingItem.swift; sourceTree = "<group>"; };
+		44D37F018F979655BC91353D3A448812 /* Pods-TravelBudgetCalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-dummy.m"; sourceTree = "<group>"; };
+		48C492EFCE4E0E296ECA95E369EE50D5 /* PageViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewControllerDelegate.swift; path = Parchment/Protocols/PageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		4EEB52F9EA5EF2FAA8B1704377F6091E /* PagingContentInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingContentInteraction.swift; path = Parchment/Enums/PagingContentInteraction.swift; sourceTree = "<group>"; };
+		4F04C9C5F804B5E9E56AD868DFB4925E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap"; sourceTree = "<group>"; };
+		524CBEBBD94C3A2014D39E32611AA26E /* InvalidationState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvalidationState.swift; path = Parchment/Enums/InvalidationState.swift; sourceTree = "<group>"; };
+		53D28F2DFCDA12589AE659D1420841DC /* Pods-TravelBudgetCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		5459BCB64467DEED4F8B6003A2186115 /* PagingItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingItems.swift; path = Parchment/Structs/PagingItems.swift; sourceTree = "<group>"; };
+		575C3D39546F01CDC03C1BCB0CA20916 /* PagingViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewControllerDelegate.swift; path = Parchment/Protocols/PagingViewControllerDelegate.swift; sourceTree = "<group>"; };
+		592FD9ED40E61FCA1D811BE71D23435F /* PagingIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorView.swift; path = Parchment/Classes/PagingIndicatorView.swift; sourceTree = "<group>"; };
+		597698E7842D2525792D76115E75149B /* UIEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsets.swift; path = Parchment/Extensions/UIEdgeInsets.swift; sourceTree = "<group>"; };
+		5B26D3DDEBCD6565D3F8BF65113F3E51 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCollectionViewLayout.swift; path = Parchment/Classes/PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		5D716D2F111A9DABE628E7345AB6DB2C /* PageViewManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewManagerDelegate.swift; path = Parchment/Protocols/PageViewManagerDelegate.swift; sourceTree = "<group>"; };
+		5FDC820D2C1BD41F1E8D39DE37F643D2 /* Parchment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Parchment.modulemap; sourceTree = "<group>"; };
+		60F57940AEC982AB6192DD45042CD3E7 /* PagingSelectedScrollPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingSelectedScrollPosition.swift; path = Parchment/Enums/PagingSelectedScrollPosition.swift; sourceTree = "<group>"; };
+		6303A6ED0BCAD25E991E9FBB385D1B70 /* PagingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingView.swift; path = Parchment/Classes/PagingView.swift; sourceTree = "<group>"; };
+		64042D507017CBDF5B13A005413F6E53 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m"; sourceTree = "<group>"; };
+		6484AB96E24CDDF16D3C8B5F01C8D4C0 /* PagingIndicatorLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorLayoutAttributes.swift; path = Parchment/Classes/PagingIndicatorLayoutAttributes.swift; sourceTree = "<group>"; };
+		6894BBA08692434542105ABA4F7EF177 /* PagingMenuTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuTransition.swift; path = Parchment/Enums/PagingMenuTransition.swift; sourceTree = "<group>"; };
+		6BEF9C960EACE2C42B5B1E39A83A4E74 /* AnyPagingItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPagingItem.swift; path = Parchment/Structs/AnyPagingItem.swift; sourceTree = "<group>"; };
+		6D52FE97493F5222C94DE03639BFBBA2 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		709359C459365ACADE8E851BFAE31002 /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		71EF62936BA09637D4C602D76FBE638E /* PagingMenuPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuPosition.swift; path = Parchment/Enums/PagingMenuPosition.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		87B818F0C251979BA05043A194A36052 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculator-dummy.m"; sourceTree = "<group>"; };
-		90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		750B0E1D3F0A571F80472F75C9B08435 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-frameworks.sh"; sourceTree = "<group>"; };
+		76B8161DAACE21564AFE49DA73632D2F /* PagingControllerRepresentableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingControllerRepresentableView.swift; path = Parchment/Structs/PagingControllerRepresentableView.swift; sourceTree = "<group>"; };
+		7811179125C198A6DF5804A232CFA197 /* Pods-TravelBudgetCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		7971651FC1F7D1B0793182F10E206718 /* PagingNavigationOrientation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingNavigationOrientation.swift; path = Parchment/Structs/PagingNavigationOrientation.swift; sourceTree = "<group>"; };
+		7AF43557F728BAEBF49BCBB4BB01B99F /* PagingDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingDirection.swift; path = Parchment/Enums/PagingDirection.swift; sourceTree = "<group>"; };
+		7D8E86894061ABEC8B9D190148BCAC0D /* Pods-TravelBudgetCalculator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-umbrella.h"; sourceTree = "<group>"; };
+		81E7AEE90E4EC7B4C7C6097203B97CED /* Pods-TravelBudgetCalculator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-acknowledgements.markdown"; sourceTree = "<group>"; };
+		829E44A3CFB9657F708B6717A9548A2B /* PagingController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingController.swift; path = Parchment/Classes/PagingController.swift; sourceTree = "<group>"; };
+		82E87930CAE3E12E4FE0349528A71CD1 /* PageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Parchment/Structs/PageView.swift; sourceTree = "<group>"; };
+		8AE6AE369683FEE926A40E2B0C4289BC /* PageViewCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewCoordinator.swift; path = Parchment/Classes/PageViewCoordinator.swift; sourceTree = "<group>"; };
+		8B8A000A5B3E79EC97F7C299E8B2BFBB /* PagingIndicatorStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorStyle.swift; path = Parchment/Protocols/PagingIndicatorStyle.swift; sourceTree = "<group>"; };
+		8D0FE76E2169B30206CBF6E32069138E /* PagingSizeCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingSizeCache.swift; path = Parchment/Classes/PagingSizeCache.swift; sourceTree = "<group>"; };
+		918AAA8A85C0F1426F5D6840B30060CB /* PageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = Parchment/Classes/PageViewController.swift; sourceTree = "<group>"; };
+		97BB2C5817DFBE9609E5353D833CEF0A /* PagingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewController.swift; path = Parchment/Classes/PagingViewController.swift; sourceTree = "<group>"; };
+		99640FAA5ECEF8B3A235974FA40591D5 /* Parchment-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Parchment-Info.plist"; sourceTree = "<group>"; };
+		9B3604EB8C2F75B7375566751FCD5248 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B7BD4658BE2390EACBC1885DE4437B2 /* PagingStaticDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingStaticDataSource.swift; path = Parchment/Classes/PagingStaticDataSource.swift; sourceTree = "<group>"; };
+		9C8823FB3814B9AA3EE47A69628FBF6E /* PageState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageState.swift; path = Parchment/Structs/PageState.swift; sourceTree = "<group>"; };
+		9CED560C050F78AF7F541D17C48B67DD /* PagingMenuInteraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuInteraction.swift; path = Parchment/Enums/PagingMenuInteraction.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DACD6787A92D8849E22D064D6600FD4 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A3C98365CAA7A4BC3A913CBA9EB1B2BA /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		AB74C0D8159EC6D4627C33B36C03989A /* Pods-TravelBudgetCalculator-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculator-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B1BAE97AE0B7CE82234043C7967509AE /* Pods-TravelBudgetCalculator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-acknowledgements.plist"; sourceTree = "<group>"; };
+		9DE5F6F179F1F033F454934D658EF841 /* PagingIndicatorOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndicatorOptions.swift; path = Parchment/Enums/PagingIndicatorOptions.swift; sourceTree = "<group>"; };
+		9E2582DDCFFD86701D8FC3572E15C084 /* Parchment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Parchment-umbrella.h"; sourceTree = "<group>"; };
+		A0CA2EB72191177414D2AEDDB409A114 /* PagingCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCellViewModel.swift; path = Parchment/Structs/PagingCellViewModel.swift; sourceTree = "<group>"; };
+		A157526399877D94C9929D5A1221C934 /* Parchment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Parchment-dummy.m"; sourceTree = "<group>"; };
+		A50F14B5EA950451BCCDE8F3C5F10254 /* Pods-TravelBudgetCalculator-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5485891C8F360D416812BF98A768E65 /* Page.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Page.swift; path = Parchment/Structs/Page.swift; sourceTree = "<group>"; };
+		A6EE7B39B733802B77AB0ECF8E72AB9D /* PagingInvalidationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingInvalidationContext.swift; path = Parchment/Classes/PagingInvalidationContext.swift; sourceTree = "<group>"; };
+		A9CB0D9AFAA9BAB1B10CDBE339CA8AA9 /* PagingViewControllerInfiniteDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewControllerInfiniteDataSource.swift; path = Parchment/Protocols/PagingViewControllerInfiniteDataSource.swift; sourceTree = "<group>"; };
+		AEFA349EF98DA565BE17C7BADEBDF9B9 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B01D300DF876C8A67A3000F3A4C5721B /* PagingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingState.swift; path = Parchment/Enums/PagingState.swift; sourceTree = "<group>"; };
+		B27648433ABE6E34C74BAB37D366D93B /* PagingIndexItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingIndexItem.swift; path = Parchment/Structs/PagingIndexItem.swift; sourceTree = "<group>"; };
+		B289B254ED1C44B62190B9EB3271BB0B /* PagingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCell.swift; path = Parchment/Classes/PagingCell.swift; sourceTree = "<group>"; };
+		B294D4FFE93BB190B06E2ECA92E39A11 /* PagingMenuItemSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuItemSource.swift; path = Parchment/Enums/PagingMenuItemSource.swift; sourceTree = "<group>"; };
+		B29ABF8B582F927ECC4E7EC5DE86BD36 /* Pods-TravelBudgetCalculatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculatorTests-umbrella.h"; sourceTree = "<group>"; };
+		BB03A5A0875A4DCD8594BFDB67FBDA4E /* Pods-TravelBudgetCalculator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculator.modulemap"; sourceTree = "<group>"; };
 		BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculatorTests"; path = Pods_TravelBudgetCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-umbrella.h"; sourceTree = "<group>"; };
-		E6D4820A185D678F758BFED7A530796B /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TravelBudgetCalculatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Parchment; path = Parchment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B0DC77040A7CD43636C4E3A5C75324 /* PagingDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingDiff.swift; path = Parchment/Structs/PagingDiff.swift; sourceTree = "<group>"; };
+		CD149D0E7A824B90D9B9DFD87924D2B5 /* PagingCellLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingCellLayoutAttributes.swift; path = Parchment/Classes/PagingCellLayoutAttributes.swift; sourceTree = "<group>"; };
+		CE395C6974F64551116BF0EF2246068D /* Tween.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tween.swift; path = Parchment/Protocols/Tween.swift; sourceTree = "<group>"; };
+		CEE96A1D765A47FD7E57737B1FE4CBA9 /* Pods-TravelBudgetCalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculatorTests.modulemap"; sourceTree = "<group>"; };
+		CFFCD587F6ABAECC268D1892F50F5D8D /* Pods-TravelBudgetCalculator-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TravelBudgetCalculator-frameworks.sh"; sourceTree = "<group>"; };
+		D03A6000077D62CA468962AF97BC5C4E /* Pods-TravelBudgetCalculatorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		D04AE75C87524A1092198619EB4E0F7D /* PageViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewControllerDataSource.swift; path = Parchment/Protocols/PageViewControllerDataSource.swift; sourceTree = "<group>"; };
+		D295F1D2AA82BAA99969E7E17C7E2CD7 /* PagingViewControllerSizeDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingViewControllerSizeDelegate.swift; path = Parchment/Protocols/PagingViewControllerSizeDelegate.swift; sourceTree = "<group>"; };
+		D2A867AB04571E77BB9A0F0A3D5EEC91 /* UIView+constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+constraints.swift"; path = "Parchment/Extensions/UIView+constraints.swift"; sourceTree = "<group>"; };
+		D4460B923DCB41FA81778DA377D02619 /* PageItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageItem.swift; path = Parchment/Structs/PageItem.swift; sourceTree = "<group>"; };
+		D7AC3E0AE0E2B68A99E1FB2A699B88DC /* PagingMenuHorizontalAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuHorizontalAlignment.swift; path = Parchment/Enums/PagingMenuHorizontalAlignment.swift; sourceTree = "<group>"; };
+		DD18807DF4A8F92E393E7897BE6EA623 /* UIColor+interpolation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+interpolation.swift"; path = "Parchment/Extensions/UIColor+interpolation.swift"; sourceTree = "<group>"; };
+		DE4DECE07BDA1F1015052B741303B9BF /* PagingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingOptions.swift; path = Parchment/Classes/PagingOptions.swift; sourceTree = "<group>"; };
+		E1F43866DF0CB5E63B54BBF61DE0E657 /* PagingMenuItemSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuItemSize.swift; path = Parchment/Enums/PagingMenuItemSize.swift; sourceTree = "<group>"; };
+		E58A09EF4E7FAFA28D55BC1AA38C5A67 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		E84566C875B171957CAC759B4DCFCBD8 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h"; sourceTree = "<group>"; };
+		E9E93EDAFE7FA9820D10B28450F13113 /* PagingFiniteDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingFiniteDataSource.swift; path = Parchment/Classes/PagingFiniteDataSource.swift; sourceTree = "<group>"; };
+		EAC61927840A805FA704E9C70272FC39 /* Pods-TravelBudgetCalculator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculator-Info.plist"; sourceTree = "<group>"; };
+		EB447BCC0151F743A66EF9F8A66D2DD7 /* PagingMenuDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuDelegate.swift; path = Parchment/Protocols/PagingMenuDelegate.swift; sourceTree = "<group>"; };
 		EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculator"; path = Pods_TravelBudgetCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TravelBudgetCalculator.release.xcconfig"; sourceTree = "<group>"; };
-		F3931E959586D7F8857B07371AF1C247 /* Pods-TravelBudgetCalculatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TravelBudgetCalculatorTests.modulemap"; sourceTree = "<group>"; };
-		F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculatorTests-dummy.m"; sourceTree = "<group>"; };
+		F39B67FA5771A97595C2F50033F20063 /* PagingTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingTransition.swift; path = Parchment/Structs/PagingTransition.swift; sourceTree = "<group>"; };
+		F518AD153A58E66EA56A0DFC555B5B10 /* PageViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewManager.swift; path = Parchment/Classes/PageViewManager.swift; sourceTree = "<group>"; };
+		F8AF64D7785603639D2F8C37A24D848B /* PagingDistance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingDistance.swift; path = Parchment/Structs/PagingDistance.swift; sourceTree = "<group>"; };
+		FAB3F68FCCBDFA7E6AC9AEAEDBF34881 /* PageItemBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageItemBuilder.swift; path = Parchment/Structs/PageItemBuilder.swift; sourceTree = "<group>"; };
+		FAEC2219D153007838F60EAE7A2C3390 /* Parchment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Parchment.debug.xcconfig; sourceTree = "<group>"; };
+		FD3E027F4827198F498BCF0D0EA6F322 /* PagingTitleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingTitleCell.swift; path = Parchment/Classes/PagingTitleCell.swift; sourceTree = "<group>"; };
+		FD8D375DD6FF68E0EF0F28F2F91340D7 /* PagingHostingIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingHostingIndicatorView.swift; path = Parchment/Classes/PagingHostingIndicatorView.swift; sourceTree = "<group>"; };
+		FE8F49FEA84BEC8D65BB3692B2C8B590 /* Pods-TravelBudgetCalculatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TravelBudgetCalculatorTests-dummy.m"; sourceTree = "<group>"; };
 		FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests"; path = Pods_TravelBudgetCalculator_TravelBudgetCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF2201023BCDC54AFC20E64A07955D4B /* Pods-TravelBudgetCalculatorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TravelBudgetCalculatorTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		19AB1F3DAAD2504A79CB4974D835E4F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEC0A2A080063306AF6305DF7384C97A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		720B285E7899DCC56480D4370530CF29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,41 +238,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98B5DA7C1DF79A60EC2862BE3E88B7B1 /* Frameworks */ = {
+		746210233F21E2AEC759CF133DBEF0CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA165287C90CF0C6F2669459E26154D /* Foundation.framework in Frameworks */,
+				A440CCC0E530A46D61158ECDDE33805D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9CA247353ECB87E1CDAC029CF65504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB28552EFC8D5BB3DD57499A81FE2936 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D3D7B98DAC24E0C064E9E6A15A1701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D957D029BFD023DF2927C0ABC2DF1BF6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E725C1514D8C2C8A5532052598C482 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
+		0AE5FC3E94DA41BA4A740FBBA6DFF512 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1349277BE7C0E24FA832C936A6E531EC /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */,
-				87B818F0C251979BA05043A194A36052 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */,
-				9DACD6787A92D8849E22D064D6600FD4 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */,
-				108EA309FA9F4E369C0D6ED8F533D29B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */,
-				4ACD4C64EC430F3535D1C4FD4FC9F33B /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */,
-				037858CF0A3DE07575DC0EE31224D891 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */,
-				F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */,
-				C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */,
+				4F04C9C5F804B5E9E56AD868DFB4925E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap */,
+				9B3604EB8C2F75B7375566751FCD5248 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.markdown */,
+				6D52FE97493F5222C94DE03639BFBBA2 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-acknowledgements.plist */,
+				64042D507017CBDF5B13A005413F6E53 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m */,
+				750B0E1D3F0A571F80472F75C9B08435 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-frameworks.sh */,
+				01F746A475CB9872A3704A37757D6C41 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-Info.plist */,
+				E84566C875B171957CAC759B4DCFCBD8 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h */,
+				1B8612AB9E1E5106D6D9A7BEE05F6DE7 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */,
+				AEFA349EF98DA565BE17C7BADEBDF9B9 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */,
 			);
 			name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
 			path = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
 			sourceTree = "<group>";
 		};
-		27D185D69850D1CD44089B78ABDF3EC6 /* Products */ = {
+		2DA475F3E11D3723D155D06FECB696B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */,
-				FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
-				BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */,
+				C1E17F439F0F8FA47AD36EEF390CEAC8 /* Parchment */,
 			);
-			name = Products;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E6B616C866CC2D063C22BB59629EA82 /* Pods-TravelBudgetCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				BB03A5A0875A4DCD8594BFDB67FBDA4E /* Pods-TravelBudgetCalculator.modulemap */,
+				81E7AEE90E4EC7B4C7C6097203B97CED /* Pods-TravelBudgetCalculator-acknowledgements.markdown */,
+				A50F14B5EA950451BCCDE8F3C5F10254 /* Pods-TravelBudgetCalculator-acknowledgements.plist */,
+				44D37F018F979655BC91353D3A448812 /* Pods-TravelBudgetCalculator-dummy.m */,
+				CFFCD587F6ABAECC268D1892F50F5D8D /* Pods-TravelBudgetCalculator-frameworks.sh */,
+				EAC61927840A805FA704E9C70272FC39 /* Pods-TravelBudgetCalculator-Info.plist */,
+				7D8E86894061ABEC8B9D190148BCAC0D /* Pods-TravelBudgetCalculator-umbrella.h */,
+				7811179125C198A6DF5804A232CFA197 /* Pods-TravelBudgetCalculator.debug.xcconfig */,
+				53D28F2DFCDA12589AE659D1420841DC /* Pods-TravelBudgetCalculator.release.xcconfig */,
+			);
+			name = "Pods-TravelBudgetCalculator";
+			path = "Target Support Files/Pods-TravelBudgetCalculator";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -122,20 +315,105 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		8B4D7290C6B31264F76D43B8422359B9 /* Pods-TravelBudgetCalculator */ = {
+		8BA0B7480A5134FD06DFCD60F80BA3F2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EA795BE53C7D1C7AA427AC435586716 /* Pods-TravelBudgetCalculator.modulemap */,
-				AB74C0D8159EC6D4627C33B36C03989A /* Pods-TravelBudgetCalculator-acknowledgements.markdown */,
-				B1BAE97AE0B7CE82234043C7967509AE /* Pods-TravelBudgetCalculator-acknowledgements.plist */,
-				88C6D65E71CC68957373FB47D910F37D /* Pods-TravelBudgetCalculator-dummy.m */,
-				11D1C295CCB6644AB48902F197C65AC9 /* Pods-TravelBudgetCalculator-Info.plist */,
-				D9815FC6E9C36C6987E4E7BEBA05E0C1 /* Pods-TravelBudgetCalculator-umbrella.h */,
-				90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */,
-				F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */,
+				4E6B616C866CC2D063C22BB59629EA82 /* Pods-TravelBudgetCalculator */,
+				0AE5FC3E94DA41BA4A740FBBA6DFF512 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
+				E3DD3EC4485FAD411B536A185A2CEDEC /* Pods-TravelBudgetCalculatorTests */,
 			);
-			name = "Pods-TravelBudgetCalculator";
-			path = "Target Support Files/Pods-TravelBudgetCalculator";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9D9D5681DF7D15876028F0C8789CAD9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */,
+				EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */,
+				FEB3FE0C8885DA717B92B6C30B8E3A12 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
+				BC3727EE2F1F916C37A99EC7663B9ADD /* Pods-TravelBudgetCalculatorTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1E17F439F0F8FA47AD36EEF390CEAC8 /* Parchment */ = {
+			isa = PBXGroup;
+			children = (
+				6BEF9C960EACE2C42B5B1E39A83A4E74 /* AnyPagingItem.swift */,
+				1B3AF630D220BF4B96D6A5F80A09FCA6 /* CollectionView.swift */,
+				524CBEBBD94C3A2014D39E32611AA26E /* InvalidationState.swift */,
+				A5485891C8F360D416812BF98A768E65 /* Page.swift */,
+				1FB000E99DADEC47BE8912ECE3A78DD2 /* PageContentConfiguration.swift */,
+				D4460B923DCB41FA81778DA377D02619 /* PageItem.swift */,
+				FAB3F68FCCBDFA7E6AC9AEAEDBF34881 /* PageItemBuilder.swift */,
+				1DF794E3F0B2F9F7D75DA058B1419E99 /* PageItemCell.swift */,
+				9C8823FB3814B9AA3EE47A69628FBF6E /* PageState.swift */,
+				82E87930CAE3E12E4FE0349528A71CD1 /* PageView.swift */,
+				918AAA8A85C0F1426F5D6840B30060CB /* PageViewController.swift */,
+				D04AE75C87524A1092198619EB4E0F7D /* PageViewControllerDataSource.swift */,
+				48C492EFCE4E0E296ECA95E369EE50D5 /* PageViewControllerDelegate.swift */,
+				8AE6AE369683FEE926A40E2B0C4289BC /* PageViewCoordinator.swift */,
+				34DC1741F1D6CCD963EEE8ACC0C6ABA5 /* PageViewDirection.swift */,
+				F518AD153A58E66EA56A0DFC555B5B10 /* PageViewManager.swift */,
+				12B0683B6B3C9367E26E8DED0DE1983B /* PageViewManagerDataSource.swift */,
+				5D716D2F111A9DABE628E7345AB6DB2C /* PageViewManagerDelegate.swift */,
+				36E630C109263092AA820D4049DB8C64 /* PageViewState.swift */,
+				317AA23CEB9B4D1D2EEF3A7626A33BDA /* PagingBorderLayoutAttributes.swift */,
+				178BD978BD9FA1A5768EF0383D836B07 /* PagingBorderOptions.swift */,
+				29360362D4F944D274E9038B1A02D183 /* PagingBorderView.swift */,
+				B289B254ED1C44B62190B9EB3271BB0B /* PagingCell.swift */,
+				CD149D0E7A824B90D9B9DFD87924D2B5 /* PagingCellLayoutAttributes.swift */,
+				A0CA2EB72191177414D2AEDDB409A114 /* PagingCellViewModel.swift */,
+				5B26D3DDEBCD6565D3F8BF65113F3E51 /* PagingCollectionViewLayout.swift */,
+				4EEB52F9EA5EF2FAA8B1704377F6091E /* PagingContentInteraction.swift */,
+				829E44A3CFB9657F708B6717A9548A2B /* PagingController.swift */,
+				76B8161DAACE21564AFE49DA73632D2F /* PagingControllerRepresentableView.swift */,
+				C2B0DC77040A7CD43636C4E3A5C75324 /* PagingDiff.swift */,
+				7AF43557F728BAEBF49BCBB4BB01B99F /* PagingDirection.swift */,
+				F8AF64D7785603639D2F8C37A24D848B /* PagingDistance.swift */,
+				E9E93EDAFE7FA9820D10B28450F13113 /* PagingFiniteDataSource.swift */,
+				FD8D375DD6FF68E0EF0F28F2F91340D7 /* PagingHostingIndicatorView.swift */,
+				B27648433ABE6E34C74BAB37D366D93B /* PagingIndexItem.swift */,
+				6484AB96E24CDDF16D3C8B5F01C8D4C0 /* PagingIndicatorLayoutAttributes.swift */,
+				1480903851C236017CA1F46BD521982B /* PagingIndicatorMetric.swift */,
+				9DE5F6F179F1F033F454934D658EF841 /* PagingIndicatorOptions.swift */,
+				8B8A000A5B3E79EC97F7C299E8B2BFBB /* PagingIndicatorStyle.swift */,
+				592FD9ED40E61FCA1D811BE71D23435F /* PagingIndicatorView.swift */,
+				A6EE7B39B733802B77AB0ECF8E72AB9D /* PagingInvalidationContext.swift */,
+				3F8A596645596D09D6D941D60577C299 /* PagingItem.swift */,
+				5459BCB64467DEED4F8B6003A2186115 /* PagingItems.swift */,
+				14408D5E82A49A2DBDC957CCE89C4BA9 /* PagingLayout.swift */,
+				2F34E98FF74AA122A9EF3DF755BDFCB0 /* PagingMenuDataSource.swift */,
+				EB447BCC0151F743A66EF9F8A66D2DD7 /* PagingMenuDelegate.swift */,
+				D7AC3E0AE0E2B68A99E1FB2A699B88DC /* PagingMenuHorizontalAlignment.swift */,
+				9CED560C050F78AF7F541D17C48B67DD /* PagingMenuInteraction.swift */,
+				E1F43866DF0CB5E63B54BBF61DE0E657 /* PagingMenuItemSize.swift */,
+				B294D4FFE93BB190B06E2ECA92E39A11 /* PagingMenuItemSource.swift */,
+				71EF62936BA09637D4C602D76FBE638E /* PagingMenuPosition.swift */,
+				6894BBA08692434542105ABA4F7EF177 /* PagingMenuTransition.swift */,
+				36169647CB7DD1138A2C7268B6D61C67 /* PagingMenuView.swift */,
+				7971651FC1F7D1B0793182F10E206718 /* PagingNavigationOrientation.swift */,
+				DE4DECE07BDA1F1015052B741303B9BF /* PagingOptions.swift */,
+				60F57940AEC982AB6192DD45042CD3E7 /* PagingSelectedScrollPosition.swift */,
+				8D0FE76E2169B30206CBF6E32069138E /* PagingSizeCache.swift */,
+				B01D300DF876C8A67A3000F3A4C5721B /* PagingState.swift */,
+				9B7BD4658BE2390EACBC1885DE4437B2 /* PagingStaticDataSource.swift */,
+				FD3E027F4827198F498BCF0D0EA6F322 /* PagingTitleCell.swift */,
+				F39B67FA5771A97595C2F50033F20063 /* PagingTransition.swift */,
+				6303A6ED0BCAD25E991E9FBB385D1B70 /* PagingView.swift */,
+				97BB2C5817DFBE9609E5353D833CEF0A /* PagingViewController.swift */,
+				316654F9593CA57184099CF3279FBD19 /* PagingViewControllerDataSource.swift */,
+				575C3D39546F01CDC03C1BCB0CA20916 /* PagingViewControllerDelegate.swift */,
+				A9CB0D9AFAA9BAB1B10CDBE339CA8AA9 /* PagingViewControllerInfiniteDataSource.swift */,
+				D295F1D2AA82BAA99969E7E17C7E2CD7 /* PagingViewControllerSizeDelegate.swift */,
+				CE395C6974F64551116BF0EF2246068D /* Tween.swift */,
+				DD18807DF4A8F92E393E7897BE6EA623 /* UIColor+interpolation.swift */,
+				597698E7842D2525792D76115E75149B /* UIEdgeInsets.swift */,
+				D2A867AB04571E77BB9A0F0A3D5EEC91 /* UIView+constraints.swift */,
+				CF427280596530A3F853A1AB245148B7 /* Support Files */,
+			);
+			name = Parchment;
+			path = Parchment;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -143,9 +421,25 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				27D185D69850D1CD44089B78ABDF3EC6 /* Products */,
-				DA9A8619A67F6D2B9024A2721A1B23B0 /* Targets Support Files */,
+				2DA475F3E11D3723D155D06FECB696B0 /* Pods */,
+				9D9D5681DF7D15876028F0C8789CAD9F /* Products */,
+				8BA0B7480A5134FD06DFCD60F80BA3F2 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CF427280596530A3F853A1AB245148B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC820D2C1BD41F1E8D39DE37F643D2 /* Parchment.modulemap */,
+				A157526399877D94C9929D5A1221C934 /* Parchment-dummy.m */,
+				99640FAA5ECEF8B3A235974FA40591D5 /* Parchment-Info.plist */,
+				1543BE1B116EF6100970CA393FCDBAB1 /* Parchment-prefix.pch */,
+				9E2582DDCFFD86701D8FC3572E15C084 /* Parchment-umbrella.h */,
+				FAEC2219D153007838F60EAE7A2C3390 /* Parchment.debug.xcconfig */,
+				29537E69AB627E1FFD07122CDBFDFA0E /* Parchment.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Parchment";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -156,27 +450,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA9A8619A67F6D2B9024A2721A1B23B0 /* Targets Support Files */ = {
+		E3DD3EC4485FAD411B536A185A2CEDEC /* Pods-TravelBudgetCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				8B4D7290C6B31264F76D43B8422359B9 /* Pods-TravelBudgetCalculator */,
-				04E725C1514D8C2C8A5532052598C482 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
-				ECF7950342653618AD4FB3F2DB0E503F /* Pods-TravelBudgetCalculatorTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		ECF7950342653618AD4FB3F2DB0E503F /* Pods-TravelBudgetCalculatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3931E959586D7F8857B07371AF1C247 /* Pods-TravelBudgetCalculatorTests.modulemap */,
-				E6D4820A185D678F758BFED7A530796B /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */,
-				A3C98365CAA7A4BC3A913CBA9EB1B2BA /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */,
-				F3D6B1F641939CFC20933E1E03C991D2 /* Pods-TravelBudgetCalculatorTests-dummy.m */,
-				FF2201023BCDC54AFC20E64A07955D4B /* Pods-TravelBudgetCalculatorTests-Info.plist */,
-				22E02512428BD0BCB5E25CCD0E0F74CC /* Pods-TravelBudgetCalculatorTests-umbrella.h */,
-				F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */,
-				A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */,
+				CEE96A1D765A47FD7E57737B1FE4CBA9 /* Pods-TravelBudgetCalculatorTests.modulemap */,
+				709359C459365ACADE8E851BFAE31002 /* Pods-TravelBudgetCalculatorTests-acknowledgements.markdown */,
+				386A1109CE56624C8264D9AFA2354D60 /* Pods-TravelBudgetCalculatorTests-acknowledgements.plist */,
+				FE8F49FEA84BEC8D65BB3692B2C8B590 /* Pods-TravelBudgetCalculatorTests-dummy.m */,
+				D03A6000077D62CA468962AF97BC5C4E /* Pods-TravelBudgetCalculatorTests-Info.plist */,
+				B29ABF8B582F927ECC4E7EC5DE86BD36 /* Pods-TravelBudgetCalculatorTests-umbrella.h */,
+				16AD09BBA7C2F1EEEBA15AC09DCC0EEC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */,
+				E58A09EF4E7FAFA28D55BC1AA38C5A67 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */,
 			);
 			name = "Pods-TravelBudgetCalculatorTests";
 			path = "Target Support Files/Pods-TravelBudgetCalculatorTests";
@@ -185,19 +469,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		37B5F1ABCB16906351246E97CB9B0213 /* Headers */ = {
+		5203EB2200C4110821A9EBBFCB8970F7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37AE89972AC238CCF4F60AC3C9FE4DE1 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */,
+				B9487D69A439A72EF76BF958E96D0AB7 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		502E5B16D3D5F8DE614864C77B282FBF /* Headers */ = {
+		7766A61EC5C6F98DE232B8CC8C47D632 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E7A24D164927F8D5234B764ACED079 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-umbrella.h in Headers */,
+				75E4BD5FC3308A2F097E2282116CFB69 /* Parchment-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,39 +493,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB83B5F851093D711BF02169A50D7358 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419D8F5A4C4BC0753420B1568AE06A38 /* Pods-TravelBudgetCalculator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B734A63A47853E81698EF215AEA90C87 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */;
+			buildConfigurationList = 53BBFA40C5587B0EFD37A496D43726A3 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */;
 			buildPhases = (
-				37B5F1ABCB16906351246E97CB9B0213 /* Headers */,
-				51AA864399001AAB522BE7929A4D15FF /* Sources */,
-				19AB1F3DAAD2504A79CB4974D835E4F3 /* Frameworks */,
-				BBA3EA4A781B984AEFCC8BEA248E7A30 /* Resources */,
+				DB83B5F851093D711BF02169A50D7358 /* Headers */,
+				97B29633EC3A27B6B7BEE77990ED78B7 /* Sources */,
+				D5D3D7B98DAC24E0C064E9E6A15A1701 /* Frameworks */,
+				BD811E4637F655BB5DE85DD521376266 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7726C2E60438E439B789BDC88D2B6155 /* PBXTargetDependency */,
 			);
 			name = "Pods-TravelBudgetCalculator";
 			productName = Pods_TravelBudgetCalculator;
 			productReference = EFEE02F4847E44CCFA4AB7BC13C7F2FA /* Pods-TravelBudgetCalculator */;
 			productType = "com.apple.product-type.framework";
 		};
-		302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
+		18184DEEDE7075D999122505659B55E9 /* Parchment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06E80DF1A9E361C26872F306E1BD8061 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */;
+			buildConfigurationList = 067C8921F14B6CE562544DC558211AB6 /* Build configuration list for PBXNativeTarget "Parchment" */;
 			buildPhases = (
-				502E5B16D3D5F8DE614864C77B282FBF /* Headers */,
-				F3369A3545F4F8F68872ABC46E589E5A /* Sources */,
-				98B5DA7C1DF79A60EC2862BE3E88B7B1 /* Frameworks */,
-				9E227CFD25F8AB1E4D4D164B32A7A9B4 /* Resources */,
+				7766A61EC5C6F98DE232B8CC8C47D632 /* Headers */,
+				5F76C118EBD80A473BEBBEEE681A2668 /* Sources */,
+				BA9CA247353ECB87E1CDAC029CF65504 /* Frameworks */,
+				173BE378DA5CFEE4A0A605FC9D9E3EB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = Parchment;
+			productName = Parchment;
+			productReference = BDD18ACB625B597CC06D7006C44D7FE5 /* Parchment */;
+			productType = "com.apple.product-type.framework";
+		};
+		302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A52E186E143076CF02D96906CD8BCBAF /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */;
+			buildPhases = (
+				5203EB2200C4110821A9EBBFCB8970F7 /* Headers */,
+				B39F1B344FB0033BE416B08A5C875115 /* Sources */,
+				746210233F21E2AEC759CF133DBEF0CD /* Frameworks */,
+				D7054E03CA58BF057BD6BFCD4D850FB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF534787AF8C87CDBFFB791E4B87B2D /* PBXTargetDependency */,
 			);
 			name = "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests";
 			productName = Pods_TravelBudgetCalculator_TravelBudgetCalculatorUITests;
@@ -260,7 +572,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				59716FEEF5F1849EDEAF43472C25051F /* PBXTargetDependency */,
+				4430B78BC0294EB2CDE88E61ACE033AF /* PBXTargetDependency */,
 			);
 			name = "Pods-TravelBudgetCalculatorTests";
 			productName = Pods_TravelBudgetCalculatorTests;
@@ -285,10 +597,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 27D185D69850D1CD44089B78ABDF3EC6 /* Products */;
+			productRefGroup = 9D9D5681DF7D15876028F0C8789CAD9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				18184DEEDE7075D999122505659B55E9 /* Parchment */,
 				065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */,
 				302A8C3DB288F02A3CC487320BB25FDF /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests */,
 				AC358AC2C2AA8FA7E71086C97CAE917E /* Pods-TravelBudgetCalculatorTests */,
@@ -297,14 +610,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E227CFD25F8AB1E4D4D164B32A7A9B4 /* Resources */ = {
+		173BE378DA5CFEE4A0A605FC9D9E3EB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBA3EA4A781B984AEFCC8BEA248E7A30 /* Resources */ = {
+		BD811E4637F655BB5DE85DD521376266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7054E03CA58BF057BD6BFCD4D850FB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,11 +641,82 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		51AA864399001AAB522BE7929A4D15FF /* Sources */ = {
+		5F76C118EBD80A473BEBBEEE681A2668 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D787130CF444AEBC1810B416E3B4CA /* Pods-TravelBudgetCalculator-dummy.m in Sources */,
+				8E9E3526B3FD6684F7C02474A563718A /* AnyPagingItem.swift in Sources */,
+				0EE8DBBC6EF7A4479E0B3AFE629DE2CF /* CollectionView.swift in Sources */,
+				4FDFE8B6D384232B4DFEC415DFBF5766 /* InvalidationState.swift in Sources */,
+				87331E777A479569A767E104ABECE42B /* Page.swift in Sources */,
+				713249888FE225E378F970574BCB4A8C /* PageContentConfiguration.swift in Sources */,
+				E4C1F4AFCFF3AA2B27160041FF8E8BD0 /* PageItem.swift in Sources */,
+				C0F2DA43291B49BB75016A8C01BF34D7 /* PageItemBuilder.swift in Sources */,
+				917E44BABDBA8850E78913CA0AA77E58 /* PageItemCell.swift in Sources */,
+				5822116C9421849008163553FCA42A3B /* PageState.swift in Sources */,
+				0FB10024FB8FFE37742B14D7EA7A0F3E /* PageView.swift in Sources */,
+				6D5047120743AD3E675AAB2299004860 /* PageViewController.swift in Sources */,
+				AF9F97D8B0B04EC01B6943E1881733A8 /* PageViewControllerDataSource.swift in Sources */,
+				EAE0A04C42CDDF3BB3E389DA148E69B3 /* PageViewControllerDelegate.swift in Sources */,
+				0F2A6337218D467AC7589447D04475F0 /* PageViewCoordinator.swift in Sources */,
+				F487FA79CFB45B4F8C7239C4D78E5871 /* PageViewDirection.swift in Sources */,
+				1449FCF609D29D7C9BF81ADFA9BD2B06 /* PageViewManager.swift in Sources */,
+				DFB6767DA68DA1403F4794760D3FEC68 /* PageViewManagerDataSource.swift in Sources */,
+				9F177971BF7D3F3A6114AE912967183C /* PageViewManagerDelegate.swift in Sources */,
+				8B46B7D7F4AEE3CF75AC504DC1625709 /* PageViewState.swift in Sources */,
+				C2820B7F77F635962A64C90536FFE6CC /* PagingBorderLayoutAttributes.swift in Sources */,
+				AB7F0F13E6083672A7239B5AE370E945 /* PagingBorderOptions.swift in Sources */,
+				07149EA1769BCDDCA8CCFB51978E172F /* PagingBorderView.swift in Sources */,
+				7CC5F369E54891E1D6E34FAB802BA1B6 /* PagingCell.swift in Sources */,
+				A8ECFB7B73FEBE40811FC79C3717F1DA /* PagingCellLayoutAttributes.swift in Sources */,
+				6B86AE4414CC895B9F3EB30E40D37B51 /* PagingCellViewModel.swift in Sources */,
+				D6C38EA9D8C26C38730E8C6F42525B1B /* PagingCollectionViewLayout.swift in Sources */,
+				9673417D2F586707ED39D0EEAA409D29 /* PagingContentInteraction.swift in Sources */,
+				69E118EF05306BFAE4D4AA40D1CE5422 /* PagingController.swift in Sources */,
+				9FEF31D79B725EF98294757BF80BE57F /* PagingControllerRepresentableView.swift in Sources */,
+				9FACACAF03F3531CFFAED57E7A92ABEE /* PagingDiff.swift in Sources */,
+				690D0162E6A39C16265D81D0C3654DAD /* PagingDirection.swift in Sources */,
+				555D9914240EA62C4A981D2E607039CA /* PagingDistance.swift in Sources */,
+				A9AC9F287FA48D582840C9045497726A /* PagingFiniteDataSource.swift in Sources */,
+				56ACB34F292882432D7707AD631C9804 /* PagingHostingIndicatorView.swift in Sources */,
+				546F1CBC8A1051DA4D726E9763012DD1 /* PagingIndexItem.swift in Sources */,
+				810DDB3B223892647B292DADDD1F6C68 /* PagingIndicatorLayoutAttributes.swift in Sources */,
+				ED1EAEED76C623B94497A050B779405C /* PagingIndicatorMetric.swift in Sources */,
+				0447707D9056B8A166907FB216971672 /* PagingIndicatorOptions.swift in Sources */,
+				1C2F9EDA346E6E02C40EC6D09BE0769F /* PagingIndicatorStyle.swift in Sources */,
+				D75BE7991BF833B48D035041657DB7E8 /* PagingIndicatorView.swift in Sources */,
+				DF8EC17FDA33FD83257EE59035DB0544 /* PagingInvalidationContext.swift in Sources */,
+				2DC8CD9A91531D73FDFAE72A284E4725 /* PagingItem.swift in Sources */,
+				A5441B71E26F7B4DCD518EC14D1296BD /* PagingItems.swift in Sources */,
+				DAA095E2CFA445F17D4BCA82FE6A8851 /* PagingLayout.swift in Sources */,
+				32396F8D78AE56E6F6FB57193E32D181 /* PagingMenuDataSource.swift in Sources */,
+				893A96F8C247BCD04F6525460A3C4321 /* PagingMenuDelegate.swift in Sources */,
+				00FFF1CB43ED89B86B5DC3BE32CF528D /* PagingMenuHorizontalAlignment.swift in Sources */,
+				35195DF0F7ADAC1540671DBF12D697C4 /* PagingMenuInteraction.swift in Sources */,
+				4F838C40F66AB30482D48911EA340DBF /* PagingMenuItemSize.swift in Sources */,
+				D91C36D5F8F129A14B78D7D8C0205DB0 /* PagingMenuItemSource.swift in Sources */,
+				07C527D0D93A69C2AD9720CF02494130 /* PagingMenuPosition.swift in Sources */,
+				861D9599A679FDD90DBF6BC57D3CC37D /* PagingMenuTransition.swift in Sources */,
+				9F91EB21B13FE2DDF3650B8D1218A859 /* PagingMenuView.swift in Sources */,
+				92A036865BF45000B7886DE55DA7E3C0 /* PagingNavigationOrientation.swift in Sources */,
+				A5699068969A64693C08D362037D0A83 /* PagingOptions.swift in Sources */,
+				FE39FFAF639472E5D8A4C5BD80CDCD3C /* PagingSelectedScrollPosition.swift in Sources */,
+				2EF4F974FBAB00B39F5AF4D13532B094 /* PagingSizeCache.swift in Sources */,
+				B2AB1A56225C509443F77CCA170260FB /* PagingState.swift in Sources */,
+				9D29492D90C59F54DD8625EE424C2262 /* PagingStaticDataSource.swift in Sources */,
+				C5BCA8728D2BF5596505B476C9EC48D8 /* PagingTitleCell.swift in Sources */,
+				CC73E15A5E2E23659D9212F4ED69A97B /* PagingTransition.swift in Sources */,
+				C329D2551D56567EB5E6376C2DBA9C68 /* PagingView.swift in Sources */,
+				5F608882ADCF7E3CE61A560626BDF7DB /* PagingViewController.swift in Sources */,
+				4728366DF1D852CD4B802246D16FFC6C /* PagingViewControllerDataSource.swift in Sources */,
+				E42234C96DA46A7D0C7660874BCDCCCB /* PagingViewControllerDelegate.swift in Sources */,
+				05304E38E7FEDF6C2DF9BE8099FB1D42 /* PagingViewControllerInfiniteDataSource.swift in Sources */,
+				EC5C7B5B8A02408A9D760A0EAE1F18D6 /* PagingViewControllerSizeDelegate.swift in Sources */,
+				0B3BE7236C3C7CC013617C482902E113 /* Parchment-dummy.m in Sources */,
+				0752BD69201A8163B72A4B9E2D61BAA2 /* Tween.swift in Sources */,
+				948C651A4D162B85B6585B19EEE05617 /* UIColor+interpolation.swift in Sources */,
+				61A72753B279B49C978B84A2AC4D1D32 /* UIEdgeInsets.swift in Sources */,
+				C578E9AD4B125D990BAC3A462DCA6FCA /* UIView+constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,29 +728,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3369A3545F4F8F68872ABC46E589E5A /* Sources */ = {
+		97B29633EC3A27B6B7BEE77990ED78B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77D8BF2B32FA326AD3883B6FB8EE99E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */,
+				1C0C752A145074A56BFDAF0203605B19 /* Pods-TravelBudgetCalculator-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39F1B344FB0033BE416B08A5C875115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5F4C9C75F465DAF1B34A5F2781983BD /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59716FEEF5F1849EDEAF43472C25051F /* PBXTargetDependency */ = {
+		4430B78BC0294EB2CDE88E61ACE033AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-TravelBudgetCalculator";
 			target = 065170C1A7332D9BA6D8C4B4F2253A36 /* Pods-TravelBudgetCalculator */;
-			targetProxy = 1221885B6D5CE6A0E1D7E28B9429DEFE /* PBXContainerItemProxy */;
+			targetProxy = 279E6BCE41172E3A06CC65AD39053ED7 /* PBXContainerItemProxy */;
+		};
+		7726C2E60438E439B789BDC88D2B6155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Parchment;
+			target = 18184DEEDE7075D999122505659B55E9 /* Parchment */;
+			targetProxy = 3AAF34935F0F30AC3B3F19169F3FA368 /* PBXContainerItemProxy */;
+		};
+		BBF534787AF8C87CDBFFB791E4B87B2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Parchment;
+			target = 18184DEEDE7075D999122505659B55E9 /* Parchment */;
+			targetProxy = CAAB520AC267160075BD6BFC1118E2FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		22CEE87E76531F053593074FDB93272B /* Debug */ = {
+		03D2D2C43965E7C8276D1C934895D5AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2AD45EDAF5A5DD6342F03D5CC762107 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */;
+			baseConfigurationReference = AEFA349EF98DA565BE17C7BADEBDF9B9 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -389,10 +800,82 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07625C96ABA10D1D35391CC54B9DCE96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAEC2219D153007838F60EAE7A2C3390 /* Parchment.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Parchment/Parchment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Parchment/Parchment-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Parchment/Parchment.modulemap";
+				PRODUCT_MODULE_NAME = Parchment;
+				PRODUCT_NAME = Parchment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		0BFC3F21E52F3581FAD73C8E5C7BC883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29537E69AB627E1FFD07122CDBFDFA0E /* Parchment.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Parchment/Parchment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Parchment/Parchment-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Parchment/Parchment.modulemap";
+				PRODUCT_MODULE_NAME = Parchment;
+				PRODUCT_NAME = Parchment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		39F5B7CD9D2655A0D1F7D42E37920E8B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -460,9 +943,9 @@
 			};
 			name = Debug;
 		};
-		7DB2C2A7367EFBB9255E2BA712ED8703 /* Release */ = {
+		52DCD955833BA09D7F55E4656D67FD00 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A94507A766B31F167ACF61FFCE337F42 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */;
+			baseConfigurationReference = 53D28F2DFCDA12589AE659D1420841DC /* Pods-TravelBudgetCalculator.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -474,7 +957,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,7 +966,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -498,9 +981,46 @@
 			};
 			name = Release;
 		};
-		97A4AB5BAB74863E7F4790F959E41D70 /* Release */ = {
+		5BF5496D6C2D7E4B8962E0550C187239 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C730A2AD78B049F4715ED014EA535C5E /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.release.xcconfig */;
+			baseConfigurationReference = 7811179125C198A6DF5804A232CFA197 /* Pods-TravelBudgetCalculator.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77919E05DCA7F1E8620ADFB3CBFD2CD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8612AB9E1E5106D6D9A7BEE05F6DE7 /* Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -522,6 +1042,43 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests/Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7DB2C2A7367EFBB9255E2BA712ED8703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58A09EF4E7FAFA28D55BC1AA38C5A67 /* Pods-TravelBudgetCalculatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculatorTests/Pods-TravelBudgetCalculatorTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -598,47 +1155,9 @@
 			};
 			name = Release;
 		};
-		CB5A3B635259F7B950DA6391DBF0F134 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2D769A1D7ABA91BE810516979A2DD85 /* Pods-TravelBudgetCalculator.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		DD805E66661D1FB229AE06E2ABD48245 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2696505A1231C4D9D2F687C28D2E8DC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */;
+			baseConfigurationReference = 16AD09BBA7C2F1EEEBA15AC09DCC0EEC /* Pods-TravelBudgetCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -673,51 +1192,14 @@
 			};
 			name = Debug;
 		};
-		EDEEFF7F79A4BD20FBDCE0A06BE88F1B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90338C75AF5402905247C59AB93705B9 /* Pods-TravelBudgetCalculator.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TravelBudgetCalculator/Pods-TravelBudgetCalculator.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06E80DF1A9E361C26872F306E1BD8061 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */ = {
+		067C8921F14B6CE562544DC558211AB6 /* Build configuration list for PBXNativeTarget "Parchment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				22CEE87E76531F053593074FDB93272B /* Debug */,
-				97A4AB5BAB74863E7F4790F959E41D70 /* Release */,
+				07625C96ABA10D1D35391CC54B9DCE96 /* Debug */,
+				0BFC3F21E52F3581FAD73C8E5C7BC883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -731,6 +1213,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		53BBFA40C5587B0EFD37A496D43726A3 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BF5496D6C2D7E4B8962E0550C187239 /* Debug */,
+				52DCD955833BA09D7F55E4656D67FD00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		710D1D81D7AA584B76F52E229FF73B4D /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -740,11 +1231,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B734A63A47853E81698EF215AEA90C87 /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator" */ = {
+		A52E186E143076CF02D96906CD8BCBAF /* Build configuration list for PBXNativeTarget "Pods-TravelBudgetCalculator-TravelBudgetCalculatorUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EDEEFF7F79A4BD20FBDCE0A06BE88F1B /* Debug */,
-				CB5A3B635259F7B950DA6391DBF0F134 /* Release */,
+				77919E05DCA7F1E8620ADFB3CBFD2CD7 /* Debug */,
+				03D2D2C43965E7C8276D1C934895D5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
