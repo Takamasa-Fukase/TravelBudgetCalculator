@@ -7,23 +7,109 @@
 
 import UIKit
 
-class DateListViewController: UIViewController {
+struct DailyExpense {
+    let date: String
+    let cityName: String
+    var expenseData: [PaymentListSection]
+}
 
+class DateListViewController: UIViewController {
+    var data: [DailyExpense] = [
+        DailyExpense(date: "9月12日", cityName: "ロサンゼルス1日目", expenseData: [
+            PaymentListSection(
+                paymentType: .transportation,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .food,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .other,
+                items: []
+            )
+        ]),
+        DailyExpense(date: "9月13日", cityName: "ブエノスアイレス1日目", expenseData: [
+            PaymentListSection(
+                paymentType: .transportation,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .food,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .other,
+                items: []
+            )
+        ]),
+        DailyExpense(date: "9月14日", cityName: "ブエノスアイレス2日目", expenseData: [
+            PaymentListSection(
+                paymentType: .transportation,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .food,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .other,
+                items: []
+            )
+        ]),
+        DailyExpense(date: "9月15日", cityName: "ブエノスアイレス3日目", expenseData: [
+            PaymentListSection(
+                paymentType: .transportation,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .food,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .other,
+                items: []
+            )
+        ]),
+        DailyExpense(date: "9月16日", cityName: "パタゴニア1日目（El Chalten宿泊）", expenseData: [
+            PaymentListSection(
+                paymentType: .transportation,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .food,
+                items: []
+            ),
+            PaymentListSection(
+                paymentType: .other,
+                items: []
+            )
+        ]),
+    ]
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTableView() {
+        tableView.register(UINib(nibName: "DateListCell", bundle: nil), forCellReuseIdentifier: "DateListCell")
     }
-    */
+}
 
+extension DateListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DateListCell", for: indexPath) as! DateListCell
+        let item = data[indexPath.section]
+        cell.dateLabel.text = item.date
+        cell.cityNameLabel.text = item.cityName
+        cell.data = item.expenseData
+        return cell
+    }
 }

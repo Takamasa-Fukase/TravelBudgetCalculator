@@ -29,29 +29,41 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vqf-In-vfm">
-                        <rect key="frame" x="16" y="64" width="288" height="526"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vqf-In-vfm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="538"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="YvD-ei-CmG"/>
+                        </constraints>
                     </tableView>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemMintColor"/>
                 <constraints>
                     <constraint firstItem="jam-SB-aiq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="4fx-vx-nZc"/>
-                    <constraint firstAttribute="trailing" secondItem="vqf-In-vfm" secondAttribute="trailing" constant="16" id="EoJ-y4-0Z5"/>
-                    <constraint firstItem="vqf-In-vfm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LBe-5O-sE7"/>
+                    <constraint firstAttribute="trailing" secondItem="vqf-In-vfm" secondAttribute="trailing" id="EoJ-y4-0Z5"/>
+                    <constraint firstItem="vqf-In-vfm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LBe-5O-sE7"/>
                     <constraint firstItem="gvX-oi-SXK" firstAttribute="top" secondItem="jam-SB-aiq" secondAttribute="bottom" constant="4" id="bTn-QE-6Zf"/>
                     <constraint firstItem="gvX-oi-SXK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fXq-zJ-7QI"/>
-                    <constraint firstAttribute="bottom" secondItem="vqf-In-vfm" secondAttribute="bottom" constant="12" id="nLE-B6-r3a"/>
+                    <constraint firstAttribute="bottom" secondItem="vqf-In-vfm" secondAttribute="bottom" id="nLE-B6-r3a"/>
                     <constraint firstItem="jam-SB-aiq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wqp-Fn-5bs"/>
                     <constraint firstItem="vqf-In-vfm" firstAttribute="top" secondItem="gvX-oi-SXK" secondAttribute="bottom" constant="4" id="zvt-mr-4cS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityNameLabel" destination="gvX-oi-SXK" id="cdU-3W-sXV"/>
+                <outlet property="dateLabel" destination="jam-SB-aiq" id="bGp-Mo-Hgf"/>
+                <outlet property="tableView" destination="vqf-In-vfm" id="3mF-lk-zmD"/>
+            </connections>
             <point key="canvasLocation" x="-154.19847328244273" y="50.70422535211268"/>
         </tableViewCell>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
