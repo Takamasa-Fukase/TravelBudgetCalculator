@@ -21,19 +21,14 @@
 		BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */; };
 		BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */; };
 		BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */; };
-		BC18F8702C89813D006C8D59 /* DateListViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18F86F2C89813D006C8D59 /* DateListViewController2.swift */; };
-		BC18F8722C898143006C8D59 /* DateListViewController2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18F8712C898143006C8D59 /* DateListViewController2.storyboard */; };
+		BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18F86F2C89813D006C8D59 /* DateListViewController.swift */; };
+		BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18F8712C898143006C8D59 /* DateListViewController.storyboard */; };
 		BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */; };
-		BCA9A9382C822E7100084047 /* DestinationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9362C822E7100084047 /* DestinationListViewController.swift */; };
-		BCA9A93B2C822EA700084047 /* DestinationListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */; };
-		BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */; };
-		BCA9A93F2C822ECD00084047 /* CreateDestinationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */; };
-		BCA9A9412C822EED00084047 /* DateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController.swift */; };
-		BCA9A9432C822EF300084047 /* DateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController.storyboard */; };
+		BC58CB5E2C898ADF00F40E16 /* DailyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */; };
+		BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController0.swift */; };
+		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
 		BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */; };
-		BCA9A94A2C82312D00084047 /* DestinationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9482C82312D00084047 /* DestinationListCell.swift */; };
-		BCA9A94B2C82312D00084047 /* DestinationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9492C82312D00084047 /* DestinationListCell.xib */; };
 		BCD007102C8891080072B455 /* DateListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0070E2C8891080072B455 /* DateListCell.swift */; };
 		BCD007112C8891080072B455 /* DateListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD0070F2C8891080072B455 /* DateListCell.xib */; };
 		BCD007132C8931E10072B455 /* DateDetailGenreSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */; };
@@ -84,19 +79,14 @@
 		BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemCell.swift; sourceTree = "<group>"; };
 		BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListItemCell.xib; sourceTree = "<group>"; };
 		BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
-		BC18F86F2C89813D006C8D59 /* DateListViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController2.swift; sourceTree = "<group>"; };
-		BC18F8712C898143006C8D59 /* DateListViewController2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController2.storyboard; sourceTree = "<group>"; };
+		BC18F86F2C89813D006C8D59 /* DateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController.swift; sourceTree = "<group>"; };
+		BC18F8712C898143006C8D59 /* DateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController.storyboard; sourceTree = "<group>"; };
 		BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryData.swift; sourceTree = "<group>"; };
-		BCA9A9362C822E7100084047 /* DestinationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListViewController.swift; sourceTree = "<group>"; };
-		BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DestinationListViewController.storyboard; sourceTree = "<group>"; };
-		BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDestinationViewController.swift; sourceTree = "<group>"; };
-		BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDestinationViewController.storyboard; sourceTree = "<group>"; };
-		BCA9A9402C822EED00084047 /* DateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController.swift; sourceTree = "<group>"; };
-		BCA9A9422C822EF300084047 /* DateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController.storyboard; sourceTree = "<group>"; };
+		BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpense.swift; sourceTree = "<group>"; };
+		BCA9A9402C822EED00084047 /* DateListViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController0.swift; sourceTree = "<group>"; };
+		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
 		BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateDetailViewController.storyboard; sourceTree = "<group>"; };
-		BCA9A9482C82312D00084047 /* DestinationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListCell.swift; sourceTree = "<group>"; };
-		BCA9A9492C82312D00084047 /* DestinationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestinationListCell.xib; sourceTree = "<group>"; };
 		BCD0070E2C8891080072B455 /* DateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListCell.swift; sourceTree = "<group>"; };
 		BCD0070F2C8891080072B455 /* DateListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateListCell.xib; sourceTree = "<group>"; };
 		BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailGenreSectionHeader.swift; sourceTree = "<group>"; };
@@ -176,14 +166,11 @@
 				BC0DFA742C81BC0100B705A7 /* AppDelegate.swift */,
 				BC0DFA762C81BC0100B705A7 /* SceneDelegate.swift */,
 				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
-				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
+				BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */,
 				BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */,
-				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
-				BCA9A9322C822D8200084047 /* DestinationList */,
-				BCA9A9332C822DD500084047 /* CreateDestination */,
-				BCA9A9342C822E0200084047 /* DateList */,
-				BC18F86E2C898112006C8D59 /* DataList2 */,
+				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
+				BC58CB5C2C8989C100F40E16 /* UnusedFiles */,
 				BC0DFA7D2C81BC0300B705A7 /* Assets.xcassets */,
 				BC0DFA7F2C81BC0300B705A7 /* LaunchScreen.storyboard */,
 				BC0DFA822C81BC0300B705A7 /* Info.plist */,
@@ -208,44 +195,34 @@
 			path = TravelBudgetCalculatorUITests;
 			sourceTree = "<group>";
 		};
-		BC18F86E2C898112006C8D59 /* DataList2 */ = {
+		BC18F86E2C898112006C8D59 /* DataList */ = {
 			isa = PBXGroup;
 			children = (
-				BC18F86F2C89813D006C8D59 /* DateListViewController2.swift */,
-				BC18F8712C898143006C8D59 /* DateListViewController2.storyboard */,
+				BC18F86F2C89813D006C8D59 /* DateListViewController.swift */,
+				BC18F8712C898143006C8D59 /* DateListViewController.storyboard */,
 			);
-			path = DataList2;
+			path = DataList;
 			sourceTree = "<group>";
 		};
-		BCA9A9322C822D8200084047 /* DestinationList */ = {
+		BC58CB5C2C8989C100F40E16 /* UnusedFiles */ = {
 			isa = PBXGroup;
 			children = (
-				BCA9A9362C822E7100084047 /* DestinationListViewController.swift */,
-				BCA9A93A2C822EA700084047 /* DestinationListViewController.storyboard */,
-				BCA9A9482C82312D00084047 /* DestinationListCell.swift */,
-				BCA9A9492C82312D00084047 /* DestinationListCell.xib */,
+				BC0DFA782C81BC0100B705A7 /* ViewController.swift */,
+				BC0DFA7A2C81BC0100B705A7 /* Main.storyboard */,
+				BCA9A9342C822E0200084047 /* DateList0 */,
 			);
-			path = DestinationList;
+			path = UnusedFiles;
 			sourceTree = "<group>";
 		};
-		BCA9A9332C822DD500084047 /* CreateDestination */ = {
+		BCA9A9342C822E0200084047 /* DateList0 */ = {
 			isa = PBXGroup;
 			children = (
-				BCA9A93C2C822EC600084047 /* CreateDestinationViewController.swift */,
-				BCA9A93E2C822ECD00084047 /* CreateDestinationViewController.storyboard */,
-			);
-			path = CreateDestination;
-			sourceTree = "<group>";
-		};
-		BCA9A9342C822E0200084047 /* DateList */ = {
-			isa = PBXGroup;
-			children = (
-				BCA9A9402C822EED00084047 /* DateListViewController.swift */,
-				BCA9A9422C822EF300084047 /* DateListViewController.storyboard */,
+				BCA9A9402C822EED00084047 /* DateListViewController0.swift */,
+				BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */,
 				BCD0070E2C8891080072B455 /* DateListCell.swift */,
 				BCD0070F2C8891080072B455 /* DateListCell.xib */,
 			);
-			path = DateList;
+			path = DateList0;
 			sourceTree = "<group>";
 		};
 		BCA9A9352C822E1B00084047 /* DateDetail */ = {
@@ -253,10 +230,10 @@
 			children = (
 				BCA9A9442C822F0200084047 /* DateDetailViewController.swift */,
 				BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */,
-				BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */,
-				BCD007142C8931E80072B455 /* DateDetailGenreSectionHeader.xib */,
 				BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */,
 				BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */,
+				BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */,
+				BCD007142C8931E80072B455 /* DateDetailGenreSectionHeader.xib */,
 				BCD007162C8934AA0072B455 /* DateDetailGenreSectionFooter.swift */,
 				BCD007182C8934B10072B455 /* DateDetailGenreSectionFooter.xib */,
 			);
@@ -383,16 +360,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD007152C8931E80072B455 /* DateDetailGenreSectionHeader.xib in Resources */,
-				BCA9A9432C822EF300084047 /* DateListViewController.storyboard in Resources */,
+				BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */,
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
-				BC18F8722C898143006C8D59 /* DateListViewController2.storyboard in Resources */,
-				BCA9A93F2C822ECD00084047 /* CreateDestinationViewController.storyboard in Resources */,
+				BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */,
 				BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */,
 				BC0DFA812C81BC0300B705A7 /* Base in Resources */,
 				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
-				BCA9A93B2C822EA700084047 /* DestinationListViewController.storyboard in Resources */,
-				BCA9A94B2C82312D00084047 /* DestinationListCell.xib in Resources */,
 				BCD007192C8934B10072B455 /* DateDetailGenreSectionFooter.xib in Resources */,
 				BCD007112C8891080072B455 /* DateListCell.xib in Resources */,
 			);
@@ -522,21 +496,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCA9A9412C822EED00084047 /* DateListViewController.swift in Sources */,
-				BC18F8702C89813D006C8D59 /* DateListViewController2.swift in Sources */,
+				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,
+				BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */,
 				BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */,
-				BCA9A9382C822E7100084047 /* DestinationListViewController.swift in Sources */,
 				BCD007172C8934AA0072B455 /* DateDetailGenreSectionFooter.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
 				BCD007102C8891080072B455 /* DateListCell.swift in Sources */,
-				BCA9A94A2C82312D00084047 /* DestinationListCell.swift in Sources */,
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
 				BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
 				BCD007132C8931E10072B455 /* DateDetailGenreSectionHeader.swift in Sources */,
 				BC0DFA772C81BC0100B705A7 /* SceneDelegate.swift in Sources */,
 				BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */,
-				BCA9A93D2C822EC600084047 /* CreateDestinationViewController.swift in Sources */,
+				BC58CB5E2C898ADF00F40E16 /* DailyExpense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +696,7 @@
 				INFOPLIST_FILE = TravelBudgetCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = DestinationListViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -753,7 +725,7 @@
 				INFOPLIST_FILE = TravelBudgetCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = DestinationListViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

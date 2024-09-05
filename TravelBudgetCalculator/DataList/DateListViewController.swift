@@ -1,5 +1,5 @@
 //
-//  DateListViewController2.swift
+//  DateListViewController.swift
 //  TravelBudgetCalculator
 //
 //  Created by ウルトラ深瀬 on 5/9/24.
@@ -8,7 +8,7 @@
 import UIKit
 import Parchment
 
-class DateListViewController2: UIViewController {
+class DateListViewController: UIViewController {
     var pagingViewController = PagingViewController(viewControllers: [])
     var dateList: [DailyExpense] = []
 
