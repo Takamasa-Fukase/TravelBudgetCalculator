@@ -9,8 +9,9 @@ import UIKit
 
 class PaymentListItemCell: UITableViewCell {    
     var id: UUID = UUID()
-    var didEndEditingAmount: ((Double) -> Void) = { _ in }
+    var didEndEditing: ((String, Double) -> Void) = { _, _  in }
     var menuButtonTapped: ((UUID) -> Void) = { _ in }
+    var showError: ((String) -> Void) = { _ in }
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
@@ -42,13 +43,12 @@ class PaymentListItemCell: UITableViewCell {
 
 extension PaymentListItemCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let doubleAmount = Double(textField.text ?? "") else {
-            // 不正な文字が入っていた場合はエラー表示する
-            textField.text = ""
-            yenDisplayLabel.text = "入力値が不正です"
+        let title = titleTextField.text ?? ""
+        guard let doubleAmount = Double(amountTextField.text ?? "") else {
+            showError("金額に不正な文字が入っていたので更新失敗")
             return
         }
         // 円表示を更新するために通知
-        didEndEditingAmount(doubleAmount)
+        didEndEditing(title, doubleAmount)
     }
 }

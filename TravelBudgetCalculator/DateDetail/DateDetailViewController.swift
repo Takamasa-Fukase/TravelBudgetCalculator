@@ -97,16 +97,15 @@ extension DateDetailViewController: UITableViewDataSource {
         // 今後、個別のセルの通貨を編集して保存する機能を作る予定があるので。（トルコでユーロを使ったみたいに。）
         cell.currencyLabel.text = "(\(item.currencyType.code))"
         cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: item.currencyType.toYenRate)
-        cell.didEndEditingAmount = { [weak self] amount in
+        cell.didEndEditing = { [weak self] (title, amount) in
+            self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
             self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = amount
+            // MEMO: セクションヘッダーに合計金額を表示しているため、セルだけでなくセクションを丸ごと更新している
             self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
         }
         cell.menuButtonTapped = { [weak self] id in
             guard let selectedItem = self?.dailyExpense.expenseData.first(where: { $0.items.contains(where: { $0.id == id }) })?.items.first(where: { $0.id == id }) else {
-                let errorAlert = UIAlertController(title: "エラーが発生しました", message: "選択されたItemの取得に失敗", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "閉じる", style: .default)
-                errorAlert.addAction(ok)
-                self?.present(errorAlert, animated: true)
+                self?.showError(message: "選択されたItemの取得に失敗")
                 return
             }
             let yenText = self?.yenAmountText(amount: selectedItem.amount, toYenRate: selectedItem.currencyType.toYenRate) ?? ""
@@ -130,6 +129,9 @@ extension DateDetailViewController: UITableViewDataSource {
             alert.addAction(cancel)
             alert.addAction(delete)
             self?.present(alert, animated: true)
+        }
+        cell.showError = { [weak self] message in
+            self?.showError(message: message)
         }
         return cell
     }
