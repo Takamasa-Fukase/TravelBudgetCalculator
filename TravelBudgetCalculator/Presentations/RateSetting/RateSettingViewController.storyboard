@@ -25,7 +25,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thu-3c-wHa">
-                                <rect key="frame" x="40" y="770" width="313" height="48"/>
+                                <rect key="frame" x="16" y="770" width="361" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Pks-Z0-Hf4"/>
                                 </constraints>
@@ -36,9 +36,9 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Thu-3c-wHa" secondAttribute="trailing" constant="40" id="J6C-NP-Ioj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Thu-3c-wHa" secondAttribute="trailing" constant="16" id="J6C-NP-Ioj"/>
                             <constraint firstItem="2ya-7E-TVO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Rvi-R4-3L7"/>
-                            <constraint firstItem="Thu-3c-wHa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="T15-rf-hAO"/>
+                            <constraint firstItem="Thu-3c-wHa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="T15-rf-hAO"/>
                             <constraint firstItem="2ya-7E-TVO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eNe-Le-rx5"/>
                             <constraint firstAttribute="bottom" secondItem="2ya-7E-TVO" secondAttribute="bottom" id="lw9-fr-Q1j"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Thu-3c-wHa" secondAttribute="bottom" id="rN9-3S-X1U"/>

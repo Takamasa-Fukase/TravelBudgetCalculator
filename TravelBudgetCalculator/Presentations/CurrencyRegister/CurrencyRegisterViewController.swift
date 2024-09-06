@@ -67,13 +67,20 @@ class CurrencyRegisterViewController: UIViewController {
     }
     
     func setupCurrencySelectionButton() {
-        let currencyOptionList = CurrencyType.allCases.map { item in
+        // 既に登録済みの通貨を除外した配列を作成
+        let unregisteredCurrencies = CurrencyType.allCases.filter({ item in
+            !UserDefaults.registeredCurrencies.contains(where: { $0.type == item })
+        })
+        let currencyOptionList = unregisteredCurrencies.map { item in
             return UIAction(title: item.rawValue, handler: { [weak self] _ in
                 guard let self = self else { return }
                 // 選択された通貨を変数に保持
                 self.selectedCurrency = item
             })
         }
+        // 初期選択される通貨を変数に保持
+        selectedCurrency = unregisteredCurrencies.first
+        
         currencySelectionButton.menu = UIMenu(title: "通貨を選択", children: currencyOptionList)
         currencySelectionButton.showsMenuAsPrimaryAction = true
         currencySelectionButton.changesSelectionAsPrimaryAction = true
