@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DailyExpense {
+struct DailyExpense: Codable {
     let date: String
     let cityName: String
     let currency: CurrencyType

@@ -9,22 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct Travel {
-    let name: String
-    let duration: String
-    let image: UIImage?
-    let dateList: [DailyExpense]
-}
-
 class TopViewController: UIViewController {
     let disposeBag = DisposeBag()
     // TODO: 後でUDの直参照にしたら消す
-    var travels: [Travel] = [
-        .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: []),
-        .init(name: "Latin America", duration: "9月12日〜10月10日", image: nil, dateList: []),
-        .init(name: "Latin America", duration: "9月12日〜10月10日", image: nil, dateList: []),
-        .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: [])
-    ]
+//    var travels: [Travel] = [
+//        .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: []),
+//        .init(name: "テスト", duration: "9月6日〜9月8日", image: nil, dateList: [])
+//    ]
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toRateSettingButton: UIButton!
@@ -90,14 +81,14 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return UserDefaults.registeredCurrencies.count
-        return travels.count
+        return UserDefaults.travels.count
+//        return travels.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelListCell", for: indexPath) as! TravelListCell
 //        let item = UserDefaults.registeredCurrencies[indexPath.row]
-        let item = travels[indexPath.row]
+        let item = UserDefaults.travels[indexPath.row]
         cell.travelNameLabel.text = item.name
         cell.durationLabel.text = item.duration
         if let image = item.image {
@@ -111,7 +102,7 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
-        vc.title = travels[indexPath.row].name
+        vc.title = UserDefaults.travels[indexPath.row].name
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

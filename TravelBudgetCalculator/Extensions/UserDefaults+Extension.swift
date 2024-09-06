@@ -12,6 +12,7 @@ extension UserDefaults {
 
     private enum Keys {
         static let registeredCurrencies = "registeredCurrencies"
+        static let travels = "travels"
     }
     
     static var registeredCurrencies: [RegisteredCurrency] {
@@ -33,6 +34,29 @@ extension UserDefaults {
                 defaults.set(encodedValue, forKey: Keys.registeredCurrencies)
             } catch {
                 print("registeredCurrenciesのset catchしたエラー: \(error)")
+            }
+        }
+    }
+    
+    static var travels: [Travel] {
+        get {
+            do {
+                guard let data = defaults.data(forKey: Keys.travels) else {
+                    return []
+                }
+                let decodedValue = try JSONDecoder().decode([Travel].self, from: data)
+                return decodedValue
+            } catch {
+                print("travelsのget catchしたエラー: \(error)")
+                return []
+            }
+        }
+        set {
+            do {
+                let encodedValue = try JSONEncoder().encode(newValue)
+                defaults.set(encodedValue, forKey: Keys.travels)
+            } catch {
+                print("travelsのset catchしたエラー: \(error)")
             }
         }
     }

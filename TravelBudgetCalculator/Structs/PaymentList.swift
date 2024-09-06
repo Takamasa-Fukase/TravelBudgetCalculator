@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct PaymentListSection {
+struct PaymentListSection: Codable {
     let paymentType: PaymentType
     var items: [PaymentListItem]
     
-    enum PaymentType: String, CaseIterable {
+    enum PaymentType: String, CaseIterable, Codable {
         case transportation = "交通費"
         case food = "食費"
         case other = "その他"
     }
 }
 
-struct PaymentListItem {
+struct PaymentListItem: Codable {
     let id: UUID
     var title: String
     var amount: Double

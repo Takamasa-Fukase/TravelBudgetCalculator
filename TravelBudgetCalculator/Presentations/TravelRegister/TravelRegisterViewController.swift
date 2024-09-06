@@ -53,7 +53,38 @@ class TravelRegisterViewController: UIViewController {
                 }
                 
                 // UserDefaultsに保存
-//                UserDefaults.registeredCurrencies = UserDefaults.registeredCurrencies + [newCurrency]
+                guard let image = UIImage(named: "latin_america"),
+                      let imageData = image.pngData() else {
+                    print("Image converted to PNG Data successfully!")
+                    return
+                }
+                
+                let dateList = dateStrings.enumerated().map { (index, dateString) in
+                    return DailyExpense(
+                        date: dateString,
+                        cityName: "\(index + 1)日目",
+                        currency: .JPY,
+                        expenseData: [
+                            .init(paymentType: .transportation, items: [
+                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                            ]),
+                            .init(paymentType: .food, items: [
+                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                            ]),
+                            .init(paymentType: .other, items: [
+                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                            ])
+                        ]
+                    )
+                }
+                let travel = Travel(
+                    name: travelNameTextField.text ?? "",
+                    duration: "\(dateStrings.first ?? "")〜\(dateStrings.last ?? "")",
+                    imageData: imageData,
+                    dateList: dateList
+                )
+                
+                UserDefaults.travels = UserDefaults.travels + [travel]
                 
                 // 前の画面のリストを更新させるために通知
                 self.delegate?.onRegistered()
