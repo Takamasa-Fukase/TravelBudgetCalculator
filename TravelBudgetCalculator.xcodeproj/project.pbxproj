@@ -40,6 +40,8 @@
 		BCA731762C8AA3B9007C56A5 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731752C8AA3B9007C56A5 /* Encodable+Extension.swift */; };
 		BCA731792C8AA988007C56A5 /* CurrencyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731782C8AA988007C56A5 /* CurrencyRegisterViewController.swift */; };
 		BCA7317B2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */; };
+		BCA7317E2C8ABF7B007C56A5 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7317D2C8ABF7B007C56A5 /* TopViewController.swift */; };
+		BCA731802C8ABF80007C56A5 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA7317F2C8ABF80007C56A5 /* TopViewController.storyboard */; };
 		BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController0.swift */; };
 		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
@@ -113,6 +115,8 @@
 		BCA731752C8AA3B9007C56A5 /* Encodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		BCA731782C8AA988007C56A5 /* CurrencyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRegisterViewController.swift; sourceTree = "<group>"; };
 		BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyRegisterViewController.storyboard; sourceTree = "<group>"; };
+		BCA7317D2C8ABF7B007C56A5 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		BCA7317F2C8ABF80007C56A5 /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
 		BCA9A9402C822EED00084047 /* DateListViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController0.swift; sourceTree = "<group>"; };
 		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 		BCA731602C8A9035007C56A5 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				BCA7317C2C8ABF69007C56A5 /* Top */,
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
 				BCA731622C8A98EC007C56A5 /* RateSetting */,
@@ -329,6 +334,15 @@
 				BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */,
 			);
 			path = CurrencyRegister;
+			sourceTree = "<group>";
+		};
+		BCA7317C2C8ABF69007C56A5 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7317D2C8ABF7B007C56A5 /* TopViewController.swift */,
+				BCA7317F2C8ABF80007C56A5 /* TopViewController.storyboard */,
+			);
+			path = Top;
 			sourceTree = "<group>";
 		};
 		BCA9A9342C822E0200084047 /* DateList0 */ = {
@@ -487,6 +501,7 @@
 				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
 				BCA731672C8A9954007C56A5 /* RateSettingViewController.storyboard in Resources */,
+				BCA731802C8ABF80007C56A5 /* TopViewController.storyboard in Resources */,
 				BCD007192C8934B10072B455 /* DateDetailGenreSectionFooter.xib in Resources */,
 				BCD007112C8891080072B455 /* DateListCell.xib in Resources */,
 			);
@@ -640,6 +655,7 @@
 				BC0DFA772C81BC0100B705A7 /* SceneDelegate.swift in Sources */,
 				BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */,
 				BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */,
+				BCA7317E2C8ABF7B007C56A5 /* TopViewController.swift in Sources */,
 				BC58CB5E2C898ADF00F40E16 /* DailyExpense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
