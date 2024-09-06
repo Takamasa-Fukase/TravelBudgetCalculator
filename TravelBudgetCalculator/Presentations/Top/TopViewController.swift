@@ -20,6 +20,9 @@ class TopViewController: UIViewController {
     let disposeBag = DisposeBag()
     // TODO: 後でUDの直参照にしたら消す
     var travels: [Travel] = [
+        .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: []),
+        .init(name: "Latin America", duration: "9月12日〜10月10日", image: nil, dateList: []),
+        .init(name: "Latin America", duration: "9月12日〜10月10日", image: nil, dateList: []),
         .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: [])
     ]
 
@@ -97,7 +100,11 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
         let item = travels[indexPath.row]
         cell.travelNameLabel.text = item.name
         cell.durationLabel.text = item.duration
-        cell.backgroundImageView.image = item.image
+        if let image = item.image {
+            cell.backgroundImageView.image = image
+        }else {
+            cell.backgroundImageView.image = UIImage(systemName: "airplane.departure")
+        }
         
         return cell
     }

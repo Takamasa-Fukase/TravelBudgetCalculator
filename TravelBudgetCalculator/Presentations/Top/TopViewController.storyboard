@@ -25,6 +25,13 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="I4L-fd-Y4M"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hka-Y4-eSw">
+                                <rect key="frame" x="0.0" y="742" width="393" height="110"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="trC-iS-Qvo"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-2B-RI7">
                                 <rect key="frame" x="16" y="758" width="361" height="48"/>
                                 <constraints>
@@ -39,16 +46,19 @@
                         <constraints>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1er-TI-brU"/>
                             <constraint firstAttribute="bottom" secondItem="EER-Kl-95A" secondAttribute="bottom" id="3Cs-jh-bv7"/>
+                            <constraint firstAttribute="bottom" secondItem="hka-Y4-eSw" secondAttribute="bottom" id="FuK-rE-jqM"/>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JEo-y4-p3l"/>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIc-CS-0ss"/>
+                            <constraint firstItem="hka-Y4-eSw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cvP-i8-hwl"/>
                             <constraint firstItem="nrk-2B-RI7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jZv-iR-hlS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nrk-2B-RI7" secondAttribute="bottom" constant="12" id="vYQ-rL-2u8"/>
+                            <constraint firstItem="hka-Y4-eSw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wh1-HN-fRo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nrk-2B-RI7" secondAttribute="trailing" constant="16" id="z9i-gq-da1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="旅行を選択" id="thA-It-f6R">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fCx-v2-BYz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="de9-4i-0gg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="de9-4i-0gg">
                                 <rect key="frame" x="270.33333333333331" y="5" width="106.66666666666669" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>

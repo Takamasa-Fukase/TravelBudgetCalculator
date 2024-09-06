@@ -20,7 +20,7 @@ class TravelListCell: UITableViewCell {
         super.awakeFromNib()
         
         setupGradationView()
-        
+        backgroundImageView.tintColor = .label
     }
     
     override func layoutSubviews() {
