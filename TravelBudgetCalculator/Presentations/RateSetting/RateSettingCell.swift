@@ -17,6 +17,9 @@ class RateSettingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        textField.keyboardType = .numbersAndPunctuation
+        textField.returnKeyType = .done
     }
     
     override func prepareForReuse() {

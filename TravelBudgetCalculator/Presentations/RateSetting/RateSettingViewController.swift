@@ -12,13 +12,6 @@ import RxCocoa
 class RateSettingViewController: UIViewController {
     let disposeBag = DisposeBag()
     var activeTextField = BehaviorRelay<UIView?>(value: nil)
-//    var registeredCurrencies: [RegisteredCurrency] = [
-//        .init(type: .USD, toYenRate: 0),
-//        .init(type: .ARA, toYenRate: 0),
-//        .init(type: .COP, toYenRate: 0),
-//        .init(type: .MXN, toYenRate: 0),
-//        .init(type: .JPY, toYenRate: 0)
-//    ]
 
     @IBOutlet weak var tableView: TouchesBeganTableView!
     @IBOutlet weak var toRegisterPageButton: UIButton!

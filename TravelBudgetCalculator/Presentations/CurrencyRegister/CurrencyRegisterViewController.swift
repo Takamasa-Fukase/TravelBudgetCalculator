@@ -25,6 +25,9 @@ class CurrencyRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rateTextField.keyboardType = .numbersAndPunctuation
+        rateTextField.returnKeyType = .done
+        rateTextField.delegate = self
         setupCurrencySelectionButton()
         
         registerButton.rx.tap
@@ -93,5 +96,12 @@ class CurrencyRegisterViewController: UIViewController {
         })
         alert.addAction(ok)
         present(alert, animated: true)
+    }
+}
+
+extension CurrencyRegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
     }
 }
