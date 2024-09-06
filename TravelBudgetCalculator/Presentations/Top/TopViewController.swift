@@ -24,20 +24,12 @@ class TopViewController: UIViewController {
     ]
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var toDateListButton: UIButton!
     @IBOutlet weak var toRateSettingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
-        
-        toDateListButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                guard let self = self else {return}
-                let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
-                self.navigationController?.pushViewController(vc, animated: true)
-            }).disposed(by: disposeBag)
         
         toRateSettingButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -47,9 +39,18 @@ class TopViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dismissCellHighlight(tableView: tableView)
+    }
+    
     func setupTableView() {
         tableView.register(UINib(nibName: "TravelListCell", bundle: nil), forCellReuseIdentifier: "TravelListCell")
         tableView.contentInset.bottom = 200
+    }
+    
+    func setNaviBarRightButton() {
+        
     }
 }
 
@@ -94,5 +95,10 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
         cell.backgroundImageView.image = item.image
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

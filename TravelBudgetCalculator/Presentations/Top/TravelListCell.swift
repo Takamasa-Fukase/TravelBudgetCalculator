@@ -14,11 +14,13 @@ class TravelListCell: UITableViewCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var gradationView: UIView!
+    @IBOutlet weak var highlightView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupGradationView()
+        
     }
     
     override func layoutSubviews() {
@@ -29,7 +31,11 @@ class TravelListCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            highlightView.backgroundColor = .systemGray.withAlphaComponent(0.5)
+        }else {
+            highlightView.backgroundColor = .clear
+        }
     }
     
     private func setupGradationView() {

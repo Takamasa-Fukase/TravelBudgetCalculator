@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelListCell" rowHeight="199" id="KGk-i7-Jjw" customClass="TravelListCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TravelListCell" rowHeight="199" id="KGk-i7-Jjw" customClass="TravelListCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -25,6 +25,12 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="secondarySystemBackgroundColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -46,12 +52,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hz-BG-H10">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="175"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Q5z-kN-luZ" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" constant="12" id="1FB-l7-SPk"/>
+                            <constraint firstAttribute="bottom" secondItem="5hz-BG-H10" secondAttribute="bottom" id="4SW-OZ-V6W"/>
                             <constraint firstAttribute="trailing" secondItem="Duu-qj-97f" secondAttribute="trailing" id="AFS-V7-UFp"/>
                             <constraint firstAttribute="bottom" secondItem="fSz-eW-BhZ" secondAttribute="bottom" id="B9P-xg-PvM"/>
+                            <constraint firstItem="5hz-BG-H10" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" id="CII-1M-KYg"/>
                             <constraint firstItem="N9X-vb-Hfi" firstAttribute="top" secondItem="Q5z-kN-luZ" secondAttribute="bottom" constant="4" id="DgV-Sy-4MJ"/>
                             <constraint firstItem="N9X-vb-Hfi" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" constant="12" id="MKd-Cu-pKh"/>
                             <constraint firstItem="fSz-eW-BhZ" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" id="VUv-qc-RsA"/>
@@ -59,8 +75,10 @@
                             <constraint firstAttribute="bottom" secondItem="Duu-qj-97f" secondAttribute="bottom" id="bvF-KW-9s9"/>
                             <constraint firstItem="Duu-qj-97f" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" id="duu-91-cos"/>
                             <constraint firstItem="fSz-eW-BhZ" firstAttribute="top" secondItem="SFe-JN-dwv" secondAttribute="top" id="i7r-fy-Oc8"/>
+                            <constraint firstItem="5hz-BG-H10" firstAttribute="top" secondItem="SFe-JN-dwv" secondAttribute="top" id="lr7-0W-yg0"/>
                             <constraint firstAttribute="trailing" secondItem="fSz-eW-BhZ" secondAttribute="trailing" id="oJW-f7-OVH"/>
                             <constraint firstAttribute="trailing" secondItem="Q5z-kN-luZ" secondAttribute="trailing" constant="12" id="vIc-7d-y2M"/>
+                            <constraint firstAttribute="trailing" secondItem="5hz-BG-H10" secondAttribute="trailing" id="vT6-ZX-cWm"/>
                             <constraint firstAttribute="trailing" secondItem="N9X-vb-Hfi" secondAttribute="trailing" constant="12" id="wVP-O2-4vX"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -82,6 +100,7 @@
                 <outlet property="backgroundImageView" destination="fSz-eW-BhZ" id="MaA-uo-ucn"/>
                 <outlet property="durationLabel" destination="N9X-vb-Hfi" id="9W2-8d-2bK"/>
                 <outlet property="gradationView" destination="Duu-qj-97f" id="SEr-22-HUV"/>
+                <outlet property="highlightView" destination="5hz-BG-H10" id="eLV-y3-tCw"/>
                 <outlet property="travelNameLabel" destination="Q5z-kN-luZ" id="5X7-88-syJ"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="75"/>

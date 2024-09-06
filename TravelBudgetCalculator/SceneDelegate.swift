@@ -15,7 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let sb = UIStoryboard(name: "TopViewController", bundle: nil)
         let vc = sb.instantiateInitialViewController() as! TopViewController
-        vc.title = "TOP"
         let navi = UINavigationController(rootViewController: vc)
         window?.rootViewController = navi
         window?.makeKeyAndVisible()

@@ -3,12 +3,13 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top View Controller-->
+        <!--旅行を選択-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="TopViewController" customModule="TravelBudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EER-Kl-95A">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="xMx-6f-LsS"/>
@@ -25,20 +26,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-2B-RI7">
-                                <rect key="frame" x="32" y="726" width="329" height="80"/>
+                                <rect key="frame" x="16" y="758" width="361" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5Ml-8c-S5b"/>
+                                    <constraint firstAttribute="height" constant="48" id="5Ml-8c-S5b"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="dollarsign.arrow.circlepath" catalog="system" title="レート設定"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e51-eW-Dr5">
-                                <rect key="frame" x="32" y="630" width="329" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="3P1-jx-vKX"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="出費記録"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+ 旅行を登録"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -46,29 +39,60 @@
                         <constraints>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1er-TI-brU"/>
                             <constraint firstAttribute="bottom" secondItem="EER-Kl-95A" secondAttribute="bottom" id="3Cs-jh-bv7"/>
-                            <constraint firstItem="nrk-2B-RI7" firstAttribute="top" secondItem="e51-eW-Dr5" secondAttribute="bottom" constant="16" id="EJD-XO-5Tn"/>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JEo-y4-p3l"/>
-                            <constraint firstItem="e51-eW-Dr5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="RSd-s8-Wx3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="e51-eW-Dr5" secondAttribute="trailing" constant="32" id="bj1-28-fE0"/>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIc-CS-0ss"/>
-                            <constraint firstItem="nrk-2B-RI7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="jZv-iR-hlS"/>
+                            <constraint firstItem="nrk-2B-RI7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jZv-iR-hlS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nrk-2B-RI7" secondAttribute="bottom" constant="12" id="vYQ-rL-2u8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nrk-2B-RI7" secondAttribute="trailing" constant="32" id="z9i-gq-da1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nrk-2B-RI7" secondAttribute="trailing" constant="16" id="z9i-gq-da1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="旅行を選択" id="thA-It-f6R">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fCx-v2-BYz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="de9-4i-0gg">
+                                <rect key="frame" x="270.33333333333331" y="5" width="106.66666666666669" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="レート設定">
+                                    <imageReference key="image" image="dollarsign.arrow.circlepath" catalog="system" symbolScale="small"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EER-Kl-95A" id="Wbf-5a-PfA"/>
-                        <outlet property="toDateListButton" destination="e51-eW-Dr5" id="uUv-5a-8NX"/>
                         <outlet property="toRateSettingButton" destination="nrk-2B-RI7" id="yWv-T7-T2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="4.9295774647887329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rhU-9S-V2D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOS-mq-8Ax" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OfT-Ha-kQ2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Jch-TC-sDN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10B-DE-bZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
         <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

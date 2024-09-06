@@ -49,4 +49,13 @@ extension UIViewController {
         //MEMO: - translucent=falseにしてもレイアウト及び座標計算上のview面積を以前のままに保つ為設定
         self.extendedLayoutIncludesOpaqueBars = true
     }
+    
+    // tableViewCellタップで遷移する画面のViewWillAppearで呼び出す（戻ってきた時にどのセルを見ていたかユーザーがわかりやすい様に）
+    func dismissCellHighlight(tableView: UITableView) {
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            UIView.animate(withDuration: 0.2, animations: {
+                tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+            })
+        }
+    }
 }
