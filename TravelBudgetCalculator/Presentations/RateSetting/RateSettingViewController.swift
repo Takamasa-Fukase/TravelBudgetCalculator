@@ -49,6 +49,28 @@ class RateSettingViewController: UIViewController {
     }
 }
 
+extension RateSettingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        var editedData = UserDefaults.registeredCurrencies
+        let selectedCurrency = editedData[indexPath.row]
+        
+        // 確認アラートを出す
+        let alert = UIAlertController(title: "通貨を削除します", message: "本当によろしいですか？\n\n通貨：\(selectedCurrency.type.description)\nレート：\(selectedCurrency.toYenRate)円", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel)
+        let delete = UIAlertAction(title: "削除", style: .destructive) { [weak self] _ in
+            guard let self = self else { return }
+            // TODO: 旅行の記録に使用されている通貨は削除できないようにしたい（データが消えると困るので）
+            
+            editedData.remove(at: indexPath.row)
+            UserDefaults.registeredCurrencies = editedData
+            self.tableView.deleteRows(at: [indexPath], with: .left)
+        }
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        present(alert, animated: true)
+    }
+}
+
 extension RateSettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return UserDefaults.registeredCurrencies.count
@@ -67,7 +89,6 @@ extension RateSettingViewController: UITableViewDataSource {
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
                 let doubleAmount = Double(cell.textField.text ?? "") ?? 0.0
-//                self.registeredCurrencies[indexPath.row].toYenRate = doubleAmount
                 var editedData = UserDefaults.registeredCurrencies
                 editedData[indexPath.row].toYenRate = doubleAmount
                 UserDefaults.registeredCurrencies = editedData
