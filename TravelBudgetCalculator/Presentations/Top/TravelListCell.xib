@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelListCell" rowHeight="199" id="KGk-i7-Jjw" customClass="TravelListCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-JN-dwv">
+                        <rect key="frame" x="16" y="12" width="288" height="175"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSz-eW-BhZ">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="175"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duu-qj-97f">
+                                <rect key="frame" x="0.0" y="95" width="288" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="upE-xW-bmD"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラテンアメリカ旅行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-kN-luZ">
+                                <rect key="frame" x="12" y="101" width="264" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9月12日〜10月10日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9X-vb-Hfi">
+                                <rect key="frame" x="12" y="134" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q5z-kN-luZ" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" constant="12" id="1FB-l7-SPk"/>
+                            <constraint firstAttribute="trailing" secondItem="Duu-qj-97f" secondAttribute="trailing" id="AFS-V7-UFp"/>
+                            <constraint firstAttribute="bottom" secondItem="fSz-eW-BhZ" secondAttribute="bottom" id="B9P-xg-PvM"/>
+                            <constraint firstItem="N9X-vb-Hfi" firstAttribute="top" secondItem="Q5z-kN-luZ" secondAttribute="bottom" constant="4" id="DgV-Sy-4MJ"/>
+                            <constraint firstItem="N9X-vb-Hfi" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" constant="12" id="MKd-Cu-pKh"/>
+                            <constraint firstItem="fSz-eW-BhZ" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" id="VUv-qc-RsA"/>
+                            <constraint firstAttribute="bottom" secondItem="N9X-vb-Hfi" secondAttribute="bottom" constant="20" id="aa9-UH-DJo"/>
+                            <constraint firstAttribute="bottom" secondItem="Duu-qj-97f" secondAttribute="bottom" id="bvF-KW-9s9"/>
+                            <constraint firstItem="Duu-qj-97f" firstAttribute="leading" secondItem="SFe-JN-dwv" secondAttribute="leading" id="duu-91-cos"/>
+                            <constraint firstItem="fSz-eW-BhZ" firstAttribute="top" secondItem="SFe-JN-dwv" secondAttribute="top" id="i7r-fy-Oc8"/>
+                            <constraint firstAttribute="trailing" secondItem="fSz-eW-BhZ" secondAttribute="trailing" id="oJW-f7-OVH"/>
+                            <constraint firstAttribute="trailing" secondItem="Q5z-kN-luZ" secondAttribute="trailing" constant="12" id="vIc-7d-y2M"/>
+                            <constraint firstAttribute="trailing" secondItem="N9X-vb-Hfi" secondAttribute="trailing" constant="12" id="wVP-O2-4vX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SFe-JN-dwv" secondAttribute="trailing" constant="16" id="K9o-bi-Plo"/>
+                    <constraint firstItem="SFe-JN-dwv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="N4i-R2-HDL"/>
+                    <constraint firstItem="SFe-JN-dwv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UXe-3m-pMY"/>
+                    <constraint firstAttribute="bottom" secondItem="SFe-JN-dwv" secondAttribute="bottom" constant="12" id="dIg-w8-w78"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="fSz-eW-BhZ" id="MaA-uo-ucn"/>
+                <outlet property="durationLabel" destination="N9X-vb-Hfi" id="9W2-8d-2bK"/>
+                <outlet property="gradationView" destination="Duu-qj-97f" id="SEr-22-HUV"/>
+                <outlet property="travelNameLabel" destination="Q5z-kN-luZ" id="5X7-88-syJ"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

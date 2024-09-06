@@ -25,6 +25,9 @@
 		BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18F8712C898143006C8D59 /* DateListViewController.storyboard */; };
 		BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */; };
 		BC58CB5E2C898ADF00F40E16 /* DailyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */; };
+		BC69D17D2C8AC81000DD0A9B /* TravelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69D17B2C8AC81000DD0A9B /* TravelListCell.swift */; };
+		BC69D17E2C8AC81000DD0A9B /* TravelListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC69D17C2C8AC81000DD0A9B /* TravelListCell.xib */; };
+		BC69D1802C8AC97200DD0A9B /* Extension+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69D17F2C8AC97200DD0A9B /* Extension+Storyboard.swift */; };
 		BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */; };
 		BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */; };
 		BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731582C89BF23007C56A5 /* UIView+Extension.swift */; };
@@ -100,6 +103,9 @@
 		BC18F8712C898143006C8D59 /* DateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController.storyboard; sourceTree = "<group>"; };
 		BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryData.swift; sourceTree = "<group>"; };
 		BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpense.swift; sourceTree = "<group>"; };
+		BC69D17B2C8AC81000DD0A9B /* TravelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListCell.swift; sourceTree = "<group>"; };
+		BC69D17C2C8AC81000DD0A9B /* TravelListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelListCell.xib; sourceTree = "<group>"; };
+		BC69D17F2C8AC97200DD0A9B /* Extension+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Storyboard.swift"; sourceTree = "<group>"; };
 		BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormUtil.swift; sourceTree = "<group>"; };
 		BCA731582C89BF23007C56A5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 		BCA7315C2C8A8FDD007C56A5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BC69D17F2C8AC97200DD0A9B /* Extension+Storyboard.swift */,
 				BCA731712C8AA250007C56A5 /* UserDefaults+Extension.swift */,
 				BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */,
 				BCA731582C89BF23007C56A5 /* UIView+Extension.swift */,
@@ -341,6 +348,8 @@
 			children = (
 				BCA7317D2C8ABF7B007C56A5 /* TopViewController.swift */,
 				BCA7317F2C8ABF80007C56A5 /* TopViewController.storyboard */,
+				BC69D17B2C8AC81000DD0A9B /* TravelListCell.swift */,
+				BC69D17C2C8AC81000DD0A9B /* TravelListCell.xib */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -504,6 +513,7 @@
 				BCA731802C8ABF80007C56A5 /* TopViewController.storyboard in Resources */,
 				BCD007192C8934B10072B455 /* DateDetailGenreSectionFooter.xib in Resources */,
 				BCD007112C8891080072B455 /* DateListCell.xib in Resources */,
+				BC69D17E2C8AC81000DD0A9B /* TravelListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +643,7 @@
 			files = (
 				BCA731792C8AA988007C56A5 /* CurrencyRegisterViewController.swift in Sources */,
 				BCA7316B2C8A9BFA007C56A5 /* RateSettingCell.swift in Sources */,
+				BC69D1802C8AC97200DD0A9B /* Extension+Storyboard.swift in Sources */,
 				BCA731742C8AA2CC007C56A5 /* RegisteredCurrency.swift in Sources */,
 				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,
 				BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */,
@@ -649,6 +660,7 @@
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
 				BCA731722C8AA250007C56A5 /* UserDefaults+Extension.swift in Sources */,
 				BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */,
+				BC69D17D2C8AC81000DD0A9B /* TravelListCell.swift in Sources */,
 				BCA731762C8AA3B9007C56A5 /* Encodable+Extension.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
 				BCD007132C8931E10072B455 /* DateDetailGenreSectionHeader.swift in Sources */,
