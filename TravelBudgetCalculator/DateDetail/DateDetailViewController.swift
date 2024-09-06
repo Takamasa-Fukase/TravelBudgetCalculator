@@ -168,7 +168,10 @@ extension DateDetailViewController: UITableViewDataSource {
                 guard let self = self else {return}
                 let title = cell.titleTextField.text ?? ""
                 self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
-                self.tableView.reloadRows(at: [indexPath], with: .none)
+                /*
+                 項目名の入力後に完了をおさずにそのまま金額のフォームに移動するときにも更新してしまうと、金額のフォームのカーソルが消えてしまうバグがあるので、このタイミングでは更新しない。データソース自体は書き換えているので問題ないと思われる。
+                 */
+//                self.tableView.reloadRows(at: [indexPath], with: .none)
             }).disposed(by: cell.disposeBag)
         
         cell.amountTextField.rx.controlEvent(.editingDidEnd)
