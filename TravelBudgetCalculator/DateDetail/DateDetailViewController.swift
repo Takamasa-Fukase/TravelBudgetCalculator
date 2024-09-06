@@ -131,42 +131,57 @@ extension DateDetailViewController: UITableViewDataSource {
         // 今後、個別のセルの通貨を編集して保存する機能を作る予定があるので。（トルコでユーロを使ったみたいに。）
         cell.currencyLabel.text = "(\(item.currencyType.code))"
         cell.yenDisplayLabel.text = yenAmountText(amount: item.amount, toYenRate: item.currencyType.toYenRate)
-        cell.didEndEditing = { [weak self] (title, amount) in
-            self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
-            self?.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = amount
-            // MEMO: セクションヘッダーに合計金額を表示しているため、セルだけでなくセクションを丸ごと更新している
-            self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
-        }
-        cell.menuButtonTapped = { [weak self] id in
-            guard let selectedItem = self?.dailyExpense.expenseData.first(where: { $0.items.contains(where: { $0.id == id }) })?.items.first(where: { $0.id == id }) else {
-                self?.showError(message: "選択されたItemの取得に失敗")
-                return
-            }
-            let yenText = self?.yenAmountText(amount: selectedItem.amount, toYenRate: selectedItem.currencyType.toYenRate) ?? ""
-            let message = "項目名：\(selectedItem.title)\n現地通貨：\(selectedItem.amount)\n（\(yenText)）"
-            let alert = UIAlertController(
-                title: "項目を削除します",
-                message: message,
-                preferredStyle: .alert
-            )
-            let cancel = UIAlertAction(title: "キャンセル", style: .cancel)
-            let delete = UIAlertAction(title: "削除", style: .destructive) { [weak self] _ in
-                let sectionIndex = self?.dailyExpense.expenseData.firstIndex(where: { section in
-                    section.items.contains(where: { $0.id == id })
-                }) ?? 0
-                let rowIndex = self?.dailyExpense.expenseData[sectionIndex].items.firstIndex(where: { $0.id == id }) ?? 0
-                let selectedIndexPath = IndexPath(row: rowIndex, section: sectionIndex)
-                // 該当のデータを削除して画面を更新
-                self?.dailyExpense.expenseData[selectedIndexPath.section].items.remove(at: selectedIndexPath.row)
-                self?.tableView.deleteRows(at: [selectedIndexPath], with: .left)
-            }
-            alert.addAction(cancel)
-            alert.addAction(delete)
-            self?.present(alert, animated: true)
-        }
-        cell.showError = { [weak self] message in
-            self?.showError(message: message)
-        }
+        
+        cell.menuButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let id = cell.id
+                guard let selectedItem = self.dailyExpense.expenseData.first(where: { $0.items.contains(where: { $0.id == id }) })?.items.first(where: { $0.id == id }) else {
+                    self.showError(message: "選択されたItemの取得に失敗")
+                    return
+                }
+                let yenText = self.yenAmountText(amount: selectedItem.amount, toYenRate: selectedItem.currencyType.toYenRate)
+                let message = "項目名：\(selectedItem.title)\n現地通貨：\(selectedItem.amount)\n（\(yenText)）"
+                let alert = UIAlertController(
+                    title: "項目を削除します",
+                    message: message,
+                    preferredStyle: .alert
+                )
+                let cancel = UIAlertAction(title: "キャンセル", style: .cancel)
+                let delete = UIAlertAction(title: "削除", style: .destructive) { _ in
+                    let sectionIndex = self.dailyExpense.expenseData.firstIndex(where: { section in
+                        section.items.contains(where: { $0.id == id })
+                    }) ?? 0
+                    let rowIndex = self.dailyExpense.expenseData[sectionIndex].items.firstIndex(where: { $0.id == id }) ?? 0
+                    let selectedIndexPath = IndexPath(row: rowIndex, section: sectionIndex)
+                    // 該当のデータを削除して画面を更新
+                    self.dailyExpense.expenseData[selectedIndexPath.section].items.remove(at: selectedIndexPath.row)
+                    self.tableView.deleteRows(at: [selectedIndexPath], with: .left)
+                }
+                alert.addAction(cancel)
+                alert.addAction(delete)
+                self.present(alert, animated: true)
+            }).disposed(by: cell.disposeBag)
+        
+        cell.titleTextField.rx.controlEvent(.editingDidEnd)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let title = cell.titleTextField.text ?? ""
+                self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            }).disposed(by: cell.disposeBag)
+        
+        cell.amountTextField.rx.controlEvent(.editingDidEnd)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let title = cell.titleTextField.text ?? ""
+                let doubleAmount = Double(cell.amountTextField.text ?? "") ?? 0.0
+                self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
+                self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = doubleAmount
+                // MEMO: セクションヘッダーに合計金額を表示しているため、セルだけでなくセクションを丸ごと更新している
+                self.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
+            }).disposed(by: cell.disposeBag)
+        
         return cell
     }
 }
