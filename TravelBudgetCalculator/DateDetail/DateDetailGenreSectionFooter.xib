@@ -14,6 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyU-HY-HmT">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfA-Ki-wT5">
                     <rect key="frame" x="16" y="12" width="361" height="40"/>
                     <constraints>
@@ -27,12 +31,15 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="RyU-HY-HmT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3y1-b9-RRc"/>
                 <constraint firstItem="qfA-Ki-wT5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="5p6-J8-K1s"/>
+                <constraint firstItem="RyU-HY-HmT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6LM-B6-97T"/>
                 <constraint firstAttribute="bottom" secondItem="qfA-Ki-wT5" secondAttribute="bottom" constant="12" id="B0t-Iq-eqR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qfA-Ki-wT5" secondAttribute="trailing" constant="16" id="DrV-ch-B7h"/>
+                <constraint firstAttribute="bottom" secondItem="RyU-HY-HmT" secondAttribute="bottom" id="Jfy-f0-fLd"/>
                 <constraint firstItem="qfA-Ki-wT5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VPu-m0-jJS"/>
+                <constraint firstItem="RyU-HY-HmT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xuG-lT-Sah"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="41.984732824427482" y="237.67605633802819"/>
