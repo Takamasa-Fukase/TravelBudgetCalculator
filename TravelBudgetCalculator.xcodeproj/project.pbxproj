@@ -29,6 +29,12 @@
 		BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */; };
 		BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731582C89BF23007C56A5 /* UIView+Extension.swift */; };
 		BCA7315B2C89E81C007C56A5 /* KeyboardOverlapUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */; };
+		BCA731652C8A994D007C56A5 /* RateSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731642C8A994D007C56A5 /* RateSettingViewController.swift */; };
+		BCA731672C8A9954007C56A5 /* RateSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA731662C8A9954007C56A5 /* RateSettingViewController.storyboard */; };
+		BCA7316A2C8A9BFA007C56A5 /* RateSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCA731692C8A9BFA007C56A5 /* RateSettingCell.xib */; };
+		BCA7316B2C8A9BFA007C56A5 /* RateSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731682C8A9BFA007C56A5 /* RateSettingCell.swift */; };
+		BCA7316E2C8A9D91007C56A5 /* TouchesBeganTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7316D2C8A9D91007C56A5 /* TouchesBeganTableView.swift */; };
+		BCA731702C8A9DB6007C56A5 /* PaymentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7316F2C8A9DB6007C56A5 /* PaymentList.swift */; };
 		BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController0.swift */; };
 		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
@@ -91,6 +97,12 @@
 		BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormUtil.swift; sourceTree = "<group>"; };
 		BCA731582C89BF23007C56A5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardOverlapUtil.swift; sourceTree = "<group>"; };
+		BCA731642C8A994D007C56A5 /* RateSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateSettingViewController.swift; sourceTree = "<group>"; };
+		BCA731662C8A9954007C56A5 /* RateSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RateSettingViewController.storyboard; sourceTree = "<group>"; };
+		BCA731682C8A9BFA007C56A5 /* RateSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateSettingCell.swift; sourceTree = "<group>"; };
+		BCA731692C8A9BFA007C56A5 /* RateSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateSettingCell.xib; sourceTree = "<group>"; };
+		BCA7316D2C8A9D91007C56A5 /* TouchesBeganTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchesBeganTableView.swift; sourceTree = "<group>"; };
+		BCA7316F2C8A9DB6007C56A5 /* PaymentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentList.swift; sourceTree = "<group>"; };
 		BCA9A9402C822EED00084047 /* DateListViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController0.swift; sourceTree = "<group>"; };
 		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +189,7 @@
 				BCA7315D2C8A9006007C56A5 /* Structs */,
 				BCA7315F2C8A9012007C56A5 /* Utilities */,
 				BCA7315C2C8A8FDD007C56A5 /* Extensions */,
+				BCA7316C2C8A9D75007C56A5 /* CustomClasses */,
 				BCA731602C8A9035007C56A5 /* Presentations */,
 				BC58CB5C2C8989C100F40E16 /* UnusedFiles */,
 				BC0DFA7D2C81BC0300B705A7 /* Assets.xcassets */,
@@ -236,6 +249,7 @@
 			children = (
 				BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */,
 				BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */,
+				BCA7316F2C8A9DB6007C56A5 /* PaymentList.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -262,8 +276,36 @@
 			children = (
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
+				BCA731622C8A98EC007C56A5 /* RateSetting */,
+				BCA731632C8A9909007C56A5 /* BudgetComparison */,
 			);
 			path = Presentations;
+			sourceTree = "<group>";
+		};
+		BCA731622C8A98EC007C56A5 /* RateSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BCA731642C8A994D007C56A5 /* RateSettingViewController.swift */,
+				BCA731662C8A9954007C56A5 /* RateSettingViewController.storyboard */,
+				BCA731682C8A9BFA007C56A5 /* RateSettingCell.swift */,
+				BCA731692C8A9BFA007C56A5 /* RateSettingCell.xib */,
+			);
+			path = RateSetting;
+			sourceTree = "<group>";
+		};
+		BCA731632C8A9909007C56A5 /* BudgetComparison */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BudgetComparison;
+			sourceTree = "<group>";
+		};
+		BCA7316C2C8A9D75007C56A5 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7316D2C8A9D91007C56A5 /* TouchesBeganTableView.swift */,
+			);
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 		BCA9A9342C822E0200084047 /* DateList0 */ = {
@@ -413,12 +455,14 @@
 			files = (
 				BCD007152C8931E80072B455 /* DateDetailGenreSectionHeader.xib in Resources */,
 				BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */,
+				BCA7316A2C8A9BFA007C56A5 /* RateSettingCell.xib in Resources */,
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
 				BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */,
 				BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */,
 				BC0DFA812C81BC0300B705A7 /* Base in Resources */,
 				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
+				BCA731672C8A9954007C56A5 /* RateSettingViewController.storyboard in Resources */,
 				BCD007192C8934B10072B455 /* DateDetailGenreSectionFooter.xib in Resources */,
 				BCD007112C8891080072B455 /* DateListCell.xib in Resources */,
 			);
@@ -548,15 +592,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA7316B2C8A9BFA007C56A5 /* RateSettingCell.swift in Sources */,
 				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,
 				BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */,
+				BCA731702C8A9DB6007C56A5 /* PaymentList.swift in Sources */,
 				BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */,
 				BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */,
 				BCD007172C8934AA0072B455 /* DateDetailGenreSectionFooter.swift in Sources */,
 				BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */,
 				BCA7315B2C89E81C007C56A5 /* KeyboardOverlapUtil.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
+				BCA7316E2C8A9D91007C56A5 /* TouchesBeganTableView.swift in Sources */,
 				BCD007102C8891080072B455 /* DateListCell.swift in Sources */,
+				BCA731652C8A994D007C56A5 /* RateSettingViewController.swift in Sources */,
 				BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */,
 				BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */,
 				BC0DFA752C81BC0100B705A7 /* AppDelegate.swift in Sources */,
