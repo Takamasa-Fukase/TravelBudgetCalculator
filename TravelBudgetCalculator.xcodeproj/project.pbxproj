@@ -173,15 +173,11 @@
 			children = (
 				BC0DFA742C81BC0100B705A7 /* AppDelegate.swift */,
 				BC0DFA762C81BC0100B705A7 /* SceneDelegate.swift */,
-				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
-				BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */,
-				BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */,
-				BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */,
-				BCA731582C89BF23007C56A5 /* UIView+Extension.swift */,
-				BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */,
-				BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */,
-				BC18F86E2C898112006C8D59 /* DataList */,
-				BCA9A9352C822E1B00084047 /* DateDetail */,
+				BCA7315E2C8A900D007C56A5 /* Enums */,
+				BCA7315D2C8A9006007C56A5 /* Structs */,
+				BCA7315F2C8A9012007C56A5 /* Utilities */,
+				BCA7315C2C8A8FDD007C56A5 /* Extensions */,
+				BCA731602C8A9035007C56A5 /* Presentations */,
 				BC58CB5C2C8989C100F40E16 /* UnusedFiles */,
 				BC0DFA7D2C81BC0300B705A7 /* Assets.xcassets */,
 				BC0DFA7F2C81BC0300B705A7 /* LaunchScreen.storyboard */,
@@ -224,6 +220,50 @@
 				BCA9A9342C822E0200084047 /* DateList0 */,
 			);
 			path = UnusedFiles;
+			sourceTree = "<group>";
+		};
+		BCA7315C2C8A8FDD007C56A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */,
+				BCA731582C89BF23007C56A5 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BCA7315D2C8A9006007C56A5 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				BC58CB5D2C898ADF00F40E16 /* DailyExpense.swift */,
+				BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		BCA7315E2C8A900D007C56A5 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BCA7315F2C8A9012007C56A5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */,
+				BCA7315A2C89E81C007C56A5 /* KeyboardOverlapUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BCA731602C8A9035007C56A5 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				BC18F86E2C898112006C8D59 /* DataList */,
+				BCA9A9352C822E1B00084047 /* DateDetail */,
+			);
+			path = Presentations;
 			sourceTree = "<group>";
 		};
 		BCA9A9342C822E0200084047 /* DateList0 */ = {
