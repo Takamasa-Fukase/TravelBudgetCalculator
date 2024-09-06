@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let sb = UIStoryboard(name: "DateListViewController", bundle: nil)
+        let sb = UIStoryboard(name: "RateSettingViewController", bundle: nil)
         let vc = sb.instantiateInitialViewController()
 //        let navi = UINavigationController(rootViewController: vc!)
 //        window?.rootViewController = navi
