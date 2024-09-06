@@ -21,6 +21,8 @@
 		BC0DFAA62C81C5B000B705A7 /* PaymentListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */; };
 		BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */; };
 		BC0DFAA92C81FE3700B705A7 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */; };
+		BC120A8D2C8ADC13005C84DC /* TravelRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC120A8C2C8ADC13005C84DC /* TravelRegisterViewController.swift */; };
+		BC120A8F2C8ADC1A005C84DC /* TravelRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC120A8E2C8ADC1A005C84DC /* TravelRegisterViewController.storyboard */; };
 		BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18F86F2C89813D006C8D59 /* DateListViewController.swift */; };
 		BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC18F8712C898143006C8D59 /* DateListViewController.storyboard */; };
 		BC58CB5B2C89887F00F40E16 /* ItineraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */; };
@@ -99,6 +101,8 @@
 		BC0DFAA42C81C5B000B705A7 /* PaymentListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentListItemCell.swift; sourceTree = "<group>"; };
 		BC0DFAA52C81C5B000B705A7 /* PaymentListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentListItemCell.xib; sourceTree = "<group>"; };
 		BC0DFAA82C81FE3700B705A7 /* CurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
+		BC120A8C2C8ADC13005C84DC /* TravelRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRegisterViewController.swift; sourceTree = "<group>"; };
+		BC120A8E2C8ADC1A005C84DC /* TravelRegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelRegisterViewController.storyboard; sourceTree = "<group>"; };
 		BC18F86F2C89813D006C8D59 /* DateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController.swift; sourceTree = "<group>"; };
 		BC18F8712C898143006C8D59 /* DateListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController.storyboard; sourceTree = "<group>"; };
 		BC58CB5A2C89887F00F40E16 /* ItineraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryData.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			path = TravelBudgetCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		BC120A8B2C8ADBEA005C84DC /* TravelRegister */ = {
+			isa = PBXGroup;
+			children = (
+				BC120A8C2C8ADC13005C84DC /* TravelRegisterViewController.swift */,
+				BC120A8E2C8ADC1A005C84DC /* TravelRegisterViewController.storyboard */,
+			);
+			path = TravelRegister;
+			sourceTree = "<group>";
+		};
 		BC18F86E2C898112006C8D59 /* DataList */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA7317C2C8ABF69007C56A5 /* Top */,
+				BC120A8B2C8ADBEA005C84DC /* TravelRegister */,
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
 				BCA731622C8A98EC007C56A5 /* RateSetting */,
@@ -499,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC120A8F2C8ADC1A005C84DC /* TravelRegisterViewController.storyboard in Resources */,
 				BCD007152C8931E80072B455 /* DateDetailGenreSectionHeader.xib in Resources */,
 				BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */,
 				BCA7316A2C8A9BFA007C56A5 /* RateSettingCell.xib in Resources */,
@@ -643,6 +658,7 @@
 			files = (
 				BCA731792C8AA988007C56A5 /* CurrencyRegisterViewController.swift in Sources */,
 				BCA7316B2C8A9BFA007C56A5 /* RateSettingCell.swift in Sources */,
+				BC120A8D2C8ADC13005C84DC /* TravelRegisterViewController.swift in Sources */,
 				BC69D1802C8AC97200DD0A9B /* Extension+Storyboard.swift in Sources */,
 				BCA731742C8AA2CC007C56A5 /* RegisteredCurrency.swift in Sources */,
 				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,

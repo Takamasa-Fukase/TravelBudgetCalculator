@@ -62,7 +62,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="EER-Kl-95A" id="Wbf-5a-PfA"/>
-                        <outlet property="toRateSettingButton" destination="nrk-2B-RI7" id="yWv-T7-T2x"/>
+                        <outlet property="toRateSettingButton" destination="de9-4i-0gg" id="j23-Jf-GpN"/>
+                        <outlet property="toTravelRegisterButton" destination="nrk-2B-RI7" id="lQ0-14-S5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

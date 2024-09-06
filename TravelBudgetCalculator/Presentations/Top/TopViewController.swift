@@ -25,6 +25,7 @@ class TopViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toRateSettingButton: UIButton!
+    @IBOutlet weak var toTravelRegisterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,14 @@ class TopViewController: UIViewController {
                 let vc = UIStoryboard(name: "RateSettingViewController", bundle: nil).instantiateInitialViewController() as! RateSettingViewController
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
+        
+        toTravelRegisterButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let vc = UIStoryboard(name: "TravelRegisterViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterViewController
+                vc.modalPresentationStyle = .pageSheet
+                self.present(vc, animated: true)
+            }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,10 +56,6 @@ class TopViewController: UIViewController {
     func setupTableView() {
         tableView.register(UINib(nibName: "TravelListCell", bundle: nil), forCellReuseIdentifier: "TravelListCell")
         tableView.contentInset.bottom = 200
-    }
-    
-    func setNaviBarRightButton() {
-        
     }
 }
 
