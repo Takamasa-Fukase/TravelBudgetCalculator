@@ -38,6 +38,8 @@
 		BCA731722C8AA250007C56A5 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731712C8AA250007C56A5 /* UserDefaults+Extension.swift */; };
 		BCA731742C8AA2CC007C56A5 /* RegisteredCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731732C8AA2CC007C56A5 /* RegisteredCurrency.swift */; };
 		BCA731762C8AA3B9007C56A5 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731752C8AA3B9007C56A5 /* Encodable+Extension.swift */; };
+		BCA731792C8AA988007C56A5 /* CurrencyRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731782C8AA988007C56A5 /* CurrencyRegisterViewController.swift */; };
+		BCA7317B2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */; };
 		BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9402C822EED00084047 /* DateListViewController0.swift */; };
 		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
@@ -109,6 +111,8 @@
 		BCA731712C8AA250007C56A5 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		BCA731732C8AA2CC007C56A5 /* RegisteredCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredCurrency.swift; sourceTree = "<group>"; };
 		BCA731752C8AA3B9007C56A5 /* Encodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		BCA731782C8AA988007C56A5 /* CurrencyRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRegisterViewController.swift; sourceTree = "<group>"; };
+		BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrencyRegisterViewController.storyboard; sourceTree = "<group>"; };
 		BCA9A9402C822EED00084047 /* DateListViewController0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListViewController0.swift; sourceTree = "<group>"; };
 		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
 				BCA731622C8A98EC007C56A5 /* RateSetting */,
+				BCA731772C8AA95F007C56A5 /* CurrencyRegister */,
 				BCA731632C8A9909007C56A5 /* BudgetComparison */,
 			);
 			path = Presentations;
@@ -315,6 +320,15 @@
 				BCA7316D2C8A9D91007C56A5 /* TouchesBeganTableView.swift */,
 			);
 			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		BCA731772C8AA95F007C56A5 /* CurrencyRegister */ = {
+			isa = PBXGroup;
+			children = (
+				BCA731782C8AA988007C56A5 /* CurrencyRegisterViewController.swift */,
+				BCA7317A2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard */,
+			);
+			path = CurrencyRegister;
 			sourceTree = "<group>";
 		};
 		BCA9A9342C822E0200084047 /* DateList0 */ = {
@@ -468,6 +482,7 @@
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
 				BC18F8722C898143006C8D59 /* DateListViewController.storyboard in Resources */,
 				BC0DFAA72C81C5B000B705A7 /* PaymentListItemCell.xib in Resources */,
+				BCA7317B2C8AA9A1007C56A5 /* CurrencyRegisterViewController.storyboard in Resources */,
 				BC0DFA812C81BC0300B705A7 /* Base in Resources */,
 				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
@@ -601,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA731792C8AA988007C56A5 /* CurrencyRegisterViewController.swift in Sources */,
 				BCA7316B2C8A9BFA007C56A5 /* RateSettingCell.swift in Sources */,
 				BCA731742C8AA2CC007C56A5 /* RegisteredCurrency.swift in Sources */,
 				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,

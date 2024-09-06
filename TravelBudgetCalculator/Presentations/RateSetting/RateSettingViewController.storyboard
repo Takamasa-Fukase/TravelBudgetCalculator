@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2ya-7E-TVO" customClass="TouchesBeganTableView" customModule="TravelBudgetCalculator" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2ya-7E-TVO" customClass="TouchesBeganTableView" customModule="TravelBudgetCalculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
@@ -24,18 +24,30 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="7fR-O5-X6K"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thu-3c-wHa">
+                                <rect key="frame" x="40" y="770" width="313" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Pks-Z0-Hf4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="通貨を登録"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Thu-3c-wHa" secondAttribute="trailing" constant="40" id="J6C-NP-Ioj"/>
                             <constraint firstItem="2ya-7E-TVO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Rvi-R4-3L7"/>
+                            <constraint firstItem="Thu-3c-wHa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="T15-rf-hAO"/>
                             <constraint firstItem="2ya-7E-TVO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eNe-Le-rx5"/>
                             <constraint firstAttribute="bottom" secondItem="2ya-7E-TVO" secondAttribute="bottom" id="lw9-fr-Q1j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Thu-3c-wHa" secondAttribute="bottom" id="rN9-3S-X1U"/>
                             <constraint firstItem="2ya-7E-TVO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wH8-Ic-j8W"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="2ya-7E-TVO" id="GDw-ZG-YY5"/>
+                        <outlet property="toRegisterPageButton" destination="Thu-3c-wHa" id="gIB-yy-hAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

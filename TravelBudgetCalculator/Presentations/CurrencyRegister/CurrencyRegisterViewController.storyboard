@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Register View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CurrencyRegisterViewController" customModule="TravelBudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnB-VL-CcA">
+                                <rect key="frame" x="16" y="91" width="361" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UUX-e3-MEo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="通貨を選択">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1単位あたりの円レート" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8p-XG-20K">
+                                <rect key="frame" x="16" y="143" width="361" height="32"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FGd-Zp-LeP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-I9-Ok2">
+                                <rect key="frame" x="16" y="235" width="361" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Ge2-zF-Cvh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="登録"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dnB-VL-CcA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="Guq-2d-mct"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W5O-I9-Ok2" secondAttribute="trailing" constant="16" id="Gw4-UY-jNs"/>
+                            <constraint firstItem="D8p-XG-20K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="L0h-4M-PJk"/>
+                            <constraint firstItem="D8p-XG-20K" firstAttribute="top" secondItem="dnB-VL-CcA" secondAttribute="bottom" constant="12" id="PGW-if-HPM"/>
+                            <constraint firstItem="W5O-I9-Ok2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Qrw-6g-reo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D8p-XG-20K" secondAttribute="trailing" constant="16" id="VZY-Cm-QPA"/>
+                            <constraint firstItem="W5O-I9-Ok2" firstAttribute="top" secondItem="D8p-XG-20K" secondAttribute="bottom" constant="60" id="dJx-92-5PX"/>
+                            <constraint firstItem="dnB-VL-CcA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="oKc-oZ-pSM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dnB-VL-CcA" secondAttribute="trailing" constant="16" id="xPw-p3-D4k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currencySelectionButton" destination="dnB-VL-CcA" id="nkH-T4-rTd"/>
+                        <outlet property="rateTextField" destination="D8p-XG-20K" id="vmO-Tn-ezw"/>
+                        <outlet property="registerButton" destination="W5O-I9-Ok2" id="e3T-Tz-xtR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
