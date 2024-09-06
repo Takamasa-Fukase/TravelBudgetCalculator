@@ -11,11 +11,6 @@ import RxCocoa
 
 class TopViewController: UIViewController {
     let disposeBag = DisposeBag()
-    // TODO: 後でUDの直参照にしたら消す
-//    var travels: [Travel] = [
-//        .init(name: "Latin America", duration: "9月12日〜10月10日", image: UIImage(named: "latin_america"), dateList: []),
-//        .init(name: "テスト", duration: "9月6日〜9月8日", image: nil, dateList: [])
-//    ]
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toRateSettingButton: UIButton!
@@ -38,6 +33,7 @@ class TopViewController: UIViewController {
                 guard let self = self else {return}
                 let vc = UIStoryboard(name: "TravelRegisterViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterViewController
                 vc.modalPresentationStyle = .pageSheet
+                vc.delegate = self
                 self.present(vc, animated: true)
             }).disposed(by: disposeBag)
     }
@@ -55,7 +51,7 @@ class TopViewController: UIViewController {
 
 extension TopViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        var editedData = UserDefaults.registeredCurrencies
+        var editedData = UserDefaults.travels
         let selectedCurrency = editedData[indexPath.row]
         
         // 確認アラートを出す
@@ -63,11 +59,9 @@ extension TopViewController: UITableViewDelegate {
         let cancel = UIAlertAction(title: "キャンセル", style: .cancel)
         let delete = UIAlertAction(title: "削除", style: .destructive) { [weak self] _ in
             guard let self = self else { return }
-            // TODO: 旅行の記録に使用されている通貨は削除できないようにしたい（データが消えると困るので）
-            
-//            editedData.remove(at: indexPath.row)
-//            UserDefaults.registeredCurrencies = editedData
-//            self.tableView.deleteRows(at: [indexPath], with: .left)
+            editedData.remove(at: indexPath.row)
+            UserDefaults.travels = editedData
+            self.tableView.deleteRows(at: [indexPath], with: .left)
         }
         alert.addAction(cancel)
         alert.addAction(delete)
@@ -82,12 +76,10 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return UserDefaults.travels.count
-//        return travels.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelListCell", for: indexPath) as! TravelListCell
-//        let item = UserDefaults.registeredCurrencies[indexPath.row]
         let item = UserDefaults.travels[indexPath.row]
         cell.travelNameLabel.text = item.name
         cell.durationLabel.text = item.duration
@@ -102,7 +94,20 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
-        vc.title = UserDefaults.travels[indexPath.row].name
+        let travel = UserDefaults.travels[indexPath.row]
+        vc.title = travel.name
+        if indexPath.row == 0 {
+            vc.isLatinAmerica = true
+        }else {
+            vc.isLatinAmerica = false
+            vc.dateList = travel.dateList
+        }
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension TopViewController: TravelRegisterDelegate {
+    func onRegistered() {
+        tableView.reloadData()
     }
 }

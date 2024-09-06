@@ -53,11 +53,13 @@ class TravelRegisterViewController: UIViewController {
                 }
                 
                 // UserDefaultsに保存
-                guard let image = UIImage(named: "latin_america"),
-                      let imageData = image.pngData() else {
-                    print("Image converted to PNG Data successfully!")
-                    return
-                }
+                
+                // 画像ピッカーを実装したら実装する
+//                guard let image = UIImage(named: "latin_america"),
+//                      let imageData = image.pngData() else {
+//                    print("Image converted to PNG Data successfully!")
+//                    return
+//                }
                 
                 let dateList = dateStrings.enumerated().map { (index, dateString) in
                     return DailyExpense(
@@ -80,7 +82,7 @@ class TravelRegisterViewController: UIViewController {
                 let travel = Travel(
                     name: travelNameTextField.text ?? "",
                     duration: "\(dateStrings.first ?? "")〜\(dateStrings.last ?? "")",
-                    imageData: imageData,
+                    imageData: nil,
                     dateList: dateList
                 )
                 
