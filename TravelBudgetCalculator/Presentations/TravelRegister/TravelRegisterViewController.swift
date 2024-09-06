@@ -9,8 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol TravelRegisterDelegate: AnyObject {
+    func onRegistered()
+}
+
 class TravelRegisterViewController: UIViewController {
     let disposeBag = DisposeBag()
+    weak var delegate: TravelRegisterDelegate?
 
     @IBOutlet weak var travelNameTextField: UITextField!
     @IBOutlet weak var startDatePicker: UIDatePicker!
@@ -37,6 +42,27 @@ class TravelRegisterViewController: UIViewController {
                 
                 print("dateStrings: \(dateStrings)")
                 
+                if (travelNameTextField.text ?? "").isEmpty {
+                    self.showError(title: "タイトルを入力してください", message: "")
+                    return
+                }
+                
+                if dateStrings.isEmpty {
+                    self.showError(title: "日付が不正です", message: "")
+                    return
+                }
+                
+                // UserDefaultsに保存
+//                UserDefaults.registeredCurrencies = UserDefaults.registeredCurrencies + [newCurrency]
+                
+                // 前の画面のリストを更新させるために通知
+                self.delegate?.onRegistered()
+                
+                // 保存した内容を改めてアラートで表示
+                self.showCompletionAlert(dateStrings: dateStrings, completion: {
+                    self.dismiss(animated: true)
+                })
+                
             }).disposed(by: disposeBag)
     }
     
@@ -50,6 +76,15 @@ class TravelRegisterViewController: UIViewController {
         }
         
         return dates
+    }
+    
+    func showCompletionAlert(dateStrings: [String], completion: (@escaping () -> Void)) {
+        let alert = UIAlertController(title: "旅行を登録しました", message: "タイトル：\(travelNameTextField.text ?? "")\n期間：\(dateStrings.first ?? "")〜\(dateStrings.last ?? "")", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "閉じる", style: .default, handler: { _ in
+            completion()
+        })
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 

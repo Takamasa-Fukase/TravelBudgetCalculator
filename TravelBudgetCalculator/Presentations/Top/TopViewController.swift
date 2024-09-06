@@ -104,6 +104,7 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
+        vc.title = travels[indexPath.row].name
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
