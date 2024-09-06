@@ -88,18 +88,9 @@ enum CurrencyType: String, CaseIterable, Codable {
     }
     
     var toYenRate: Double {
-        // TODO: UDに保存されているデータを返す
-        switch self {
-        case .USD:
-            return 144.93
-        case .ARA:
-            return 0.15
-        case .COP:
-            return 0.035
-        case .MXN:
-            return 7.28
-        default:
+        guard let currency = UserDefaults.registeredCurrencies.first(where: { $0.type == self }) else {
             return 0.0
         }
+        return currency.toYenRate
     }
 }
