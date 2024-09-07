@@ -138,7 +138,7 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
         let travel = UserDefaults.travels[indexPath.row]
         vc.title = travel.name
-        vc.travelId = travel.id
+        vc.travel = travel
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -13,6 +13,8 @@ class DateDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
     var activeTextField = BehaviorRelay<UIView?>(value: nil)
     var dailyExpense: DailyExpense = .init(date: "", cityName: "", currency: .USD, expenseData: [])
+    var travelId: UUID = UUID()
+    var dateIndex: Int = 0
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -43,6 +45,14 @@ class DateDetailViewController: UIViewController {
         let yenAmount = amount * toYenRate
         return "\(String(format: "%.0f", ceil(yenAmount)))円"
     }
+
+    // この画面の変数で保持している1日の出費データをUserDefaultsに保存する
+    func saveToUserDefaults() {
+        var editedData = UserDefaults.travels
+        let index = editedData.firstIndex(where: { $0.id == travelId }) ?? 0
+        editedData[index].dateList[dateIndex] = dailyExpense
+        UserDefaults.travels = editedData
+    }
 }
 
 extension DateDetailViewController: UITableViewDelegate {
@@ -62,10 +72,13 @@ extension DateDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let sectionFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionFooter") as! DateDetailGenreSectionFooter
         sectionFooter.addFormButtonTapped = { [weak self] in
-            self?.dailyExpense.expenseData[section].items.append(
-                PaymentListItem(id: UUID(), title: "", amount: 0, currencyType: self?.dailyExpense.currency ?? .USD)
-            )
-            self?.tableView.reloadSections(IndexSet(integer: section), with: .none)
+            guard let self = self else { return }
+            let newItem = PaymentListItem(id: UUID(), title: "", amount: 0, currencyType: self.dailyExpense.currency)
+            self.dailyExpense.expenseData[section].items.append(newItem)
+            
+            self.saveToUserDefaults()
+            
+            self.tableView.reloadSections(IndexSet(integer: section), with: .none)
         }
         return sectionFooter
     }
@@ -132,6 +145,9 @@ extension DateDetailViewController: UITableViewDataSource {
                     let selectedIndexPath = IndexPath(row: rowIndex, section: sectionIndex)
                     // 該当のデータを削除して画面を更新
                     self.dailyExpense.expenseData[selectedIndexPath.section].items.remove(at: selectedIndexPath.row)
+                    
+                    self.saveToUserDefaults()
+                    
                     self.tableView.deleteRows(at: [selectedIndexPath], with: .left)
                 }
                 alert.addAction(cancel)
@@ -144,6 +160,9 @@ extension DateDetailViewController: UITableViewDataSource {
                 guard let self = self else {return}
                 let title = cell.titleTextField.text ?? ""
                 self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
+                
+                self.saveToUserDefaults()
+                
                 /*
                  項目名の入力後に完了をおさずにそのまま金額のフォームに移動するときにも更新してしまうと、金額のフォームのカーソルが消えてしまうバグがあるので、このタイミングでは更新しない。データソース自体は書き換えているので問題ないと思われる。
                  */
@@ -157,6 +176,9 @@ extension DateDetailViewController: UITableViewDataSource {
                 let doubleAmount = Double(cell.amountTextField.text ?? "") ?? 0.0
                 self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].title = title
                 self.dailyExpense.expenseData[indexPath.section].items[indexPath.row].amount = doubleAmount
+                
+                self.saveToUserDefaults()
+                
                 // MEMO: セクションヘッダーに合計金額を表示しているため、セルだけでなくセクションを丸ごと更新している
                 self.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
             }).disposed(by: cell.disposeBag)

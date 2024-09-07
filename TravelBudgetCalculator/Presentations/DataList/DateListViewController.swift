@@ -13,7 +13,7 @@ import Parchment
 class DateListViewController: UIViewController {
     let disposeBag = DisposeBag()
     var pagingViewController = PagingViewController(viewControllers: [])
-    var travelId: UUID = UUID()
+    var travel: Travel = .init(id: UUID(), name: "", duration: "", dateList: [], budgetList: [])
     
     @IBOutlet weak var toBudgetComparisonButton: UIButton!
     
@@ -25,18 +25,19 @@ class DateListViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
                 let vc = UIStoryboard(name: "BudgetComparisonViewController", bundle: nil).instantiateInitialViewController() as! BudgetComparisonViewController
-                vc.travelId = self.travelId
+                vc.travelId = self.travel.id
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
 
     func setupParchment() {
-        let dateList = UserDefaults.travels.first(where: { $0.id == travelId })?.dateList ?? []
-        let vcs = dateList.map { dailyExpense in
+        let vcs = travel.dateList.enumerated().map { (index ,dailyExpense) in
             let sb = UIStoryboard(name: "DateDetailViewController", bundle: nil)
             let vc = sb.instantiateInitialViewController() as! DateDetailViewController
-            vc.dailyExpense = dailyExpense
             vc.title = dailyExpense.date
+            vc.dailyExpense = dailyExpense
+            vc.travelId = travel.id
+            vc.dateIndex = index
             return vc
         }
         
