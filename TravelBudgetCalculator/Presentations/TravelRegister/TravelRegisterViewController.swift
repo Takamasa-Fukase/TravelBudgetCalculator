@@ -38,9 +38,8 @@ class TravelRegisterViewController: UIViewController {
                 let dates = generateDatesArray(from: startDate, to: endDate)
                 let formatter = DateFormatter()
                 formatter.dateFormat = "M月d日（E）" // 月日と曜日のフォーマット
-                formatter.timeZone = TimeZone(abbreviation: "UTC")!
+                formatter.timeZone = .utc
                 formatter.locale = Locale(identifier: "ja_JP") // 日本語のロケールを設定
-                
                 let dateStrings = dates.map { formatter.string(from: $0) }
                                 
                 if (travelNameTextField.text ?? "").isEmpty {
@@ -102,9 +101,9 @@ class TravelRegisterViewController: UIViewController {
     
     func modifyTimeToZero(date: Date) -> Date {
         var calendar = Calendar.current
-        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        calendar.timeZone = .utc
         var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        components.hour = 23
+        components.hour = 0
         components.minute = 0
         components.second = 0
         let modifiedDate = calendar.date(from: components)
@@ -113,7 +112,7 @@ class TravelRegisterViewController: UIViewController {
     
     func generateDatesArray(from startDate: Date, to endDate: Date) -> [Date] {
         var calendar = Calendar.current
-        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        calendar.timeZone = .utc
         
         var dates: [Date] = []
         var currentDate = startDate
