@@ -1,4 +1,5 @@
 PODS:
+  - GTProgressBar (0.3.3)
   - Parchment (4.0.0)
   - RxCocoa (6.7.0):
     - RxRelay (= 6.7.0)
@@ -8,23 +9,26 @@ PODS:
   - RxSwift (6.7.0)
 
 DEPENDENCIES:
+  - GTProgressBar
   - Parchment (~> 4.0)
   - RxCocoa (~> 6.7.0)
   - RxSwift (~> 6.7.0)
 
 SPEC REPOS:
   trunk:
+    - GTProgressBar
     - Parchment
     - RxCocoa
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
   Parchment: 60038b444208afbcfd7c7d5b7d7accc0c036ab2c
   RxCocoa: fb0aefb9e7229c8ab057acde714136d19117f102
   RxRelay: 5d39f4d8da150ad47a71b9ce11915e3eae2a8f4d
   RxSwift: 6ee35684dc3f7a63938758f4b7708199517dfa97
 
-PODFILE CHECKSUM: 136c6edfa4d45ce54cc2700d091916e41824b77b
+PODFILE CHECKSUM: 901885d32770fc3291b1761fa6a96512a3d4c832
 
 COCOAPODS: 1.15.2

@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import GTProgressBar
 
 class BudgetComparisonViewController: UIViewController {
     let disposeBag = DisposeBag()
@@ -73,6 +74,12 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
         let restAmount = item.budgetAmount - usedAmount
         cell.usedAmountLabel.text = "出費：\(formatToManYen(usedAmount))"
         cell.restAmountLabel.text = "残り：\(formatToManYen(restAmount))"
+        
+        var progress = usedAmount / item.budgetAmount
+        if progress > 1 {
+            progress = 1
+        }
+        cell.progressBar.progress = progress
 
         return cell
     }

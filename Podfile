@@ -9,6 +9,7 @@ target 'TravelBudgetCalculator' do
   pod 'Parchment', '~> 4.0'
   pod 'RxSwift', '~> 6.7.0'
   pod 'RxCocoa', '~> 6.7.0'
+  pod "GTProgressBar"
 
   target 'TravelBudgetCalculatorTests' do
     inherit! :search_paths

@@ -6,23 +6,17 @@
 //
 
 import UIKit
+import GTProgressBar
 
 class BudgetComparisonCell: UITableViewCell {
-
+    
     @IBOutlet weak var budgetNameLabel: UILabel!
+    @IBOutlet weak var progressBar: GTProgressBar!
     @IBOutlet weak var usedAmountLabel: UILabel!
     @IBOutlet weak var restAmountLabel: UILabel!
     @IBOutlet weak var bedgetAmountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
