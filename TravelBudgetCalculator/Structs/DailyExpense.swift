@@ -9,7 +9,7 @@ import Foundation
 
 struct DailyExpense: Codable {
     let date: String
-    let cityName: String
-    let currency: CurrencyType
+    var cityName: String
+    var currency: CurrencyType
     var expenseData: [PaymentListSection]
 }

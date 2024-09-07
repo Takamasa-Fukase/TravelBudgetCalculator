@@ -8,10 +8,10 @@
 import UIKit
 
 struct Travel: Codable {
-    let name: String
-    let duration: String
-    let imageData: Data?
-    let dateList: [DailyExpense]
+    var name: String
+    var duration: String
+    var imageData: Data?
+    var dateList: [DailyExpense]
     
     var image: UIImage? {
         if let data = imageData {

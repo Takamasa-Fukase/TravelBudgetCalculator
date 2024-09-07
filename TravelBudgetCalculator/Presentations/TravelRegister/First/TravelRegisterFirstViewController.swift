@@ -9,10 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol TravelRegisterDelegate: AnyObject {
-    func onRegistered()
-}
-
 class TravelRegisterFirstViewController: UIViewController {
     let disposeBag = DisposeBag()
     weak var delegate: TravelRegisterDelegate?
@@ -28,6 +24,7 @@ class TravelRegisterFirstViewController: UIViewController {
         title = "旅行を登録"
         
         travelNameTextField.delegate = self
+        travelNameTextField.returnKeyType = .done
         startDatePicker.timeZone = .current
         endDatePicker.timeZone = .current
 
@@ -63,6 +60,18 @@ class TravelRegisterFirstViewController: UIViewController {
 //                    return
 //                }
                 
+                // 通貨が未登録の場合は日本円を登録する
+                if UserDefaults.registeredCurrencies.isEmpty {
+                    UserDefaults.registeredCurrencies = [
+                        RegisteredCurrency(type: .JPY, toYenRate: 1)
+                    ]
+                }
+                guard let firstRegisteredCurrency = UserDefaults.registeredCurrencies.first else {
+                    // 通貨が未登録の場合はありえない想定だがエラー表示
+                    self.showError(title: "エラーが発生しました", message: "通貨が未登録です。\nTOPページ右上の「レート設定」から最低１つ登録を行なってください。")
+                    return
+                }
+                
                 let dateList = dateStrings.enumerated().map { (index, dateString) in
                     return DailyExpense(
                         date: dateString,
@@ -70,13 +79,13 @@ class TravelRegisterFirstViewController: UIViewController {
                         currency: .JPY,
                         expenseData: [
                             .init(paymentType: .transportation, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
                             ]),
                             .init(paymentType: .food, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
                             ]),
                             .init(paymentType: .other, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: .JPY)
+                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
                             ])
                         ]
                     )
@@ -88,19 +97,10 @@ class TravelRegisterFirstViewController: UIViewController {
                     dateList: dateList
                 )
                 
-//                UserDefaults.travels = UserDefaults.travels + [travel]
-//                
-//                // 前の画面のリストを更新させるために通知
-//                self.delegate?.onRegistered()
-//                
-//                // 保存した内容を改めてアラートで表示
-//                self.showCompletionAlert(dateStrings: dateStrings, completion: {
-//                    self.dismiss(animated: true)
-//                })
-                
                 // 次画面に値を受け渡して遷移
                 let vc = UIStoryboard(name: "TravelRegisterSecondViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterSecondViewController
                 vc.travel = travel
+                vc.delegate = self.delegate
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
@@ -128,15 +128,6 @@ class TravelRegisterFirstViewController: UIViewController {
             currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
         }
         return dates
-    }
-    
-    func showCompletionAlert(dateStrings: [String], completion: (@escaping () -> Void)) {
-        let alert = UIAlertController(title: "旅行を登録しました", message: "タイトル：\(travelNameTextField.text ?? "")\n期間：\(dateStrings.first ?? "")〜\(dateStrings.last ?? "")", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "閉じる", style: .default, handler: { _ in
-            completion()
-        })
-        alert.addAction(ok)
-        present(alert, animated: true)
     }
 }
 

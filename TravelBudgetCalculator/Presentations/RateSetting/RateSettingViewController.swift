@@ -18,6 +18,9 @@ class RateSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "レート設定"
+        
         setupTableView()
         setRxKeyboardMovement(disposeBag: disposeBag,
                               scrollView: tableView,
