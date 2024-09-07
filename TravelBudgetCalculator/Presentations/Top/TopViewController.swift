@@ -13,6 +13,7 @@ class TopViewController: UIViewController {
     let disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var createDefaultLatinAmericaTravelButton: UIButton!
     @IBOutlet weak var toRateSettingButton: UIButton!
     @IBOutlet weak var toTravelRegisterButton: UIButton!
     
@@ -20,6 +21,39 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        
+        createDefaultLatinAmericaTravelButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                
+                // デフォルトデータを取り込み
+                var dateList = defaultItineraryData
+                
+                // 各日の通貨に合わせて３ジャンルの出費データの初期値を生成
+                dateList.enumerated().forEach({ (index, item) in
+                    dateList[index].expenseData = [
+                        .init(paymentType: .transportation, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ]),
+                        .init(paymentType: .food, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ]),
+                        .init(paymentType: .other, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ])
+                    ]
+                })
+                let travel = Travel(
+                    name: "Latin America",
+                    duration: "\(dateList.first?.date ?? "")〜\(dateList.last?.date ?? "")",
+                    imageData: UIImage(named: "latin_america")!.pngData()!,
+                    dateList: dateList
+                )
+                
+                UserDefaults.travels = UserDefaults.travels + [travel]
+                self.tableView.reloadData()
+                
+            }).disposed(by: disposeBag)
         
         toRateSettingButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -97,12 +131,7 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
         let travel = UserDefaults.travels[indexPath.row]
         vc.title = travel.name
-        if indexPath.row == 0 {
-            vc.isLatinAmerica = true
-        }else {
-            vc.isLatinAmerica = false
-            vc.dateList = travel.dateList
-        }
+        vc.dateList = travel.dateList
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
