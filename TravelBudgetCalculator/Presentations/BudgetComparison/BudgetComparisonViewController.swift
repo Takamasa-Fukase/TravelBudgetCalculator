@@ -17,7 +17,7 @@ class BudgetComparisonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "予算管理"
         setupTableView()
     }
@@ -25,6 +25,18 @@ class BudgetComparisonViewController: UIViewController {
     func setupTableView() {
         tableView.register(UINib(nibName: "BudgetComparisonCell", bundle: nil), forCellReuseIdentifier: "BudgetComparisonCell")
         tableView.contentInset.bottom = 200
+    }
+    
+    // 例: 36111円 -> 3.7万円 の表示にする。少数2桁以下は繰り上げる（出費は多めに見積もった方が安全なので）
+    func formatToManYen(_ amount: Double) -> String {
+        // 金額を「万円」に変換
+        let manYen = amount / 10000.0
+        
+        // 少数第2位で四捨五入
+        let roundedManYen = ceil(manYen * 10) / 10.0
+        
+        // 結果をフォーマットして文字列に変換
+        return String(format: "%.1f万円", roundedManYen)
     }
 }
 
@@ -44,13 +56,11 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
         print("cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "BudgetComparisonCell", for: indexPath) as! BudgetComparisonCell
         guard let travel = UserDefaults.travels.first(where: { $0.id == travelId }) else {
-            print("アンラップ失敗")
             return cell
         }
-        print(1)
         let item = travel.budgetList[indexPath.row]
         cell.budgetNameLabel.text = item.name
-        cell.bedgetAmountLabel.text = "予算：\(item.budgetAmount)円"
+        cell.bedgetAmountLabel.text = "予算：\(formatToManYen(item.budgetAmount))"
         var usedAmount: Double = 0.0
         travel.dateList.forEach({ date in
             date.expenseData.forEach({ genre in
@@ -61,8 +71,8 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
             })
         })
         let restAmount = item.budgetAmount - usedAmount
-        cell.usedAmountLabel.text = "出費：\(usedAmount)円"
-        cell.restAmountLabel.text = "残り：\(restAmount)円"
+        cell.usedAmountLabel.text = "出費：\(formatToManYen(usedAmount))"
+        cell.restAmountLabel.text = "残り：\(formatToManYen(restAmount))"
 
         return cell
     }
