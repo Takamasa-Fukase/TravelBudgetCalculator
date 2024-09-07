@@ -24,17 +24,41 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="1b8-HB-gS4"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAr-6U-k5w">
+                                <rect key="frame" x="0.0" y="742" width="393" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1D-E7-eo6">
+                                        <rect key="frame" x="16" y="12" width="361" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="4HE-wR-QF3"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="登録"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="H1D-E7-eo6" secondAttribute="trailing" constant="16" id="YbC-HQ-A9G"/>
+                                    <constraint firstItem="H1D-E7-eo6" firstAttribute="top" secondItem="UAr-6U-k5w" secondAttribute="top" constant="12" id="e1Y-9I-Awf"/>
+                                    <constraint firstItem="H1D-E7-eo6" firstAttribute="leading" secondItem="UAr-6U-k5w" secondAttribute="leading" constant="16" id="h81-bL-cls"/>
+                                    <constraint firstAttribute="height" constant="110" id="vil-l9-RUh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UAr-6U-k5w" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="13L-Nt-ImA"/>
                             <constraint firstItem="uoy-Ez-reK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="NQm-8m-khd"/>
+                            <constraint firstItem="UAr-6U-k5w" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="S7t-Lj-6f9"/>
                             <constraint firstItem="uoy-Ez-reK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dXo-Cz-ePg"/>
                             <constraint firstAttribute="bottom" secondItem="uoy-Ez-reK" secondAttribute="bottom" id="fmz-Vp-Rbx"/>
+                            <constraint firstAttribute="bottom" secondItem="UAr-6U-k5w" secondAttribute="bottom" id="knQ-uC-e69"/>
                             <constraint firstItem="uoy-Ez-reK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pLw-2l-xSG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="registerButton" destination="H1D-E7-eo6" id="81g-BY-hpC"/>
                         <outlet property="tableView" destination="uoy-Ez-reK" id="icW-WP-C9E"/>
                     </connections>
                 </viewController>

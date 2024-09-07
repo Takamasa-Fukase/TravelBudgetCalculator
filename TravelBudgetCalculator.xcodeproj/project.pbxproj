@@ -50,6 +50,8 @@
 		BC8B903E2C8C39970050B252 /* BudgetComparisonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B903D2C8C39970050B252 /* BudgetComparisonViewController.storyboard */; };
 		BC8B90412C8C3B560050B252 /* BudgetComparisonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8B90402C8C3B560050B252 /* BudgetComparisonCell.xib */; };
 		BC8B90422C8C3B560050B252 /* BudgetComparisonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B903F2C8C3B560050B252 /* BudgetComparisonCell.swift */; };
+		BC9D919E2C8C988200D85F90 /* BudgetRegisterDateListSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D919D2C8C988200D85F90 /* BudgetRegisterDateListSectionHeader.swift */; };
+		BC9D91A02C8C989100D85F90 /* BudgetRegisterDateListSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9D919F2C8C989100D85F90 /* BudgetRegisterDateListSectionHeader.xib */; };
 		BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */; };
 		BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */; };
 		BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731582C89BF23007C56A5 /* UIView+Extension.swift */; };
@@ -151,6 +153,8 @@
 		BC8B903D2C8C39970050B252 /* BudgetComparisonViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetComparisonViewController.storyboard; sourceTree = "<group>"; };
 		BC8B903F2C8C3B560050B252 /* BudgetComparisonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetComparisonCell.swift; sourceTree = "<group>"; };
 		BC8B90402C8C3B560050B252 /* BudgetComparisonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BudgetComparisonCell.xib; sourceTree = "<group>"; };
+		BC9D919D2C8C988200D85F90 /* BudgetRegisterDateListSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRegisterDateListSectionHeader.swift; sourceTree = "<group>"; };
+		BC9D919F2C8C989100D85F90 /* BudgetRegisterDateListSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BudgetRegisterDateListSectionHeader.xib; sourceTree = "<group>"; };
 		BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormUtil.swift; sourceTree = "<group>"; };
 		BCA731582C89BF23007C56A5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 				BC894E842C8C8A79002FB1D2 /* BudgetRegisterInputFormCell.xib */,
 				BC894E872C8C8BBE002FB1D2 /* BudgetRegisterDateListCell.swift */,
 				BC894E882C8C8BBE002FB1D2 /* BudgetRegisterDateListCell.xib */,
+				BC9D919D2C8C988200D85F90 /* BudgetRegisterDateListSectionHeader.swift */,
+				BC9D919F2C8C989100D85F90 /* BudgetRegisterDateListSectionHeader.xib */,
 			);
 			path = BudgetRegister;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 				BC894E8A2C8C8BBE002FB1D2 /* BudgetRegisterDateListCell.xib in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
 				BCA731672C8A9954007C56A5 /* RateSettingViewController.storyboard in Resources */,
+				BC9D91A02C8C989100D85F90 /* BudgetRegisterDateListSectionHeader.xib in Resources */,
 				BC8B903E2C8C39970050B252 /* BudgetComparisonViewController.storyboard in Resources */,
 				BCA731802C8ABF80007C56A5 /* TopViewController.storyboard in Resources */,
 				BC8B90362C8C06990050B252 /* TravelRegisterSecondSectionFooter.xib in Resources */,
@@ -774,6 +781,7 @@
 				BCA7315B2C89E81C007C56A5 /* KeyboardOverlapUtil.swift in Sources */,
 				BC0DFA792C81BC0100B705A7 /* ViewController.swift in Sources */,
 				BCA7316E2C8A9D91007C56A5 /* TouchesBeganTableView.swift in Sources */,
+				BC9D919E2C8C988200D85F90 /* BudgetRegisterDateListSectionHeader.swift in Sources */,
 				BC8B902C2C8BFA310050B252 /* TravelRegisterSecondViewController.swift in Sources */,
 				BCD007102C8891080072B455 /* DateListCell.swift in Sources */,
 				BCA731652C8A994D007C56A5 /* RateSettingViewController.swift in Sources */,
