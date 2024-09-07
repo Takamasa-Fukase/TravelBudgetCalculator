@@ -24,8 +24,8 @@ class TravelRegisterSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "旅行を登録"
-        
+        title = "旅行を登録（2/2）"
+
         setupTableView()
         setRxKeyboardMovement(disposeBag: disposeBag,
                               scrollView: tableView,

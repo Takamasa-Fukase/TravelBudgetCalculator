@@ -21,10 +21,11 @@ class TravelRegisterFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "旅行を登録"
+        title = "旅行を登録（1/2）"
         
         travelNameTextField.delegate = self
         travelNameTextField.returnKeyType = .done
+        travelNameTextField.becomeFirstResponder()
         startDatePicker.timeZone = .current
         endDatePicker.timeZone = .current
 
