@@ -20,7 +20,6 @@ class RateSettingViewController: UIViewController {
         super.viewDidLoad()
         
         title = "レート設定"
-        
         setupTableView()
         setRxKeyboardMovement(disposeBag: disposeBag,
                               scrollView: tableView,

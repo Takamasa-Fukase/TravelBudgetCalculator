@@ -44,10 +44,18 @@ class TopViewController: UIViewController {
                     ]
                 })
                 let travel = Travel(
+                    id: UUID(),
                     name: "Latin America",
                     duration: "\(dateList.first?.date ?? "")〜\(dateList.last?.date ?? "")",
                     imageData: UIImage(named: "latin_america")!.pngData()!,
-                    dateList: dateList
+                    dateList: dateList,
+                    budgetList: [
+                        .init(
+                            name: "全体",
+                            budgetAmount: 100000,
+                            targetDates: dateList
+                        )
+                    ]
                 )
                 
                 UserDefaults.travels = UserDefaults.travels + [travel]
@@ -130,7 +138,7 @@ extension TopViewController: UITableViewDataSource, UITabBarDelegate {
         let vc = UIStoryboard(name: "DateListViewController", bundle: nil).instantiateInitialViewController() as! DateListViewController
         let travel = UserDefaults.travels[indexPath.row]
         vc.title = travel.name
-        vc.dateList = travel.dateList
+        vc.travelId = travel.id
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

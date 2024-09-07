@@ -16,7 +16,7 @@ protocol TravelRegisterDelegate: AnyObject {
 class TravelRegisterSecondViewController: UIViewController {
     let disposeBag = DisposeBag()
     var activeTextField = BehaviorRelay<UIView?>(value: nil)
-    var travel: Travel = .init(name: "", duration: "", imageData: nil, dateList: [])
+    var travel: Travel = .init(id: UUID(), name: "", duration: "", imageData: nil, dateList: [], budgetList: [])
     weak var delegate: TravelRegisterDelegate?
     
     @IBOutlet weak var tableView: TouchesBeganTableView!

@@ -6,19 +6,32 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import Parchment
 
 class DateListViewController: UIViewController {
+    let disposeBag = DisposeBag()
     var pagingViewController = PagingViewController(viewControllers: [])
-    var dateList: [DailyExpense] = []
+    var travelId: UUID = UUID()
+    
+    @IBOutlet weak var toBudgetComparisonButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupParchment()
+        toBudgetComparisonButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let vc = UIStoryboard(name: "BudgetComparisonViewController", bundle: nil).instantiateInitialViewController() as! BudgetComparisonViewController
+                vc.travelId = self.travelId
+                self.navigationController?.pushViewController(vc, animated: true)
+            }).disposed(by: disposeBag)
     }
 
     func setupParchment() {
+        let dateList = UserDefaults.travels.first(where: { $0.id == travelId })?.dateList ?? []
         let vcs = dateList.map { dailyExpense in
             let sb = UIStoryboard(name: "DateDetailViewController", bundle: nil)
             let vc = sb.instantiateInitialViewController() as! DateDetailViewController

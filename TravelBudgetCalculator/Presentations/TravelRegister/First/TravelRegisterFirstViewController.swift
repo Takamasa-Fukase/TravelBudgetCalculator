@@ -82,10 +82,12 @@ class TravelRegisterFirstViewController: UIViewController {
                     )
                 }
                 let travel = Travel(
+                    id: UUID(),
                     name: travelNameTextField.text ?? "",
                     duration: "\(dateStrings.first ?? "")〜\(dateStrings.last ?? "")",
                     imageData: nil,
-                    dateList: dateList
+                    dateList: dateList,
+                    budgetList: []
                 )
                                 
                 // 次画面に値を受け渡して遷移

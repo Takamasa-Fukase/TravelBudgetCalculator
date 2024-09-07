@@ -40,6 +40,10 @@
 		BC8B90362C8C06990050B252 /* TravelRegisterSecondSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8B90352C8C06990050B252 /* TravelRegisterSecondSectionFooter.xib */; };
 		BC8B90382C8C07B90050B252 /* TravelRegisterSecondSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B90372C8C07B90050B252 /* TravelRegisterSecondSectionHeader.swift */; };
 		BC8B903A2C8C07C20050B252 /* TravelRegisterSecondSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8B90392C8C07C20050B252 /* TravelRegisterSecondSectionHeader.xib */; };
+		BC8B903C2C8C39920050B252 /* BudgetComparisonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B903B2C8C39920050B252 /* BudgetComparisonViewController.swift */; };
+		BC8B903E2C8C39970050B252 /* BudgetComparisonViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B903D2C8C39970050B252 /* BudgetComparisonViewController.storyboard */; };
+		BC8B90412C8C3B560050B252 /* BudgetComparisonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8B90402C8C3B560050B252 /* BudgetComparisonCell.xib */; };
+		BC8B90422C8C3B560050B252 /* BudgetComparisonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B903F2C8C3B560050B252 /* BudgetComparisonCell.swift */; };
 		BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */; };
 		BCA731572C89BCB1007C56A5 /* InputFormUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */; };
 		BCA731592C89BF23007C56A5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA731582C89BF23007C56A5 /* UIView+Extension.swift */; };
@@ -61,6 +65,7 @@
 		BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */; };
 		BCA9A9452C822F0200084047 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9A9442C822F0200084047 /* DateDetailViewController.swift */; };
 		BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */; };
+		BCC1C4E32C8C41DD00F226E0 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1C4E22C8C41DD00F226E0 /* Budget.swift */; };
 		BCD007102C8891080072B455 /* DateListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD0070E2C8891080072B455 /* DateListCell.swift */; };
 		BCD007112C8891080072B455 /* DateListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD0070F2C8891080072B455 /* DateListCell.xib */; };
 		BCD007132C8931E10072B455 /* DateDetailGenreSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */; };
@@ -130,6 +135,10 @@
 		BC8B90352C8C06990050B252 /* TravelRegisterSecondSectionFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelRegisterSecondSectionFooter.xib; sourceTree = "<group>"; };
 		BC8B90372C8C07B90050B252 /* TravelRegisterSecondSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRegisterSecondSectionHeader.swift; sourceTree = "<group>"; };
 		BC8B90392C8C07C20050B252 /* TravelRegisterSecondSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelRegisterSecondSectionHeader.xib; sourceTree = "<group>"; };
+		BC8B903B2C8C39920050B252 /* BudgetComparisonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetComparisonViewController.swift; sourceTree = "<group>"; };
+		BC8B903D2C8C39970050B252 /* BudgetComparisonViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetComparisonViewController.storyboard; sourceTree = "<group>"; };
+		BC8B903F2C8C3B560050B252 /* BudgetComparisonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetComparisonCell.swift; sourceTree = "<group>"; };
+		BC8B90402C8C3B560050B252 /* BudgetComparisonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BudgetComparisonCell.xib; sourceTree = "<group>"; };
 		BCA731542C89B8B4007C56A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		BCA731562C89BCB1007C56A5 /* InputFormUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormUtil.swift; sourceTree = "<group>"; };
 		BCA731582C89BF23007C56A5 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -151,6 +160,7 @@
 		BCA9A9422C822EF300084047 /* DateListViewController0.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateListViewController0.storyboard; sourceTree = "<group>"; };
 		BCA9A9442C822F0200084047 /* DateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
 		BCA9A9462C822F0800084047 /* DateDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateDetailViewController.storyboard; sourceTree = "<group>"; };
+		BCC1C4E22C8C41DD00F226E0 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		BCD0070E2C8891080072B455 /* DateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateListCell.swift; sourceTree = "<group>"; };
 		BCD0070F2C8891080072B455 /* DateListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateListCell.xib; sourceTree = "<group>"; };
 		BCD007122C8931E10072B455 /* DateDetailGenreSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailGenreSectionHeader.swift; sourceTree = "<group>"; };
@@ -333,6 +343,7 @@
 				BCA7316F2C8A9DB6007C56A5 /* PaymentList.swift */,
 				BCA731732C8AA2CC007C56A5 /* RegisteredCurrency.swift */,
 				BC8B90252C8AFA980050B252 /* Travel.swift */,
+				BCC1C4E22C8C41DD00F226E0 /* Budget.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -361,9 +372,9 @@
 				BC120A8B2C8ADBEA005C84DC /* TravelRegister */,
 				BC18F86E2C898112006C8D59 /* DataList */,
 				BCA9A9352C822E1B00084047 /* DateDetail */,
+				BCA731632C8A9909007C56A5 /* BudgetComparison */,
 				BCA731622C8A98EC007C56A5 /* RateSetting */,
 				BCA731772C8AA95F007C56A5 /* CurrencyRegister */,
-				BCA731632C8A9909007C56A5 /* BudgetComparison */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -382,6 +393,10 @@
 		BCA731632C8A9909007C56A5 /* BudgetComparison */ = {
 			isa = PBXGroup;
 			children = (
+				BC8B903B2C8C39920050B252 /* BudgetComparisonViewController.swift */,
+				BC8B903D2C8C39970050B252 /* BudgetComparisonViewController.storyboard */,
+				BC8B903F2C8C3B560050B252 /* BudgetComparisonCell.swift */,
+				BC8B90402C8C3B560050B252 /* BudgetComparisonCell.xib */,
 			);
 			path = BudgetComparison;
 			sourceTree = "<group>";
@@ -562,6 +577,7 @@
 				BC8B90312C8BFE620050B252 /* TravelRegisterSecondCell.xib in Resources */,
 				BC120A8F2C8ADC1A005C84DC /* TravelRegisterFirstViewController.storyboard in Resources */,
 				BCD007152C8931E80072B455 /* DateDetailGenreSectionHeader.xib in Resources */,
+				BC8B90412C8C3B560050B252 /* BudgetComparisonCell.xib in Resources */,
 				BCA9A9432C822EF300084047 /* DateListViewController0.storyboard in Resources */,
 				BCA7316A2C8A9BFA007C56A5 /* RateSettingCell.xib in Resources */,
 				BC0DFA7E2C81BC0300B705A7 /* Assets.xcassets in Resources */,
@@ -573,6 +589,7 @@
 				BCA9A9472C822F0800084047 /* DateDetailViewController.storyboard in Resources */,
 				BC0DFA7C2C81BC0100B705A7 /* Base in Resources */,
 				BCA731672C8A9954007C56A5 /* RateSettingViewController.storyboard in Resources */,
+				BC8B903E2C8C39970050B252 /* BudgetComparisonViewController.storyboard in Resources */,
 				BCA731802C8ABF80007C56A5 /* TopViewController.storyboard in Resources */,
 				BC8B90362C8C06990050B252 /* TravelRegisterSecondSectionFooter.xib in Resources */,
 				BCD007192C8934B10072B455 /* DateDetailGenreSectionFooter.xib in Resources */,
@@ -714,6 +731,7 @@
 				BC8B90342C8C06920050B252 /* TravelRegisterSecondSectionFooter.swift in Sources */,
 				BC8B90282C8BF67B0050B252 /* TimeZone+Extension.swift in Sources */,
 				BCA731742C8AA2CC007C56A5 /* RegisteredCurrency.swift in Sources */,
+				BC8B903C2C8C39920050B252 /* BudgetComparisonViewController.swift in Sources */,
 				BCA9A9412C822EED00084047 /* DateListViewController0.swift in Sources */,
 				BC18F8702C89813D006C8D59 /* DateListViewController.swift in Sources */,
 				BCA731702C8A9DB6007C56A5 /* PaymentList.swift in Sources */,
@@ -740,6 +758,8 @@
 				BCA731552C89B8B4007C56A5 /* UIViewController+Extension.swift in Sources */,
 				BCA7317E2C8ABF7B007C56A5 /* TopViewController.swift in Sources */,
 				BC8B90322C8BFE620050B252 /* TravelRegisterSecondCell.swift in Sources */,
+				BC8B90422C8C3B560050B252 /* BudgetComparisonCell.swift in Sources */,
+				BCC1C4E32C8C41DD00F226E0 /* Budget.swift in Sources */,
 				BC58CB5E2C898ADF00F40E16 /* DailyExpense.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
