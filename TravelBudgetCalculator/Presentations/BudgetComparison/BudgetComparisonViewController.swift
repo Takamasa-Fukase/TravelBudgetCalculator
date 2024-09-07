@@ -27,13 +27,13 @@ class BudgetComparisonViewController: UIViewController {
         tableView.contentInset.bottom = 200
     }
     
-    // 例: 36111円 -> 3.7万円 の表示にする。少数2桁以下は繰り上げる（出費は多めに見積もった方が安全なので）
+    // 例: 36111円 -> 3.7万円 の表示にする。少数2桁以下は四捨五入
     func formatToManYen(_ amount: Double) -> String {
         // 金額を「万円」に変換
         let manYen = amount / 10000.0
         
         // 少数第2位で四捨五入
-        let roundedManYen = ceil(manYen * 10) / 10.0
+        let roundedManYen = round(manYen * 10) / 10.0
         
         // 結果をフォーマットして文字列に変換
         return String(format: "%.1f万円", roundedManYen)
