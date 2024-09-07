@@ -49,13 +49,7 @@ class TopViewController: UIViewController {
                     duration: "\(dateList.first?.date ?? "")〜\(dateList.last?.date ?? "")",
                     imageData: UIImage(named: "latin_america")!.pngData()!,
                     dateList: dateList,
-                    budgetList: [
-                        .init(
-                            name: "全体",
-                            budgetAmount: 100000,
-                            targetDates: dateList
-                        )
-                    ]
+                    budgetList: []
                 )
                 
                 UserDefaults.travels = UserDefaults.travels + [travel]
