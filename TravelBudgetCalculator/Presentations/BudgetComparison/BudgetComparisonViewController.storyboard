@@ -16,26 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="svV-lF-JSo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="svV-lF-JSo">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="FBv-1S-dpQ"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="Qgz-Rk-pK3"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQt-OT-98e">
+                                <rect key="frame" x="0.0" y="742" width="393" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-F2-Zrz">
+                                        <rect key="frame" x="16" y="12" width="361" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="QZe-Vc-YfN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+ 予算を登録"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Vmr-JZ-bfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qma-F2-Zrz" secondAttribute="trailing" constant="16" id="pYB-XK-UeX"/>
+                                    <constraint firstItem="Qma-F2-Zrz" firstAttribute="top" secondItem="oQt-OT-98e" secondAttribute="top" constant="12" id="tVi-b9-ztG"/>
+                                    <constraint firstItem="Qma-F2-Zrz" firstAttribute="leading" secondItem="oQt-OT-98e" secondAttribute="leading" constant="16" id="tal-pD-thV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="svV-lF-JSo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="4WY-Eb-6qa"/>
+                            <constraint firstAttribute="bottom" secondItem="oQt-OT-98e" secondAttribute="bottom" id="4o0-Iu-chb"/>
+                            <constraint firstItem="oQt-OT-98e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="W9C-6l-a1a"/>
                             <constraint firstItem="svV-lF-JSo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="XRX-9k-3k6"/>
                             <constraint firstItem="svV-lF-JSo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bgg-rH-4MW"/>
+                            <constraint firstAttribute="trailing" secondItem="oQt-OT-98e" secondAttribute="trailing" id="dRn-cZ-iNe"/>
                             <constraint firstAttribute="bottom" secondItem="svV-lF-JSo" secondAttribute="bottom" id="yw3-4m-NMK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="svV-lF-JSo" id="X7p-yw-KtW"/>
+                        <outlet property="toBudgetRegisterButton" destination="Qma-F2-Zrz" id="ap4-78-82w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

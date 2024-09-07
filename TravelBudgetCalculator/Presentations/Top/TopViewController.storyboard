@@ -27,19 +27,24 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hka-Y4-eSw">
                                 <rect key="frame" x="0.0" y="742" width="393" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-2B-RI7">
+                                        <rect key="frame" x="16" y="12" width="361" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="5Ml-8c-S5b"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+ 旅行を登録"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nrk-2B-RI7" secondAttribute="trailing" constant="16" id="73Y-gF-ojZ"/>
+                                    <constraint firstItem="nrk-2B-RI7" firstAttribute="top" secondItem="hka-Y4-eSw" secondAttribute="top" constant="12" id="QkD-yf-GvD"/>
+                                    <constraint firstItem="nrk-2B-RI7" firstAttribute="leading" secondItem="hka-Y4-eSw" secondAttribute="leading" constant="16" id="psc-qX-ZpO"/>
                                     <constraint firstAttribute="height" constant="110" id="trC-iS-Qvo"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrk-2B-RI7">
-                                <rect key="frame" x="16" y="758" width="361" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="5Ml-8c-S5b"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+ 旅行を登録"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,10 +55,7 @@
                             <constraint firstItem="EER-Kl-95A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JEo-y4-p3l"/>
                             <constraint firstItem="EER-Kl-95A" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIc-CS-0ss"/>
                             <constraint firstItem="hka-Y4-eSw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cvP-i8-hwl"/>
-                            <constraint firstItem="nrk-2B-RI7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jZv-iR-hlS"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nrk-2B-RI7" secondAttribute="bottom" constant="12" id="vYQ-rL-2u8"/>
                             <constraint firstItem="hka-Y4-eSw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wh1-HN-fRo"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nrk-2B-RI7" secondAttribute="trailing" constant="16" id="z9i-gq-da1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="旅行を選択" id="thA-It-f6R">

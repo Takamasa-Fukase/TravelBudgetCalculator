@@ -43,7 +43,7 @@
                                 <color key="value" systemColor="labelColor"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="barFillInset">
-                                <real key="value" value="2"/>
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -75,11 +75,11 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9TA-So-xw2" firstAttribute="top" secondItem="OK1-rV-tec" secondAttribute="bottom" constant="4" id="2Xh-vm-if0"/>
+                    <constraint firstItem="9TA-So-xw2" firstAttribute="top" secondItem="OK1-rV-tec" secondAttribute="bottom" constant="8" id="2Xh-vm-if0"/>
                     <constraint firstAttribute="trailing" secondItem="CAM-bj-bFD" secondAttribute="trailing" constant="16" id="8HA-8k-2BJ"/>
                     <constraint firstItem="OK1-rV-tec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9r0-xZ-r0l"/>
                     <constraint firstAttribute="bottom" secondItem="9TA-So-xw2" secondAttribute="bottom" constant="12" id="DCL-y6-lpC"/>
-                    <constraint firstItem="OK1-rV-tec" firstAttribute="top" secondItem="CAM-bj-bFD" secondAttribute="bottom" constant="8" id="EGc-FN-ERv"/>
+                    <constraint firstItem="OK1-rV-tec" firstAttribute="top" secondItem="CAM-bj-bFD" secondAttribute="bottom" constant="12" id="EGc-FN-ERv"/>
                     <constraint firstItem="9TA-So-xw2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G3R-RL-SzG"/>
                     <constraint firstItem="hAG-SP-duB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ige-ed-Qol"/>
                     <constraint firstAttribute="trailing" secondItem="OK1-rV-tec" secondAttribute="trailing" constant="16" id="NJH-1R-Bud"/>

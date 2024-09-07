@@ -15,6 +15,7 @@ class BudgetComparisonViewController: UIViewController {
     var travelId: UUID = UUID()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var toBudgetRegisterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

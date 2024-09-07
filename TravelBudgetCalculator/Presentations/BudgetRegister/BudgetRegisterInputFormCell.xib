@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="BudgetRegisterInputFormCell" customModule="TravelBudgetCalculator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlR-bQ-vnF">
+                        <rect key="frame" x="16" y="12" width="379" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="tqU-hv-aDq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpu-1Y-u2s">
+                        <rect key="frame" x="16" y="36" width="379" height="40"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="ddm-Ia-GOm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="qlR-bQ-vnF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0nZ-rp-b0g"/>
+                    <constraint firstItem="zpu-1Y-u2s" firstAttribute="top" secondItem="qlR-bQ-vnF" secondAttribute="bottom" constant="4" id="4uo-SB-o9b"/>
+                    <constraint firstAttribute="trailing" secondItem="qlR-bQ-vnF" secondAttribute="trailing" constant="16" id="TBX-8f-llh"/>
+                    <constraint firstAttribute="bottom" secondItem="zpu-1Y-u2s" secondAttribute="bottom" constant="12" id="gRc-t8-ce0"/>
+                    <constraint firstItem="qlR-bQ-vnF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="rWU-Vf-yDf"/>
+                    <constraint firstItem="zpu-1Y-u2s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xeB-CU-VZJ"/>
+                    <constraint firstAttribute="trailing" secondItem="zpu-1Y-u2s" secondAttribute="trailing" constant="16" id="ydi-zW-6Mc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textField" destination="zpu-1Y-u2s" id="0WI-BZ-IeK"/>
+                <outlet property="titleLabel" destination="qlR-bQ-vnF" id="YYW-KR-xBM"/>
+            </connections>
+            <point key="canvasLocation" x="115.26717557251908" y="35.563380281690144"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
