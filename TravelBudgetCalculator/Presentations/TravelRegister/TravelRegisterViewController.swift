@@ -26,16 +26,21 @@ class TravelRegisterViewController: UIViewController {
         super.viewDidLoad()
         
         travelNameTextField.delegate = self
+        startDatePicker.timeZone = .current
+        endDatePicker.timeZone = .current
 
         registerButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
-                let startDate = startDatePicker.date
-                let endDate = endDatePicker.date
+//                let startDate = startDatePicker.date
+//                let endDate = endDatePicker.date
+                let startDate = modifyTimeToZero(date: startDatePicker.date)
+                let endDate = modifyTimeToZero(date: endDatePicker.date)
                 
                 let dates = generateDatesArray(from: startDate, to: endDate)
                 let formatter = DateFormatter()
                 formatter.dateFormat = "M月d日（E）" // 月日と曜日のフォーマット
+                formatter.timeZone = TimeZone(abbreviation: "UTC")!
                 formatter.locale = Locale(identifier: "ja_JP") // 日本語のロケールを設定
                 
                 let dateStrings = dates.map { formatter.string(from: $0) }
@@ -99,14 +104,38 @@ class TravelRegisterViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    func modifyTimeToZero(date: Date) -> Date {
+        print("modifyTimeToZero: \(date)")
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        var components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        components.hour = 23
+        components.minute = 0
+        components.second = 0
+        let modifiedDate = calendar.date(from: components)
+        print("modifiedDate: \(modifiedDate)")
+        return modifiedDate ?? Date()
+    }
+    
     func generateDatesArray(from startDate: Date, to endDate: Date) -> [Date] {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        
+        print("generateDatesArray startDate: \(startDate), endDate: \(endDate)")
         var dates: [Date] = []
+        print("dates: \(dates)")
         var currentDate = startDate
+        print("currentDateにstartDateを代入した: \(currentDate)")
         
         while currentDate <= endDate {
+            print("while currentDate <= endDateがtrueなので中に入った, currentDate(\(currentDate) <= endDate(\(endDate)")
             dates.append(currentDate)
-            currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
+            print("appendした後のdates: \(dates)")
+            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
+            print("+1の日で書き換えた後のcurrentDate: \(currentDate)")
         }
+        
+        print("whileを抜けたので返却するdates: \(dates)")
         
         return dates
     }
