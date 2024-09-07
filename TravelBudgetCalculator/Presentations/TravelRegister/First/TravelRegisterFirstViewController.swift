@@ -77,18 +77,8 @@ class TravelRegisterFirstViewController: UIViewController {
                     return DailyExpense(
                         date: dateString,
                         cityName: "\(index + 1)日目",
-                        currency: .JPY,
-                        expenseData: [
-                            .init(paymentType: .transportation, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
-                            ]),
-                            .init(paymentType: .food, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
-                            ]),
-                            .init(paymentType: .other, items: [
-                                .init(id: UUID(), title: "", amount: 0, currencyType: firstRegisteredCurrency.type)
-                            ])
-                        ]
+                        currency: firstRegisteredCurrency.type,
+                        expenseData: []
                     )
                 }
                 let travel = Travel(
@@ -97,7 +87,7 @@ class TravelRegisterFirstViewController: UIViewController {
                     imageData: nil,
                     dateList: dateList
                 )
-                
+                                
                 // 次画面に値を受け渡して遷移
                 let vc = UIStoryboard(name: "TravelRegisterSecondViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterSecondViewController
                 vc.travel = travel

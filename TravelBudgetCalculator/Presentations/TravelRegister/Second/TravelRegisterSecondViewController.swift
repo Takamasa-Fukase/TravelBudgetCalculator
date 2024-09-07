@@ -63,6 +63,22 @@ extension TravelRegisterSecondViewController: UITableViewDelegate, UITableViewDa
         sectionFooter.registerButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
+                
+                // 各日の通貨に合わせて３ジャンルの出費データの初期値を生成
+                self.travel.dateList.enumerated().forEach({ (index, item) in
+                    self.travel.dateList[index].expenseData = [
+                        .init(paymentType: .transportation, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ]),
+                        .init(paymentType: .food, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ]),
+                        .init(paymentType: .other, items: [
+                            .init(id: UUID(), title: "", amount: 0, currencyType: item.currency)
+                        ])
+                    ]
+                })
+                
                 UserDefaults.travels = UserDefaults.travels + [self.travel]
                 
                 // 前の画面のリストを更新させるために通知
