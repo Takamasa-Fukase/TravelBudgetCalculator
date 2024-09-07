@@ -55,7 +55,7 @@ class DateDetailViewController: UIViewController {
     }
 }
 
-extension DateDetailViewController: UITableViewDelegate {
+extension DateDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "DateDetailGenreSectionHeader") as! DateDetailGenreSectionHeader
         let sectionData = dailyExpense.expenseData[section]
@@ -82,9 +82,7 @@ extension DateDetailViewController: UITableViewDelegate {
         }
         return sectionFooter
     }
-}
 
-extension DateDetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dailyExpense.expenseData.count
     }

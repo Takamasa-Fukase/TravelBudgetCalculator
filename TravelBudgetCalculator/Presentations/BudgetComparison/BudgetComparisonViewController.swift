@@ -12,8 +12,8 @@ import GTProgressBar
 
 class BudgetComparisonViewController: UIViewController {
     let disposeBag = DisposeBag()
-    var travelId: UUID = UUID()
-    
+    var travel: Travel = .init(id: UUID(), name: "", duration: "", dateList: [], budgetList: [])
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var toBudgetRegisterButton: UIButton!
     
@@ -22,6 +22,17 @@ class BudgetComparisonViewController: UIViewController {
         
         title = "予算管理"
         setupTableView()
+        
+        toBudgetRegisterButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {return}
+                let vc = UIStoryboard(name: "BudgetRegisterViewController", bundle: nil).instantiateInitialViewController() as! BudgetRegisterViewController
+                vc.travel = self.travel
+                let navi = UINavigationController(rootViewController: vc)
+                navi.modalPresentationStyle = .pageSheet
+                // TODO: delegateの受け渡し
+                self.present(navi, animated: true)
+            }).disposed(by: disposeBag)
     }
     
     func setupTableView() {
@@ -51,15 +62,12 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserDefaults.travels.first(where: { $0.id == travelId })?.budgetList.count ?? 0
+        return travel.budgetList.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "BudgetComparisonCell", for: indexPath) as! BudgetComparisonCell
-        guard let travel = UserDefaults.travels.first(where: { $0.id == travelId }) else {
-            return cell
-        }
         let item = travel.budgetList[indexPath.row]
         cell.budgetNameLabel.text = item.name
         cell.bedgetAmountLabel.text = "予算：\(formatToManYen(item.budgetAmount))"
