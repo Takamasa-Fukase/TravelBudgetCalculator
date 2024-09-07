@@ -87,7 +87,6 @@ class TopViewController: UIViewController {
 extension TopViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         var editedData = UserDefaults.travels
-        let selectedCurrency = editedData[indexPath.row]
         
         // 確認アラートを出す
         let alert = UIAlertController(title: "旅行を削除します", message: "本当によろしいですか？", preferredStyle: .alert)
