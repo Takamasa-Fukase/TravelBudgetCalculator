@@ -1,5 +1,5 @@
 //
-//  TravelRegisterViewController.swift
+//  TravelRegisterFirstViewController.swift
 //  TravelBudgetCalculator
 //
 //  Created by ウルトラ深瀬 on 6/9/24.
@@ -13,23 +13,25 @@ protocol TravelRegisterDelegate: AnyObject {
     func onRegistered()
 }
 
-class TravelRegisterViewController: UIViewController {
+class TravelRegisterFirstViewController: UIViewController {
     let disposeBag = DisposeBag()
     weak var delegate: TravelRegisterDelegate?
 
     @IBOutlet weak var travelNameTextField: UITextField!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var toNextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "旅行を登録"
         
         travelNameTextField.delegate = self
         startDatePicker.timeZone = .current
         endDatePicker.timeZone = .current
 
-        registerButton.rx.tap
+        toNextButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
                 let startDate = modifyTimeToZero(date: startDatePicker.date)
@@ -86,16 +88,20 @@ class TravelRegisterViewController: UIViewController {
                     dateList: dateList
                 )
                 
-                UserDefaults.travels = UserDefaults.travels + [travel]
+//                UserDefaults.travels = UserDefaults.travels + [travel]
+//                
+//                // 前の画面のリストを更新させるために通知
+//                self.delegate?.onRegistered()
+//                
+//                // 保存した内容を改めてアラートで表示
+//                self.showCompletionAlert(dateStrings: dateStrings, completion: {
+//                    self.dismiss(animated: true)
+//                })
                 
-                // 前の画面のリストを更新させるために通知
-                self.delegate?.onRegistered()
-                
-                // 保存した内容を改めてアラートで表示
-                self.showCompletionAlert(dateStrings: dateStrings, completion: {
-                    self.dismiss(animated: true)
-                })
-                
+                // 次画面に値を受け渡して遷移
+                let vc = UIStoryboard(name: "TravelRegisterSecondViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterSecondViewController
+                vc.travel = travel
+                self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)
     }
     
@@ -134,7 +140,7 @@ class TravelRegisterViewController: UIViewController {
     }
 }
 
-extension TravelRegisterViewController: UITextFieldDelegate {
+extension TravelRegisterFirstViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true

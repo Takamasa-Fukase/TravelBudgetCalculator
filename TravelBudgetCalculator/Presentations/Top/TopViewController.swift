@@ -31,10 +31,11 @@ class TopViewController: UIViewController {
         toTravelRegisterButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
-                let vc = UIStoryboard(name: "TravelRegisterViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterViewController
-                vc.modalPresentationStyle = .pageSheet
+                let vc = UIStoryboard(name: "TravelRegisterFirstViewController", bundle: nil).instantiateInitialViewController() as! TravelRegisterFirstViewController
                 vc.delegate = self
-                self.present(vc, animated: true)
+                let navi = UINavigationController(rootViewController: vc)
+                navi.modalPresentationStyle = .pageSheet
+                self.present(navi, animated: true)
             }).disposed(by: disposeBag)
     }
     

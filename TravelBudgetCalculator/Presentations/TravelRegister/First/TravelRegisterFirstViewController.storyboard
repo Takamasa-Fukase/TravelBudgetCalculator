@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Travel Register View Controller-->
+        <!--Travel Register First View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TravelRegisterViewController" customModule="TravelBudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TravelRegisterFirstViewController" customModule="TravelBudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="SJJ-W9-o9K">
-                                <rect key="frame" x="16" y="91" width="361" height="727"/>
+                                <rect key="frame" x="16" y="71" width="361" height="747"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3P-eB-J44">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="88"/>
@@ -120,10 +120,10 @@
                                             <constraint firstAttribute="height" constant="48" id="iut-Ur-Ora"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="登録"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="次へ"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I30-Di-QDD">
-                                        <rect key="frame" x="0.0" y="372" width="361" height="355"/>
+                                        <rect key="frame" x="0.0" y="372" width="361" height="375"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -140,7 +140,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SJJ-W9-o9K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="2xZ-Gg-W5l"/>
+                            <constraint firstItem="SJJ-W9-o9K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="2xZ-Gg-W5l"/>
                             <constraint firstItem="SJJ-W9-o9K" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="Kbr-ue-TIa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SJJ-W9-o9K" secondAttribute="bottom" id="pcJ-R3-Iq2"/>
                             <constraint firstAttribute="trailing" secondItem="SJJ-W9-o9K" secondAttribute="trailing" constant="16" id="zES-Fe-Cyx"/>
@@ -148,8 +148,8 @@
                     </view>
                     <connections>
                         <outlet property="endDatePicker" destination="Nrf-zo-wDB" id="SKV-iS-OIk"/>
-                        <outlet property="registerButton" destination="hQv-aj-WJI" id="Wz6-Oq-ZYd"/>
                         <outlet property="startDatePicker" destination="tf4-Cc-HOL" id="X5c-PT-jrF"/>
+                        <outlet property="toNextButton" destination="hQv-aj-WJI" id="Egv-Ki-hBR"/>
                         <outlet property="travelNameTextField" destination="LKP-ga-2Fz" id="kix-OX-pEQ"/>
                     </connections>
                 </viewController>
