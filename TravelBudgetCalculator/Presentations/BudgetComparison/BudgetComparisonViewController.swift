@@ -28,9 +28,9 @@ class BudgetComparisonViewController: UIViewController {
                 guard let self = self else {return}
                 let vc = UIStoryboard(name: "BudgetRegisterViewController", bundle: nil).instantiateInitialViewController() as! BudgetRegisterViewController
                 vc.travel = self.travel
+                vc.delegate = self
                 let navi = UINavigationController(rootViewController: vc)
                 navi.modalPresentationStyle = .pageSheet
-                // TODO: delegateの受け渡し
                 self.present(navi, animated: true)
             }).disposed(by: disposeBag)
     }
@@ -91,5 +91,11 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
         cell.progressBar.progress = progress
 
         return cell
+    }
+}
+
+extension BudgetComparisonViewController: BudgetRegisterDelegate {
+    func onRegistered() {
+        tableView.reloadData()
     }
 }
