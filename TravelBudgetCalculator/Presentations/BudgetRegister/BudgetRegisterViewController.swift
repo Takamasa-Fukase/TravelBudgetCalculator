@@ -79,6 +79,13 @@ class BudgetRegisterViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? BudgetRegisterInputFormCell {
+            cell.textField.becomeFirstResponder()
+        }
+    }
+    
     func setupTableView() {
         tableView.register(UINib(nibName: "BudgetRegisterInputFormCell", bundle: nil), forCellReuseIdentifier: "BudgetRegisterInputFormCell")
         tableView.register(UINib(nibName: "BudgetRegisterDateListCell", bundle: nil), forCellReuseIdentifier: "BudgetRegisterDateListCell")
