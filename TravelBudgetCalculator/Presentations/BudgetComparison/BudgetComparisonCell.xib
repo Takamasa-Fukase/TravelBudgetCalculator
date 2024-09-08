@@ -23,6 +23,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="（28日間）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIY-ah-UiJ">
+                        <rect key="frame" x="247" y="12" width="57" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAM-bj-bFD" customClass="GTProgressBar" customModule="GTProgressBar">
                         <rect key="frame" x="16" y="37.666666666666657" width="288" height="30"/>
                         <constraints>
@@ -76,6 +82,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="9TA-So-xw2" firstAttribute="top" secondItem="OK1-rV-tec" secondAttribute="bottom" constant="8" id="2Xh-vm-if0"/>
+                    <constraint firstItem="WIY-ah-UiJ" firstAttribute="centerY" secondItem="hAG-SP-duB" secondAttribute="centerY" id="5og-WO-PHY"/>
                     <constraint firstAttribute="trailing" secondItem="CAM-bj-bFD" secondAttribute="trailing" constant="16" id="8HA-8k-2BJ"/>
                     <constraint firstItem="OK1-rV-tec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9r0-xZ-r0l"/>
                     <constraint firstAttribute="bottom" secondItem="9TA-So-xw2" secondAttribute="bottom" constant="12" id="DCL-y6-lpC"/>
@@ -83,17 +90,20 @@
                     <constraint firstItem="9TA-So-xw2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G3R-RL-SzG"/>
                     <constraint firstItem="hAG-SP-duB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Ige-ed-Qol"/>
                     <constraint firstAttribute="trailing" secondItem="OK1-rV-tec" secondAttribute="trailing" constant="16" id="NJH-1R-Bud"/>
+                    <constraint firstItem="WIY-ah-UiJ" firstAttribute="centerY" secondItem="hAG-SP-duB" secondAttribute="centerY" id="Nxd-A8-J39"/>
                     <constraint firstItem="CAM-bj-bFD" firstAttribute="top" secondItem="hAG-SP-duB" secondAttribute="bottom" constant="8" id="OU1-PQ-6I1"/>
                     <constraint firstAttribute="trailing" secondItem="9TA-So-xw2" secondAttribute="trailing" constant="16" id="W5b-l5-UnQ"/>
                     <constraint firstItem="hAG-SP-duB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WLP-Kv-zmQ"/>
                     <constraint firstAttribute="trailing" secondItem="hAG-SP-duB" secondAttribute="trailing" constant="16" id="Wws-iU-oi5"/>
                     <constraint firstItem="CAM-bj-bFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="clN-gW-eTg"/>
+                    <constraint firstAttribute="trailing" secondItem="WIY-ah-UiJ" secondAttribute="trailing" constant="16" id="zcI-vz-pog"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bedgetAmountLabel" destination="jGp-db-BIW" id="DqL-Gw-B66"/>
                 <outlet property="budgetNameLabel" destination="hAG-SP-duB" id="6vm-Id-Tot"/>
+                <outlet property="durationCountLabel" destination="WIY-ah-UiJ" id="YTz-Bj-lyj"/>
                 <outlet property="progressBar" destination="CAM-bj-bFD" id="G6M-6x-7FD"/>
                 <outlet property="restAmountLabel" destination="9TA-So-xw2" id="1za-A2-RG6"/>
                 <outlet property="usedAmountLabel" destination="IkK-fA-WjY" id="QSh-ph-xCu"/>

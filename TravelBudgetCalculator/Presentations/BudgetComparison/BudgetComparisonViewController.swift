@@ -84,6 +84,7 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
         let cell = tableView.dequeueReusableCell(withIdentifier: "BudgetComparisonCell", for: indexPath) as! BudgetComparisonCell
         let item = travel.budgetList[indexPath.row]
         cell.budgetNameLabel.text = item.name
+        cell.durationCountLabel.text = "（\(item.targetDateIds.count)日間）"
         cell.bedgetAmountLabel.text = "予算：\(formatToManYen(item.budgetAmount))"
         
         // 対象日をループで回して、出費額の日本円換算後の金額を加算していき合計を求める

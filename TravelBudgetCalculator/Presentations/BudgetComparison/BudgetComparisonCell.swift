@@ -11,6 +11,7 @@ import GTProgressBar
 class BudgetComparisonCell: UITableViewCell {
     
     @IBOutlet weak var budgetNameLabel: UILabel!
+    @IBOutlet weak var durationCountLabel: UILabel!
     @IBOutlet weak var progressBar: GTProgressBar!
     @IBOutlet weak var usedAmountLabel: UILabel!
     @IBOutlet weak var restAmountLabel: UILabel!
