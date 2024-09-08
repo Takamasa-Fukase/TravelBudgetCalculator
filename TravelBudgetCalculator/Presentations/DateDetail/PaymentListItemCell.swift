@@ -41,8 +41,4 @@ class PaymentListItemCell: UITableViewCell {
         amountTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 0))
         amountTextField.rightViewMode = .always
     }
-    
-    @objc func done() {
-        contentView.endEditing(true)
-    }
 }

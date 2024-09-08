@@ -113,6 +113,29 @@ extension BudgetRegisterViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 1 {
             let sectionHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "BudgetRegisterDateListSectionHeader") as! BudgetRegisterDateListSectionHeader
+            
+            sectionHeader.selectAllButton.rx.tap
+                .subscribe(onNext: { [weak self] in
+                    guard let self = self else {return}
+                    // TODO: ボタンタイトルの書き換えは後で考える　一旦やらない
+                    
+                    let selectedIndexPaths = self.tableView.indexPathsForSelectedRows ?? []
+                    
+                    if selectedIndexPaths.count == self.travel.dateList.count {
+                        // 既に全選択されている状態なので、全て解除する
+                        selectedIndexPaths.forEach({ indexPath in
+                            self.tableView.deselectRow(at: indexPath, animated: false)
+                        })
+                        
+                    }else {
+                        // 未選択のものがあるので全選択にする
+                        self.travel.dateList.enumerated().forEach({ (index, _) in
+                            let targetIndexPath = IndexPath(row: index, section: 1)
+                            self.tableView.selectRow(at: targetIndexPath, animated: false, scrollPosition: .none)
+                        })
+                    }
+                }).disposed(by: sectionHeader.disposeBag)
+            
             return sectionHeader
         }else {
             return UIView()

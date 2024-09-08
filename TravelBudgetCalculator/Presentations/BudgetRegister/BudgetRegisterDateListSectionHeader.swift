@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class BudgetRegisterDateListSectionHeader: UITableViewHeaderFooterView {
+    var disposeBag = DisposeBag()
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var selectAllButton: UIButton!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
     }
-    */
-
 }
