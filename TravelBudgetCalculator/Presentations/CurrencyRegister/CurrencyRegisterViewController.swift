@@ -77,6 +77,7 @@ class CurrencyRegisterViewController: UIViewController {
             !UserDefaults.registeredCurrencies.contains(where: { $0.type == item })
         })
         
+        // TODO: 3桁のコード以降の日本語部分の50音順ソートに変更した方が使いやすいかも
         // アルファベット順でソート
         unregisteredCurrencies.sort(by: { $0.code < $1.code })
         
