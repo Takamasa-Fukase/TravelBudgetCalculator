@@ -32,8 +32,9 @@ class RateSettingViewController: UIViewController {
                 guard let self = self else {return}
                 let vc = UIStoryboard(name: "CurrencyRegisterViewController", bundle: nil).instantiateInitialViewController() as! CurrencyRegisterViewController
                 vc.delegate = self
-                vc.modalPresentationStyle = .pageSheet
-                self.present(vc, animated: true)
+                let navi = UINavigationController(rootViewController: vc)
+                navi.modalPresentationStyle = .pageSheet
+                self.present(navi, animated: true)
             }).disposed(by: disposeBag)
     }
     

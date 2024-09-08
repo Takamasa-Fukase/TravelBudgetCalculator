@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnB-VL-CcA">
-                                <rect key="frame" x="16" y="91" width="361" height="40"/>
+                                <rect key="frame" x="16" y="71" width="361" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UUX-e3-MEo"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 </buttonConfiguration>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1単位あたりの円レート" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8p-XG-20K">
-                                <rect key="frame" x="16" y="143" width="337" height="40"/>
+                                <rect key="frame" x="16" y="123" width="337" height="40"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FGd-Zp-LeP"/>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-I9-Ok2">
-                                <rect key="frame" x="16" y="243" width="361" height="48"/>
+                                <rect key="frame" x="16" y="223" width="361" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ge2-zF-Cvh"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="登録"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-fY-9fN">
-                                <rect key="frame" x="361" y="143" width="16" height="40"/>
+                                <rect key="frame" x="361" y="123" width="16" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="l8u-w9-D4b"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Ct-fY-9fN" firstAttribute="leading" secondItem="D8p-XG-20K" secondAttribute="trailing" constant="8" id="2H7-Fe-4nS"/>
-                            <constraint firstItem="dnB-VL-CcA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="Guq-2d-mct"/>
+                            <constraint firstItem="dnB-VL-CcA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="Guq-2d-mct"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W5O-I9-Ok2" secondAttribute="trailing" constant="16" id="Gw4-UY-jNs"/>
                             <constraint firstItem="D8p-XG-20K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="L0h-4M-PJk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Ct-fY-9fN" secondAttribute="trailing" constant="16" id="NJm-fy-sL1"/>

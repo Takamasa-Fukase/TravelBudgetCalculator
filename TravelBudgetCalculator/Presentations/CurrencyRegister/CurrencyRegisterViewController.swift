@@ -25,6 +25,8 @@ class CurrencyRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "通貨を登録"
+        
         rateTextField.keyboardType = .numbersAndPunctuation
         rateTextField.returnKeyType = .done
         rateTextField.delegate = self
@@ -71,9 +73,13 @@ class CurrencyRegisterViewController: UIViewController {
     
     func setupCurrencySelectionButton() {
         // 既に登録済みの通貨を除外した配列を作成
-        let unregisteredCurrencies = CurrencyType.allCases.filter({ item in
+        var unregisteredCurrencies = CurrencyType.allCases.filter({ item in
             !UserDefaults.registeredCurrencies.contains(where: { $0.type == item })
         })
+        
+        // アルファベット順でソート
+        unregisteredCurrencies.sort(by: { $0.code < $1.code })
+        
         let currencyOptionList = unregisteredCurrencies.map { item in
             return UIAction(title: item.rawValue, handler: { [weak self] _ in
                 guard let self = self else { return }
