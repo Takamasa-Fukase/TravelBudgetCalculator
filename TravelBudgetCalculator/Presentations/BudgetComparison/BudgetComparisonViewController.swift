@@ -21,6 +21,12 @@ class BudgetComparisonViewController: UIViewController {
         super.viewDidLoad()
         
         title = "予算管理"
+        
+        // 遷移時に一度UserDefaultsから最新データを取得して変数に保持する
+        if let travel = UserDefaults.travels.first(where: { $0.id == travel.id }) {
+            self.travel = travel
+        }
+        
         setupTableView()
         
         toBudgetRegisterButton.rx.tap

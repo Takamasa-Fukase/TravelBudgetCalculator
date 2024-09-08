@@ -154,6 +154,12 @@ extension BudgetRegisterViewController: UITableViewDelegate, UITableViewDataSour
             // Delegateを親VCに設定
             cell.textField.delegate = self
             
+            if indexPath.row == 1 {
+                cell.textField.keyboardType = .numbersAndPunctuation
+            }else {
+                cell.textField.keyboardType = .default
+            }
+            
             cell.titleLabel.text = item.title
             cell.textField.placeholder = item.title
             cell.textField.text = item.text

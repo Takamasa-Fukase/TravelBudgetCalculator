@@ -17,6 +17,7 @@ class BudgetRegisterInputFormCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        textField.returnKeyType = .done
     }
     
     override func prepareForReuse() {
