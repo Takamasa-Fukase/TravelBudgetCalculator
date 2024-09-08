@@ -12,7 +12,7 @@ import RxCocoa
 class DateDetailViewController: UIViewController {
     let disposeBag = DisposeBag()
     var activeTextField = BehaviorRelay<UIView?>(value: nil)
-    var dailyExpense: DailyExpense = .init(date: "", cityName: "", currency: .USD, expenseData: [])
+    var dailyExpense: DailyExpense = .init(id: UUID(), date: "", cityName: "", currency: .USD, expenseData: [])
     var travelId: UUID = UUID()
     var dateIndex: Int = 0
     

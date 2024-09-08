@@ -8,6 +8,7 @@
 import Foundation
 
 struct DailyExpense: Codable {
+    let id: UUID
     let date: String
     var cityName: String
     var currency: CurrencyType

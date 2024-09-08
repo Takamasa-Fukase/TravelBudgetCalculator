@@ -16,7 +16,7 @@ protocol BudgetRegisterDelegate: AnyObject {
 class BudgetRegisterViewController: UIViewController {
     let disposeBag = DisposeBag()
     var travel: Travel = .init(id: UUID(), name: "", duration: "", dateList: [], budgetList: [])
-    var section1DataList: [(title: String, text: String)] = [
+    var section0DataList: [(title: String, text: String)] = [
         (title: "予算名", text: ""),
         (title: "予算金額", text: "")
     ]
@@ -35,14 +35,14 @@ class BudgetRegisterViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
                 
-                // 通貨が選択されていなかったらエラーを出す
-                if self.section1DataList[0].text.isEmpty {
+                // 予算名が未入力だったらエラーを出す
+                if self.section0DataList[0].text.isEmpty {
                     self.showError(title: "予算名を入力してください", message: "")
                     return
                 }
                 
-                // レートが未入力だったらエラーを出す
-                guard let doubleAmount = Double(self.section1DataList[1].text) else {
+                // 予算金額が未入力だったらエラーを出す
+                guard let doubleAmount = Double(self.section0DataList[1].text) else {
                     self.showError(title: "予算金額の値が不正です", message: "")
                     return
                 }
@@ -53,14 +53,14 @@ class BudgetRegisterViewController: UIViewController {
                     self.showError(title: "対象日を1つ以上選択してください", message: "")
                     return
                 }
-                let targetDates = selectedIndexPaths.map({ indexPath in
-                    return self.travel.dateList[indexPath.row]
+                let targetDateIds = selectedIndexPaths.map({ indexPath in
+                    return self.travel.dateList[indexPath.row].id
                 })
                 
                 let budget = Budget(
-                    name: self.section1DataList[0].text,
+                    name: self.section0DataList[0].text,
                     budgetAmount: doubleAmount,
-                    targetDates: targetDates
+                    targetDateIds: targetDateIds
                 )
                 
                 // UserDefaultsに保存
@@ -125,7 +125,7 @@ extension BudgetRegisterViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return section1DataList.count
+            return section0DataList.count
         }else {
             return travel.dateList.count
         }
@@ -150,7 +150,7 @@ extension BudgetRegisterViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BudgetRegisterInputFormCell", for: indexPath) as! BudgetRegisterInputFormCell
-            let item = section1DataList[indexPath.row]
+            let item = section0DataList[indexPath.row]
             // Delegateを親VCに設定
             cell.textField.delegate = self
             
@@ -167,8 +167,7 @@ extension BudgetRegisterViewController: UITableViewDelegate, UITableViewDataSour
             cell.textField.rx.controlEvent(.editingDidEnd)
                 .subscribe(onNext: { [weak self] in
                     guard let self = self else {return}
-                    self.section1DataList[indexPath.row].text = cell.textField.text ?? ""
-                    self.tableView.reloadData()
+                    self.section0DataList[indexPath.row].text = cell.textField.text ?? ""
                 }).disposed(by: cell.disposeBag)
             
             return cell

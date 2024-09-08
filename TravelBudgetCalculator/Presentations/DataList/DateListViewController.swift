@@ -25,6 +25,7 @@ class DateListViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 guard let self = self else {return}
                 let vc = UIStoryboard(name: "BudgetComparisonViewController", bundle: nil).instantiateInitialViewController() as! BudgetComparisonViewController
+                // TODO: 後でうまく考えたい
                 vc.travel = self.travel
                 self.navigationController?.pushViewController(vc, animated: true)
             }).disposed(by: disposeBag)

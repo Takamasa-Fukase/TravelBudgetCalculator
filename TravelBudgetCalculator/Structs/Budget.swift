@@ -10,5 +10,5 @@ import Foundation
 struct Budget: Codable {
     var name: String
     var budgetAmount: Double
-    var targetDates: [DailyExpense]
+    var targetDateIds: [UUID]
 }

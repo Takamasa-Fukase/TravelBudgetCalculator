@@ -75,6 +75,7 @@ class TravelRegisterFirstViewController: UIViewController {
                 
                 let dateList = dateStrings.enumerated().map { (index, dateString) in
                     return DailyExpense(
+                        id: UUID(),
                         date: dateString,
                         cityName: "\(index + 1)日目",
                         currency: firstRegisteredCurrency.type,

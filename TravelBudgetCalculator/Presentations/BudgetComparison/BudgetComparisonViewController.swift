@@ -22,6 +22,7 @@ class BudgetComparisonViewController: UIViewController {
         
         title = "予算管理"
         
+        // TODO: 今だと結局前の画面から遷移時に一度は正しいtravelIdが含まれてるtravelを渡す必要がある。
         // 遷移時に一度UserDefaultsから最新データを取得して変数に保持する
         if let travel = UserDefaults.travels.first(where: { $0.id == travel.id }) {
             self.travel = travel
@@ -87,7 +88,10 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
         
         // 対象日をループで回して、出費額の日本円換算後の金額を加算していき合計を求める
         var usedAmount: Double = 0.0
-        item.targetDates.forEach({ date in
+        item.targetDateIds.forEach({ dateId in
+            guard let date = travel.dateList.first(where: { $0.id == dateId }) else {
+                return
+            }
             date.expenseData.forEach({ genre in
                 genre.items.forEach({ payment in
                     let yenAmount = payment.amount * payment.currencyType.toYenRate
@@ -111,8 +115,6 @@ extension BudgetComparisonViewController: UITableViewDelegate, UITableViewDataSo
             cell.restAmountLabel.textColor = .systemRed
             cell.progressBar.barFillColor = .systemRed
         }
-        
-        print("index\(indexPath.row)のデータ\n\(item)")
 
         return cell
     }
