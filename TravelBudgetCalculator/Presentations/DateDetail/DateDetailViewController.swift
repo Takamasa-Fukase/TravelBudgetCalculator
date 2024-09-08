@@ -146,7 +146,9 @@ extension DateDetailViewController: UITableViewDelegate, UITableViewDataSource {
                     
                     self.saveToUserDefaults()
                     
-                    self.tableView.deleteRows(at: [selectedIndexPath], with: .left)
+                    // セクションヘッダーに表示してる金額も更新したいので、
+                    // 単体でのdeleteRowsではなくsectionを丸ごと更新している
+                    self.tableView.reloadSections([indexPath.section], with: .automatic)
                 }
                 alert.addAction(cancel)
                 alert.addAction(delete)
